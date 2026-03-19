@@ -5,175 +5,146 @@
     "image": "",
     "email": "ethanmahajan@icloud.com",
     "phone": "(678) 684-8177",
-    "summary": "A soon-to-be Georgia Tech student who has had past experience tutoring Mathematics and working as a freelancer to design and produce clientele's visions for 3D printed products.",
+    "location": {
+      "city": "Dacula",
+      "region": "Georgia",
+      "countryCode": "US"
+    },
+    "summary": "Motivated high school senior and incoming Georgia Tech Mechanical Engineering student with hands-on experience in CAD modeling, 3D printing, and mathematics tutoring. Skilled in Fusion 360, FDM printing, and Klipper firmware configuration. Known for reliability, technical problem-solving, and clear communication.",
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "url": ""
+      },
+      {
+        "network": "GitHub",
+        "url": ""
+      }
+    ]
   },
   "work": [
     {
       "name": "Mathnasium",
       "position": "Math Instructor",
       "location": "Dacula, GA",
-      "startDate": "August 2024",
-      "endDate": "August 2025",
-      "summary": "Tutoring K-12 mathematics on topics ranging from the basic four functions to AP Calculus BC. As part of this, I logged their progress digitally.",
+      "startDate": "2024-08",
+      "endDate": "2025-08",
+      "summary": "Tutored K-12 students across topics ranging from elementary arithmetic to AP Calculus BC. Adapted explanations to individual learning styles, tracked student progress digitally, and collaborated with staff on learning plans. Maintained consistent attendance and a professional, positive environment."
     },
     {
-      "name": "Fiverr Freelancing",
-      "position": "CAD Modelling Freelancer",
-      "startDate": "February 2024",
-      "endDate": "October 2025",
-      "summary": "Served as interpreter for bringing customer's ideas to life through CAD 3D modelling solutions and 3D printing services.",
+      "name": "Fiverr",
+      "position": "CAD Modeling & 3D Printing Freelancer",
+      "startDate": "2024-02",
+      "endDate": "2025-10",
+      "summary": "Designed custom CAD models and 3D-printed parts based on client specifications using Fusion 360. Communicated with clients to clarify requirements, provide revisions, and meet deadlines. Managed multiple concurrent orders while maintaining consistent print quality and documentation."
     }
   ],
   "volunteer": [
     {
       "organization": "National Green Student Society",
       "position": "Recycling Crew Member",
-      "summary": "Worked as part of a team to recycle within my school to reduce waste.",
+      "summary": "Collaborated with a team to coordinate on-campus recycling efforts at Mill Creek High School, contributing to waste reduction initiatives."
     }
   ],
   "education": [
     {
-      "institution": "University of Zurich",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Physics",
-      "studyType": "PhD",
-      "startDate": "1900-01-01",
-      "endDate": "1905-01-01",
-      "score": "",
-      "courses": ["Theory of Relativity"],
-      "highlights": ["Description 1.", "Description 2."]
+      "institution": "Georgia Institute of Technology",
+      "location": "Atlanta, GA",
+      "url": "https://www.gatech.edu/",
+      "area": "Mechanical Engineering",
+      "studyType": "B.S.",
+      "startDate": "2026-08",
+      "endDate": "2030-05",
+      "highlights": [
+        "Currently enrolled in Georgia Tech's distance mathematics program prior to full enrollment."
+      ]
     },
     {
-      "institution": "Eidgenössische Technische Hochschule",
-      "location": "Zurich, Switzerland",
-      "area": "Physics",
-      "studyType": "Federal teaching diploma",
-      "startDate": "1896-01-01",
-      "endDate": "1900-01-01",
-      "score": "",
-      "courses": [],
-      "highlights": ["Description 1.", "Description 2."]
-    }
-  ],
-  "awards": [
-    {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
-    },
-    {
-      "title": "Max Planck Medal",
-      "date": "2029-01-01",
-      "awarder": "German Physical Society",
-      "summary": ""
+      "institution": "Mill Creek High School",
+      "location": "Hoschton, GA",
+      "area": "STEM",
+      "studyType": "High School Diploma",
+      "startDate": "2022-08",
+      "endDate": "2026-05",
+      "highlights": [
+        "STEM-focused coursework including calculus and physics."
+      ]
     }
   ],
   "certificates": [
     {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "icon": "fa-solid fa-location-dot"
-    },
-    {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "icon": "fa-solid fa-tag"
-    },
-    {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "icon": "fa-solid fa-envelope"
+      "name": "Math Instructor Training",
+      "date": "2024",
+      "issuer": "Mathnasium of Dacula",
+      "icon": "fa-solid fa-chalkboard-teacher"
     }
   ],
-  "publications": [
+  "projects": [
     {
-      "name": "Zur Elektrodynamik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
-    },
-    {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
-    },
-    {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
+      "name": "CoreXY 3D Printer Build",
+      "summary": "Designed and assembled a high-speed CoreXY 3D printer from individual mechanical and electronic components. Integrated Klipper firmware with a CAN bus toolhead system, performed vibration analysis and mechanical tuning, and independently diagnosed hardware, wiring, and software issues. Managed the full project from concept through testing.",
+      "startDate": "2023-01",
+      "endDate": ""
     }
   ],
   "skills": [
     {
-      "name": "Physics",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
+      "name": "CAD & Engineering",
+      "icon": "fa-solid fa-drafting-compass",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "Fusion 360",
+        "CAD Modeling",
+        "3D Printing (FDM)",
+        "Klipper Firmware",
+        "CAN Bus Systems",
+        "Mechanical Assembly",
+        "Vibration Analysis"
+      ]
+    },
+    {
+      "name": "Electronics & Software",
+      "icon": "fa-solid fa-microchip",
+      "keywords": [
+        "Soldering",
+        "Electronics Troubleshooting",
+        "Computer Skills",
+        "Google Workspace",
+        "Microsoft Office"
+      ]
+    },
+    {
+      "name": "Professional",
+      "icon": "fa-solid fa-briefcase",
+      "keywords": [
+        "Customer Service",
+        "Clear Communication",
+        "Project Management",
+        "Teamwork",
+        "Time Management"
       ]
     }
   ],
   "languages": [
     {
-      "language": "German",
-      "fluency": "Native speaker",
-      "icon": ""
-    },
-    {
       "language": "English",
-      "fluency": "Fluent",
+      "fluency": "Native speaker",
       "icon": ""
     }
   ],
   "interests": [
     {
-      "name": "Physics",
-      "icon": "fa-solid fa-tag",
+      "name": "Mechanical Engineering",
+      "icon": "fa-solid fa-gear",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "3D Printing",
+        "CAD Design",
+        "Robotics",
+        "Prototyping",
+        "Manufacturing"
       ]
     }
   ],
-  "references": [
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit."
-    },
-    {
-      "name": "Professor Jane Smith",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit."
-    }
-  ],
-  "projects": [
-    {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01"
-    }
-  ]
+  "references": [],
+  "awards": [],
+  "publications": []
 }
