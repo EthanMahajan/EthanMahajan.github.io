@@ -144,8 +144,16 @@ external_sources:
 # -----------------------------------------------------------------------------
 
 collections:
+  books:
+    output: false
+  news:
+    defaults:
+      layout: post
+    output: false
   projects:
     output: true
+  teachings:
+    output: false
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
