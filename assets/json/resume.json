@@ -55,9 +55,7 @@
       "studyType": "B.S.",
       "startDate": "2026-08",
       "endDate": "2030-05",
-      "highlights": [
-        "Currently enrolled in Georgia Tech's distance mathematics program prior to full enrollment."
-      ]
+      "highlights": ["Currently enrolled in Georgia Tech's distance mathematics program prior to full enrollment."]
     },
     {
       "institution": "Mill Creek High School",
@@ -66,9 +64,7 @@
       "studyType": "High School Diploma",
       "startDate": "2022-08",
       "endDate": "2026-05",
-      "highlights": [
-        "STEM-focused coursework including calculus and physics."
-      ]
+      "highlights": ["STEM-focused coursework including calculus and physics."]
     }
   ],
   "certificates": [
@@ -104,24 +100,12 @@
     {
       "name": "Electronics & Software",
       "icon": "fa-solid fa-microchip",
-      "keywords": [
-        "Soldering",
-        "Electronics Troubleshooting",
-        "Computer Skills",
-        "Google Workspace",
-        "Microsoft Office"
-      ]
+      "keywords": ["Soldering", "Electronics Troubleshooting", "Computer Skills", "Google Workspace", "Microsoft Office"]
     },
     {
       "name": "Professional",
       "icon": "fa-solid fa-briefcase",
-      "keywords": [
-        "Customer Service",
-        "Clear Communication",
-        "Project Management",
-        "Teamwork",
-        "Time Management"
-      ]
+      "keywords": ["Customer Service", "Clear Communication", "Project Management", "Teamwork", "Time Management"]
     }
   ],
   "languages": [
@@ -135,13 +119,7 @@
     {
       "name": "Mechanical Engineering",
       "icon": "fa-solid fa-gear",
-      "keywords": [
-        "3D Printing",
-        "CAD Design",
-        "Robotics",
-        "Prototyping",
-        "Manufacturing"
-      ]
+      "keywords": ["3D Printing", "CAD Design", "Robotics", "Prototyping", "Manufacturing"]
     }
   ],
   "references": [],
