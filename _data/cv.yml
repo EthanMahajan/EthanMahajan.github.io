@@ -34,8 +34,6 @@ cv:
           - STEM-focused coursework including calculus and physics.
 
     Experience:
-      type: work
-      entries:
       - company: Mathnasium
         position: Math Instructor
         location: Dacula, GA
@@ -57,8 +55,7 @@ cv:
           - Communicated with clients to clarify requirements, provide revisions, and meet deadlines.
           - Managed multiple concurrent orders while maintaining consistent print quality and documentation.
 
-      type: volunteer
-      entries:
+    Volunteer:
       - company: National Green Student Society
         position: Recycling Crew Member
         location: Hoschton, GA
