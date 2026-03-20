@@ -1,7 +1,6 @@
 {
   "basics": {
     "name": "Ethan Mahajan",
-    "label": "Aspiring Mechanical Engineer",
     "image": "",
     "email": "ethanmahajan@icloud.com",
     "phone": "(678) 684-8177",
@@ -14,7 +13,7 @@
     "profiles": [
       {
         "network": "LinkedIn",
-        "url": ""
+        "url": "www.linkedin.com/in/ethan-mahajan-546827355"
       },
       {
         "network": "GitHub",
@@ -37,13 +36,6 @@
       "startDate": "2024-02",
       "endDate": "2025-10",
       "summary": "Designed custom CAD models and 3D-printed parts based on client specifications using Fusion 360. Communicated with clients to clarify requirements, provide revisions, and meet deadlines. Managed multiple concurrent orders while maintaining consistent print quality and documentation."
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "National Green Student Society",
-      "position": "Recycling Crew Member",
-      "summary": "Collaborated with a team to coordinate on-campus recycling efforts at Mill Creek High School, contributing to waste reduction initiatives."
     }
   ],
   "education": [
