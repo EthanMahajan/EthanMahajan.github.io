@@ -1,17 +1,15 @@
 ---
 layout: page
-title: project 5
-description: a project with a background image
+title: Artorius
+description: High-Speed, Reliable coreXY 3D Printer
 img: assets/img/artoriusRevised.png
 importance: 3
 category: fun
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+I recycled my old cartesian style 3D printer into a new-generation machine to perform as well as current day consumer-grade printers, if not better.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Initially, this project started out as a grievance with my old BIQU B1 3D printer because it would struggle to print when I needed it to leading to multiple-day troubleshooting sessions, so something had to change. I realized that I could redesign the printer from the ground up to not only fix the existing issues but also add new features. Thus, I got to work thinking about how it would work; designing how the parts would mesh together; and checking for existing parts that fit my design goals.
 
     ---
     layout: page
@@ -22,20 +20,20 @@ To give your project a background in the portfolio page, just add the img tag to
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/artoriusSketch.jpg" title="Early Sketch" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/artoriusSketch.jpg" title="Early Sketch" class="img-fluid rounded z-depth-1" style="height: 250px; object-fit: cover;" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/artoriusEarlyRender.png" title="Early CAD Renderings" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/artoriusEarlyRender.png" title="Early CAD Renderings" class="img-fluid rounded z-depth-1" style="height: 250px; object-fit: cover;" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/toolheadMockup.jpg" title="Early Toolhead Design" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/toolheadMockup.jpg" title="Early Toolhead Design" class="img-fluid rounded z-depth-1" style="height: 250px; object-fit: cover;" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    On the left, an early brainstorm session for the feasibility and material cost of the machine. In the middle, an early mockup of the printer without including most of the necessary components. On the right, an illustration of the toolhead I had originally designed.
 </div>
 
-Put text here as well.
+Once I had the design firmly finished, I started ordering the parts and building the printer. After every part had arrived,
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
@@ -55,11 +53,11 @@ You describe how you toiled, sweated, _bled_ for your project, and then... you r
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/artoriusRevised.png" title="2nd Iteration" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    Rendering of the second iteration of Artorius.
 </div>
 
 The code is simple.
