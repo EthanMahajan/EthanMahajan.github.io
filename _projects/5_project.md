@@ -11,13 +11,6 @@ I recycled my old cartesian style 3D printer into a new-generation machine to pe
 
 Initially, this project started out as a grievance with my old BIQU B1 3D printer because it would struggle to print when I needed it to leading to multiple-day troubleshooting sessions, so something had to change. I realized that I could redesign the printer from the ground up to not only fix the existing issues but also add new features. Thus, I got to work thinking about how it would work; designing how the parts would mesh together; and checking for existing parts that fit my design goals.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
-
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/artoriusSketch.jpg" title="Early Sketch" class="img-fluid rounded z-depth-1" style="height: 250px; object-fit: cover;" %}
@@ -33,7 +26,7 @@ Initially, this project started out as a grievance with my old BIQU B1 3D printe
     On the left, an early brainstorm session for the feasibility and material cost of the machine. In the middle, an early mockup of the printer without including most of the necessary components. On the right, an illustration of the toolhead I had originally designed.
 </div>
 
-Once I had the design firmly finished, I started ordering the parts and building the printer. After every part had arrived,
+Once I had the design firmly finished, I started ordering the parts and building the printer. After every part had arrived, I got to work assembling and testing this first iteration for performance. This led to me recognizing my design had flaws that were fundamental to the frame as well as other components, so I got back to designing as shown in the photos below.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
