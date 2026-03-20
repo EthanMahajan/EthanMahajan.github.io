@@ -7,7 +7,7 @@ subtitle: Manufacturing and Engineering. Incoming BSME @ The Georgia Institute o
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: true # crops the image to make it circular
+  image_circular: false # crops the image to make it circular
   more_info: >
     <p></p>
     <p></p>
@@ -17,12 +17,12 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Hello! I am an incoming Georgia Institute of Technology student pursuing a Bachelor of Science in Mechanical Engineering. My interests include additive manufacturing, technical CAD design, and machining.
+Hi! I'm Ethan,
 
-Academically, I have pursued a strong foundation in STEM topics taking the highest level offered at my school: AP Physics, Chemistry, and Calculus. This thirst for knowledge led me to enter the top 1% of my graduating class of over 700 students. Beyond in the class study, I have applied myself to both research and development related to my interest. As part of the AP Capstone program, I developed a method for testing for microplastics within water contaminated by 3D printed containers in order to test the feasibility of rural development of turnkey homemade kitchen utensils. In regards to development, I have undertaken a few projects; namely, the production of my own 3D printer, Artorius. Through the construction of which I gained many skills to fabricate with not only plastic, but also metalworking machinery.
+My passions are additive manufacturing, CAD design, and machining.
 
-As I transition into my Mechanical Engineering degree, I would like to continue this focus on applying concepts from the classroom to real designs.
+This interest of mine sparked from my STEM-focused AP classes such as physics, chemistry, and calculus which all inspired me to apply my learning to real life projects. One project I'm particularly proud of is building my own 3D printer from scratch; it taught me a lot about both fabrication and problem solving. I have also conducted research where I looked into microplastic contamination from 3D printed containers as part of a broader question about accessible homemade kitchen utensils. I'm excited to bring that same curiosity and hands-on approach into my engineering degree.
 
-For hobbies, I enjoy nature and cooking. I always find it relaxing to take a walk through my local park. Cooking wise, I like to indulge in creating different pasta dishes as well as cooking my family's traditional curry.
+Outside of engineering, I enjoy getting outside for walks and spending time in the kitchen, mostly pasta and my family's curry recipe.
 
-If anything has sparked your interest, please reach out to me through an email or text!
+Feel free to reach out by email or text if you'd like to connect!
