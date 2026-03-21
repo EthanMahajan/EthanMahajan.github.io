@@ -428,6 +428,13 @@ ninja.data = [{
           window.open("mailto:%65%74%68%61%6E%6D%61%68%61%6A%61%6E@%69%63%6C%6F%75%64.%63%6F%6D", "_blank");
         },
       },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/ethan-mahajan-546827355", "_blank");
+        },
+      },{
       id: 'light-theme',
       title: 'Change theme to light',
       description: 'Change the theme of the site to Light',
