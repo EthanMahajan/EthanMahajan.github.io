@@ -1,0 +1,13 @@
+<section
+  class="printer-animation"
+  data-printer-animation
+  data-model-url="{{ '/assets/models/final-toolhead.glb' | relative_url }}"
+  aria-label="A 3D printer printing the About page text"
+>
+  <div class="printer-animation__stage">
+    <canvas class="printer-animation__canvas" data-printer-canvas></canvas>
+    <div class="printer-animation__status" data-printer-status aria-live="polite">Preparing printer...</div>
+    <button class="printer-animation__skip" type="button" data-printer-skip>Skip Animation</button>
+  </div>
+  <p class="sr-only">The About page text is available below the animation as regular readable text.</p>
+</section>

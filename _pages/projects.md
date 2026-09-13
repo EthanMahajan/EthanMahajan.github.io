@@ -1,15 +1,14 @@
 ---
 layout: page
-title: projects
+title: Projects
 permalink: /projects/
-description: list of projects I have worked on
+description: Selected engineering, design, and fabrication projects.
 nav: true
 nav_order: 3
-display_categories: [fun] #work, 
+display_categories: [Engineering, Design]
 horizontal: false
 ---
 
-<!-- pages/projects.md -->
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized projects -->

@@ -1,108 +1,188 @@
 cv:
   name: Ethan Mahajan
-  label: Aspiring Mechanical Engineer
-  email: ethanmahajan@icloud.com
+  headline: Mechanical Engineering Student
+  email: emahajan7@gatech.edu
   location: Dacula, GA
-  image: ""
-  summary: Motivated high school senior and incoming Georgia Tech Mechanical Engineering student with hands-on experience in CAD modeling, 3D printing, and mathematics tutoring. Skilled in Fusion 360, FDM printing, and Klipper firmware configuration. Known for reliability, technical problem-solving, and clear communication.
 
   social_networks:
     - network: LinkedIn
-      username: example
+      username: ethan-mahajan-546827355
     - network: GitHub
-      username: example
+      username: EthanMahajan
 
   sections:
+    Professional Summary:
+      - bullet: Mechanical engineering student with experience in CAD design, additive manufacturing, electromechanical prototyping, and freelance engineering consulting. Completed 20+ client projects while independently designing and building a high-speed CoreXY 3D printer.
+
     Education:
       - institution: Georgia Institute of Technology
         location: Atlanta, GA
         url: https://www.gatech.edu/
         area: Mechanical Engineering
         studyType: B.S.
-        start_date: 2026
-        end_date: 2030
+        start_date: "2026-08"
+        end_date: "2029-05"
         highlights:
-          - Currently enrolled in Georgia Tech's distance mathematics program prior to full undergraduate enrollment.
+          - "GPA: 4.00"
+          - "Relevant Coursework: Principles & Applications of Engineering Materials; Engineering Graphics"
 
       - institution: Mill Creek High School
         location: Hoschton, GA
         area: STEM
         studyType: High School Diploma
-        start_date: 2022
-        end_date: 2026
+        start_date: "2022-08"
+        end_date: "2026-05"
         highlights:
-          - STEM-focused coursework including calculus and physics.
-
-    Experience:
-      - company: Mathnasium
-        position: Math Instructor
-        location: Dacula, GA
-        start_date: 2024
-        end_date: 2025
-        summary: Tutored K-12 students across topics ranging from elementary arithmetic to AP Calculus BC.
-        highlights:
-          - Adapted explanations to individual learning styles and skill levels.
-          - Tracked student progress digitally and collaborated with staff on learning plans.
-          - Maintained consistent attendance and a professional, positive environment.
-
-      - company: Fiverr
-        position: CAD Modeling & 3D Printing Freelancer
-        location: Remote
-        start_date: 2024
-        end_date: 2025
-        summary: Designed custom CAD models and 3D-printed parts based on client specifications using Fusion 360.
-        highlights:
-          - Communicated with clients to clarify requirements, provide revisions, and meet deadlines.
-          - Managed multiple concurrent orders while maintaining consistent print quality and documentation.
-
-    Volunteer:
-      - company: National Green Student Society
-        position: Recycling Crew Member
-        location: Hoschton, GA
-        start_date: 2022
-        end_date: 2026
-        summary: Collaborated with a team to coordinate on-campus recycling efforts at Mill Creek High School, contributing to waste reduction initiatives.
-
-    Awards: []
-
-    Publications: []
+          - "Weighted GPA: 4.63; SAT: 1540 (Top 1% Nationally)"
+          - "AP Scholar with Distinction; National Honor Society"
+          - "Physics and Math Scholar Award (1 of 700 Students)"
+          - "Relevant Coursework: AP Physics; AP Calculus; AP Chemistry"
 
     Skills:
-      - name: CAD & Engineering
+      - label: CAD & Design
         icon: fa-solid fa-drafting-compass
-        keywords: "Fusion 360, CAD Modeling, 3D Printing (FDM), Klipper Firmware, CAN Bus Systems, Mechanical Assembly, Vibration Analysis"
+        details: "Fusion 360, Solidworks, Onshape, FreeCAD, Technical Drawings, Design for Manufacturing"
 
-      - name: Electronics & Software
+      - label: Manufacturing & Fabrication
+        icon: fa-solid fa-screwdriver-wrench
+        details: "FDM 3D Printing, Rapid Prototyping, Mechanical Assembly, Woodworking, Metalworking, Basic Metrology"
+
+      - label: Electronics & Hardware
         icon: fa-solid fa-microchip
-        keywords: "Soldering, Electronics Troubleshooting, Computer Skills, Google Workspace, Microsoft Office"
+        details: "PCB Design, Soldering, Wiring, Crimping, Multimeter Diagnostics, CAN Bus, Connector Assembly"
 
-      - name: Professional
-        icon: fa-solid fa-briefcase
-        keywords: "Customer Service, Clear Communication, Project Management, Teamwork, Time Management"
+      - label: Machinery & Tools
+        icon: fa-solid fa-gears
+        details: "FDM 3D Printers, Laser Engravers, Manual & CNC Milling, & Wood Saws"
+
+      - label: Software & Systems
+        icon: fa-solid fa-laptop-code
+        details: "Microsoft Office, Google Workspace, Github, Windows, Linux, MacOS, Klipper, Java, Python, & Markdown"
+
+      - label: Communication & Project Work
+        icon: fa-solid fa-people-group
+        details: "Technical & Client Communication, Team Collaboration, Project Management & Documentation, Online Tutoring, Lesson Planning, Time Management"
+
+    Projects:
+      - name: FDM 3D Printer Design, Prototyping, & Revising
+        summary: Created a high-speed CoreXY 3D printer by overhauling an older machine.
+        highlights:
+          - "Designed a frame and motion system in CAD to meet mechanical and thermal specifications."
+          - "Verified component tolerances and clearances before fabrication."
+          - "Fabricated a prototype using metalworking machines and additive manufacturing."
+          - "Configured Kalico Klipper firmware for high-speed, quality 3D prints."
+          - "Installed CAN-bus toolhead electronics to compartmentalize for easier maintenance."
+          - "Used vibration analysis and input shaping to improve rigidity, reliability, and print speed."
+        start_date: "2024-06"
+        end_date: "2026-07"
+
+      - name: Air Purifier
+        summary: Smart DIY air purifier that reuses a 120 mm computer case fan and responds to room particulate-matter levels.
+        highlights:
+          - "Designed a control concept for automatic fan-speed adjustment and filter replacement detection."
+          - "Completed electrical schematics in KiCad; PCB placement and testing are coming soon."
+        start_date: "2026-07"
+        end_date: present
+
+      - name: Laser-Engraved Chess Board
+        summary: In-progress Invention Studio project combining CAD, laser engraving, and planned CNC-machined metal pieces.
+        highlights:
+          - "Developed a quickly manufacturable board design and planned low-center-of-mass pieces for stability."
+          - "Completed approximately half of the board fabrication; CNC-machined metal pieces are coming soon."
+        start_date: "2026-08"
+        end_date: present
+
+    Experience:
+      - company: Fiverr
+        position: Freelance CAD Designer & Manufacturing Consultant
+        location: Remote
+        start_date: "2024-02"
+        end_date: "2025-10"
+        summary: Completed 20+ custom engineering contracts involving CAD design, reverse engineering, and small-scale manufacturing.
+        highlights:
+          - "Maintained a 4.6-star client rating across completed engagements."
+          - "Designed and iterated an accessibility device, including a tie-tying assistance tool."
+          - "Reverse-engineered a broken replacement component from reference materials and technical drawings."
+          - "Manufactured a low-volume production run of 30 tailored tablet holders."
+
+      - company: Shape Machine
+        position: Social Media & Web Design Contributor
+        location: Atlanta, GA
+        start_date: "2026-09"
+        end_date: present
+        summary: Work with an early-stage startup developing shape-computation tools and supporting public-facing digital communication.
+        highlights:
+          - "Launched Shape Machine's digital presence through social-media outreach."
+          - "Collaborated with an interdisciplinary team to publish the Shape Computation Lab website."
+
+      - company: Wyzant
+        position: Freelance Private Tutor
+        location: Remote
+        start_date: "2026-05"
+        end_date: "2026-08"
+        summary: Work directly with students of different ages to schedule lessons, prepare instructional materials, and tailor tutoring to each student's needs.
+        highlights:
+          - "Tutored approximately 100 hours while maintaining a 5-star rating across approximately 70 reviews."
+          - "Schedule lessons directly with students and prepare materials that clarify each lesson's subject matter."
+          - "Developed online tutoring, time-management, lesson-planning, and student-communication skills."
+
+      - company: Mathnasium of Dacula
+        position: Mathematics Instructor
+        location: Dacula, GA
+        start_date: "2024-08"
+        end_date: "2025-08"
+        summary: Instructed students from foundational arithmetic through AP Calculus while adapting explanations to individual learning speeds.
+        highlights:
+          - "Instructed up to five students simultaneously in a fast-paced learning environment."
+          - "Translated complex mathematical concepts into clear, step-by-step explanations."
+          - "Supported student confidence and academic progress across diverse grade levels."
+
+      - company: Mercor & Handshake AI
+        position: AI Data Trainer & Labeler
+        location: Remote
+        start_date: "2026-05"
+        end_date: present
+        summary: Analyze AI-generated artifacts and author prompts to provide structured feedback on model quality.
+
+    Involvement:
+      - company: Technology Student Association
+        position: Treasurer (TSA)
+        location: Hoschton, GA
+        start_date: "2024-08"
+        end_date: "2026-05"
+        summary: Managed club finances, supported engineering competition activities, and helped coordinate member communication.
+        highlights:
+          - "Managed club finances and structural budgeting alongside faculty advisors."
+          - "Organized community fundraising initiatives, including a local movie-night event."
+          - "Organized and delivered presentations about upcoming events and member opportunities."
+          - "Competed at the state level as part of a biotechnology team."
+
+      - company: Osborne Middle School
+        position: Volunteer Tutor
+        start_date: "2025-08"
+        end_date: "2026-05"
+        summary: Provided volunteer tutoring support to middle-school students.
 
     Languages:
       - name: English
-        summary: "Native speaker"
+        summary: "Native"
+
+      - name: German
+        summary: "Conversational"
 
     Interests:
-      - name: Mechanical Engineering
-        icon: fa-solid fa-gear
-        keywords: "3D Printing, CAD Design, Robotics, Prototyping, Manufacturing"
+      - label: Advanced Manufacturing & Research
+        icon: fa-solid fa-gears
+        details: "Additive Manufacturing, Rapid Prototyping, Robotics & Electromechanical Systems, Hardware & Electronics, Experimental Design, Applied Engineering Research"
 
-    Certificates:
-      - name: Math Instructor Training
-        date: 2024
-        issuer: Mathnasium of Dacula
-        icon: fa-solid fa-chalkboard-teacher
+      - label: Systems, Software & AI
+        icon: fa-solid fa-laptop-code
+        details: "Programming, Operating Systems (Windows, macOS, Linux), Engineering Software, Local & Agentic AI Experimentation"
 
-    Projects:
-      - name: CoreXY 3D Printer Build
-        summary: Designed and assembled a high-speed CoreXY 3D printer from individual mechanical and electronic components. Integrated Klipper firmware with a CAN bus toolhead system, performed vibration analysis and mechanical tuning, and independently diagnosed hardware, wiring, and software issues.
-        highlights:
-          - Integrated Klipper firmware with CAN bus toolhead system.
-          - Performed mechanical tuning and vibration analysis to improve print quality.
-          - Diagnosed and resolved hardware, wiring, and software issues independently.
-        start_date: 2023
-        end_date: ""
+      - label: Design, Craft & Personalization
+        icon: fa-solid fa-wrench
+        details: "Personalized Product Design, Everyday Problem Solving, Woodworking, Culinary Experimentation"
 
-    References: []
+      - label: Outdoors, Strategy & Learning
+        icon: fa-solid fa-compass
+        details: "Hiking & Outdoor Exploration, Chess, Continuous Technical Learning"

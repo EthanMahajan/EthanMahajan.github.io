@@ -1,0 +1,101 @@
+.printer-animation {
+  margin: 1.5rem 0 2.25rem;
+}
+
+.printer-animation__stage {
+  position: relative;
+  width: 100%;
+  height: clamp(320px, 54vw, 540px);
+  overflow: hidden;
+  border: 1px solid rgba(80, 95, 110, 0.28);
+  border-radius: 1rem;
+  background: radial-gradient(circle at 50% 20%, #f7fafc 0%, #dce5ec 58%, #c5d0d9 100%);
+  box-shadow: 0 1rem 2.5rem rgba(31, 47, 61, 0.16);
+}
+
+.printer-animation__canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.printer-animation__status {
+  position: absolute;
+  top: 1rem;
+  left: 1.1rem;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid rgba(80, 95, 110, 0.25);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  color: #263746;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.printer-animation__skip {
+  position: absolute;
+  right: 1.1rem;
+  bottom: 1rem;
+  border: 1px solid rgba(80, 95, 110, 0.35);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  background: rgba(255, 255, 255, 0.86);
+  color: #263746;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.printer-animation__skip:hover,
+.printer-animation__skip:focus-visible {
+  background: #fff;
+  box-shadow: 0 0.25rem 0.75rem rgba(31, 47, 61, 0.16);
+}
+
+.printer-animation[data-state='complete'] .printer-animation__status {
+  opacity: 0;
+}
+
+#about-copy.is-printing {
+  visibility: hidden;
+}
+
+html[data-theme='dark'] .printer-animation__stage {
+  border-color: rgba(190, 210, 225, 0.2);
+  background: radial-gradient(circle at 50% 20%, #394957 0%, #202b35 60%, #151d24 100%);
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.32);
+}
+
+html[data-theme='dark'] .printer-animation__status,
+html[data-theme='dark'] .printer-animation__skip {
+  border-color: rgba(190, 210, 225, 0.25);
+  background: rgba(20, 29, 37, 0.82);
+  color: #e9f2f7;
+}
+
+html[data-theme='dark'] .printer-animation__skip:hover,
+html[data-theme='dark'] .printer-animation__skip:focus-visible {
+  background: #253541;
+}
+
+@media (max-width: 576px) {
+  .printer-animation {
+    margin-top: 1rem;
+  }
+
+  .printer-animation__stage {
+    height: 330px;
+    border-radius: 0.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .printer-animation {
+    display: none;
+  }
+
+  #about-copy.is-printing {
+    visibility: visible;
+  }
+}

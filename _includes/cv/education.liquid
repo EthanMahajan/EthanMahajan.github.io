@@ -18,9 +18,58 @@
           {% endcapture %}
 
           {% if start_date != '' %}
-            {% comment %} Extract year only from dates like "1933-01-01" or just use "1933" as is {% endcomment %}
-            {% assign startDate = start_date | split: '-' | first %}
-            {% assign endDate = end_date | split: '-' | first | default: 'Present' %}
+            {% comment %} Format YYYY-MM as "Mon YYYY" so month-level dates are visible {% endcomment %}
+            {% assign startParts = start_date | strip | split: '-' %}
+            {% assign startYear = startParts[0] | strip %}
+            {% assign startMonth = startParts[1] | strip | default: '' %}
+            {% case startMonth %}
+              {% when '01' %}{% assign startMonthName = 'Jan' %}
+              {% when '02' %}{% assign startMonthName = 'Feb' %}
+              {% when '03' %}{% assign startMonthName = 'Mar' %}
+              {% when '04' %}{% assign startMonthName = 'Apr' %}
+              {% when '05' %}{% assign startMonthName = 'May' %}
+              {% when '06' %}{% assign startMonthName = 'Jun' %}
+              {% when '07' %}{% assign startMonthName = 'Jul' %}
+              {% when '08' %}{% assign startMonthName = 'Aug' %}
+              {% when '09' %}{% assign startMonthName = 'Sep' %}
+              {% when '10' %}{% assign startMonthName = 'Oct' %}
+              {% when '11' %}{% assign startMonthName = 'Nov' %}
+              {% when '12' %}{% assign startMonthName = 'Dec' %}
+              {% else %}{% assign startMonthName = '' %}
+            {% endcase %}
+            {% if startMonthName != '' %}
+              {% assign startDate = startMonthName | append: ' ' | append: startYear %}
+            {% else %}
+              {% assign startDate = startYear %}
+            {% endif %}
+            {% assign endStripped = end_date | strip | downcase %}
+            {% if endStripped == 'present' or endStripped == '' %}
+              {% assign endDate = 'Present' %}
+            {% else %}
+              {% assign endParts = end_date | strip | split: '-' %}
+              {% assign endYear = endParts[0] | strip %}
+              {% assign endMonth = endParts[1] | strip | default: '' %}
+              {% case endMonth %}
+                {% when '01' %}{% assign endMonthName = 'Jan' %}
+                {% when '02' %}{% assign endMonthName = 'Feb' %}
+                {% when '03' %}{% assign endMonthName = 'Mar' %}
+                {% when '04' %}{% assign endMonthName = 'Apr' %}
+                {% when '05' %}{% assign endMonthName = 'May' %}
+                {% when '06' %}{% assign endMonthName = 'Jun' %}
+                {% when '07' %}{% assign endMonthName = 'Jul' %}
+                {% when '08' %}{% assign endMonthName = 'Aug' %}
+                {% when '09' %}{% assign endMonthName = 'Sep' %}
+                {% when '10' %}{% assign endMonthName = 'Oct' %}
+                {% when '11' %}{% assign endMonthName = 'Nov' %}
+                {% when '12' %}{% assign endMonthName = 'Dec' %}
+                {% else %}{% assign endMonthName = '' %}
+              {% endcase %}
+              {% if endMonthName != '' %}
+                {% assign endDate = endMonthName | append: ' ' | append: endYear %}
+              {% else %}
+                {% assign endDate = endYear %}
+              {% endif %}
+            {% endif %}
             {% assign date = startDate | append: ' - ' | append: endDate %}
           {% else %}
             {% assign date = null %}
