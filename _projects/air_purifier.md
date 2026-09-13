@@ -5,6 +5,7 @@ description: Engineering project in development
 importance: 1
 category: Engineering
 github: https://github.com/EthanMahajan/Air-Purifier
+img: assets/img/PurifierPCB
 ---
 
 I am developing a smart DIY air purifier that reuses a 120 mm computer case fan inside a custom 3D-printed housing. The design is intended to improve room air quality while also serving as a white-noise generator for a dorm room. The project repository contains the current design files and documentation.
