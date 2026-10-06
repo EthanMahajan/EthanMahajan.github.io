@@ -3,6 +3,8 @@ layout: page
 title: Air Purifier
 description: Engineering project in development
 importance: 3
+project_started: July 2026
+documentation_updated: 2026-10-06
 category: Engineering
 github: https://github.com/EthanMahajan/Air-Purifier
 img: assets/img/PurifierPCB

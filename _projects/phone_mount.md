@@ -4,6 +4,7 @@ title: Phone Mount
 description: Adjustable, low-cost iPhone filming mount built from aluminum extrusion and 3D-printed fixtures
 img: assets/img/phone-mount/thumbnail.jpg
 importance: 2
+documentation_updated: 2026-10-06
 category: Engineering
 ---
 

@@ -3,6 +3,7 @@ layout: page
 title: Shape Machine
 description: Startup web design, social media, and digital communication work
 importance: 2
+documentation_updated: 2026-10-06
 category: Design
 img: assets/img/SCLLogo_110.png
 ---
