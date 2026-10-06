@@ -1,33 +1,47 @@
 ---
 layout: page
 title: Shape Machine
-description: Startup web design, social media, and digital communication work
+description: Content improvements, error correction, and template fixes for an existing team website
 importance: 2
 documentation_updated: 2026-10-06
 category: Design
 img: assets/img/SCLLogo_110.png
 project_summary:
-  role: "Website design and social-media contribution"
-  tools: "Content structure, digital communication, interdisciplinary collaboration"
+  role: "Website content and template improvements"
+  tools: "Content editing, website review, template maintenance, team collaboration"
   status: "Contribution ongoing"
-  result: "Public-facing communication and website work"
+  result: "Clearer content and corrections to existing website materials"
 ---
 
 {% include project_summary.liquid %}
 
-I contribute to Shape Machine's public-facing digital presence through website design and social-media work. Shape Machine is a team-developed shape-computation technology; my role focuses on how its work is presented and communicated, rather than developing the underlying computation system.
+I contribute to the Shape Computation Lab website by improving existing content, catching mistakes, and fixing templates. My work supports the presentation of Shape Machine, a team-developed shape-computation technology, through targeted improvements to the team's existing website.
 
-## Ideation
+## Project Context
 
-The communication challenge is making a specialized design technology understandable to people encountering it for the first time. I work with an interdisciplinary team on presenting the project's purpose, demonstrations, and research context through the Shape Computation Lab website and social-media outreach.
+The website introduces a specialized design technology to visitors with different levels of technical background. My role is to make its explanations and supporting materials clearer and more consistent while working within an established site and an interdisciplinary team.
 
-The goal is to connect an accessible introduction with technical material that interested visitors can explore further. This requires thinking about audience, page organization, and how visual examples support the explanation.
+## My Contributions
 
-## Design
+### Content improvements
 
-My contribution includes the structure, content, and presentation of the revised website, alongside outreach planning. I collaborate with the team to connect explanations and demonstrations so visitors can move from an overview of the technology to more detailed examples.
+I review and revise website content to help visitors understand the project's purpose and follow its explanations. The focus is on clearer wording, better organization, and making existing material easier to navigate and interpret.
 
-Shape Machine identifies matching geometric elements in drawings and can apply transformations across those matches, conceptually similar to find-and-replace operations. The demonstration below illustrates the team's technology; it is context for my communication work, not a claim that I developed the system.
+### Catching and correcting mistakes
+
+Reviewing the existing website is an important part of my contribution. I look for mistakes and inconsistencies in the content and presentation, then correct them so they do not distract from the team's work or confuse visitors.
+
+### Template fixes
+
+I also work on the templates used to present the website's content. Fixing these helps address presentation issues at their source and supports consistency across pages that share the same structure.
+
+## Ongoing Work
+
+My contribution is ongoing and centers on incremental improvements to the existing site. It combines careful content review with practical template maintenance and collaboration with the team. Specific before-and-after examples can be added as the work is documented.
+
+## Shape Machine in Context
+
+Shape Machine identifies matching geometric elements in drawings and can apply transformations across those matches, conceptually similar to find-and-replace operations. The demonstration below shows the team's technology and provides context for the website content I help improve.
 
 <div class="project-gallery">
     <figure>
@@ -35,14 +49,6 @@ Shape Machine identifies matching geometric elements in drawings and can apply t
         <figcaption class="caption">Team-developed Shape Machine applications.</figcaption>
     </figure>
 </div>
-
-## Prototype
-
-The website and outreach work are ongoing. My current contribution involves collaborating on website organization and presentation as the revised site is prepared for publication. This page does not yet document a specific launch result or measured outreach impact.
-
-## Final Product
-
-The contribution is still in progress. Visitors can explore the team's existing website and demonstrations below; a completed account of my revised-site work will be added when the deliverable is published.
 
 - [Shape Computation Lab website](https://shape.gatech.edu)
 - [What Is Shape Machine?](https://youtu.be/wlHdKuWjhsE)
