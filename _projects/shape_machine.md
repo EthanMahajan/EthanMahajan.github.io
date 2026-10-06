@@ -7,33 +7,39 @@ category: Design
 img: assets/img/SCLLogo_110.png
 ---
 
-I work with Shape Machine, an early-stage startup developing tools for shape computation and design. My contribution focuses on building the startup's public-facing digital presence through social media and website design.
+| Role                                         | Tools / methods                                                           | Status               | Main result                                  |
+| -------------------------------------------- | ------------------------------------------------------------------------- | -------------------- | -------------------------------------------- |
+| Website design and social-media contribution | Content structure, digital communication, interdisciplinary collaboration | Contribution ongoing | Public-facing communication and website work |
 
-I will be launching Shape Machine into the digital forefront through social media outreach and collaborating with an interdisciplinary team to publish a new, revised [Shape Computation Lab website](https://shape.gatech.edu){:target="_blank"}. The work connects design, computation, engineering communication, and public-facing digital work.
+I contribute to Shape Machine's public-facing digital presence through website design and social-media work. Shape Machine is a team-developed shape-computation technology; my role focuses on how its work is presented and communicated, rather than developing the underlying computation system.
 
-## About The Technology
+## Ideation
 
-Shape Machine is a shape-computation system that helps designers work with repeated geometric elements in drawings. It can identify/ matching instances and apply a change across those instances similar to the find and replace commands on many other software.
+The communication challenge is making a specialized design technology understandable to people encountering it for the first time. I work with an interdisciplinary team on presenting the project's purpose, demonstrations, and research context through the Shape Computation Lab website and social-media outreach.
 
+The goal is to connect an accessible introduction with technical material that interested visitors can explore further. This requires thinking about audience, page organization, and how visual examples support the explanation.
 
-<div class="text-center">
-    <img
-        src="{{ '/assets/gif/ShapeMachineApps_Figure.gif' | relative_url }}"
-        alt="Shape Machine Applications"
-        title="Shape Machine Applications"
-        class="img-fluid rounded z-depth-0 d-inline-block"
-        style="width: auto; max-width: 80%;"
-        loading="eager"
-    >
+## Design
+
+My contribution includes the structure, content, and presentation of the revised website, alongside outreach planning. I collaborate with the team to connect explanations and demonstrations so visitors can move from an overview of the technology to more detailed examples.
+
+Shape Machine identifies matching geometric elements in drawings and can apply transformations across those matches, conceptually similar to find-and-replace operations. The demonstration below illustrates the team's technology; it is context for my communication work, not a claim that I developed the system.
+
+<div class="project-gallery">
+    <figure>
+        <img src="{{ '/assets/gif/ShapeMachineApps_Figure.gif' | relative_url }}" alt="Demonstration of team-developed Shape Machine applications" class="img-fluid rounded" loading="lazy">
+        <figcaption class="caption">Team-developed Shape Machine applications.</figcaption>
+    </figure>
 </div>
 
-## Public-Facing Work
+## Prototype
 
-My work supports how Shape Machine communicates its technology to a wider audience. This includes social-media outreach and collaborating on the structure, content, and presentation of the Shape Computation Lab website.
+The website and outreach work are ongoing. My current contribution involves collaborating on website organization and presentation as the revised site is prepared for publication. This page does not yet document a specific launch result or measured outreach impact.
 
-## Technology Demonstrations
+## Final Product
 
-- [What Is Shape Machine?](https://youtu.be/wlHdKuWjhsE){:target="_blank"}
-- [Shape Machine CAD Demo](https://shape.gatech.edu/Machine/demo.html){:target="_blank"}
+The contribution is still in progress. Visitors can explore the team's existing website and demonstrations below; a completed account of my revised-site work will be added when the deliverable is published.
 
-[Visit Shape Machine and the Shape Computation Lab](https://shape.gatech.edu){:target="_blank"}
+- [Shape Computation Lab website](https://shape.gatech.edu)
+- [What Is Shape Machine?](https://youtu.be/wlHdKuWjhsE)
+- [Shape Machine CAD demonstration](https://shape.gatech.edu/Machine/demo.html)
