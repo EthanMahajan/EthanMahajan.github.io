@@ -373,3 +373,7 @@
 {% if site.newsletter.enabled %}
   <script defer src="{{ '/assets/js/newsletter.js' | relative_url | bust_file_cache }}"></script>
 {% endif %}
+
+{% if page.cad_model %}
+  <script type="module" src="{{ '/assets/js/cad-viewer.js' | relative_url }}"></script>
+{% endif %}
