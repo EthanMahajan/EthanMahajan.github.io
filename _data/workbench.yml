@@ -6,9 +6,9 @@ items:
     milestone: Completed the electrical schematic in KiCad.
     next: Place components, route the board, then fabricate and test a prototype.
     url: /projects/air_purifier.html
-  - title: Artorius
-    status: Operational; refinement ongoing
-    summary: Improving a custom CoreXY printer after the first working build.
-    milestone: Built a working printer with a revised frame and serviceable electronics.
-    next: Address frame squareness, vibration, and consistent print quality.
-    url: /projects/artorius.html
+  - title: Laser-engraved chess board
+    status: Board fabrication in progress; metal pieces planned
+    summary: Combining a laser-engraved playing surface with planned CNC-machined metal pieces.
+    milestone: Designed the board in CAD and began fabricating the playing surface.
+    next: Complete the board, then develop and manufacture the metal pieces.
+    url: /projects/laser_engraved_chess_board.html

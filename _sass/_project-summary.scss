@@ -1,15 +1,36 @@
+.project-summary-panel {
+  margin: 0 0 2rem;
+  padding: 1rem;
+  border: 1px solid var(--global-divider-color);
+  border-left: 4px solid var(--global-theme-color);
+  border-radius: 0.5rem;
+  background: var(--global-code-bg-color);
+
+  &__title {
+    margin: 0 0 0.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+
 .project-summary {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.8rem 1.2rem;
-  margin: 0 0 1.5rem;
-  padding: 1rem;
-  border: 1px solid var(--global-divider-color);
-  border-radius: 0.5rem;
+  gap: 0.75rem;
+  margin: 0;
+
+  > div {
+    min-width: 0;
+    padding: 0.8rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 0.25rem;
+    background: var(--global-bg-color);
+  }
   dt {
-    margin-bottom: 0.25rem;
-    font-size: 0.8rem;
-    color: var(--global-text-color-light);
+    margin-bottom: 0.35rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--global-text-color);
   }
   dd {
     margin: 0;

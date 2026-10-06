@@ -1,18 +1,21 @@
-<dl class="project-summary" aria-label="Project at a glance">
-  <div>
-    <dt>Role</dt>
-    <dd>{{ page.project_summary.role | escape }}</dd>
-  </div>
-  <div>
-    <dt>Tools &amp; methods</dt>
-    <dd>{{ page.project_summary.tools | escape }}</dd>
-  </div>
-  <div>
-    <dt>Status</dt>
-    <dd>{{ page.project_summary.status | escape }}</dd>
-  </div>
-  <div>
-    <dt>Outcome</dt>
-    <dd>{{ page.project_summary.result | escape }}</dd>
-  </div>
-</dl>
+<section class="project-summary-panel" aria-labelledby="project-summary-title">
+  <h2 id="project-summary-title" class="project-summary-panel__title">Project at a glance</h2>
+  <dl class="project-summary">
+    <div>
+      <dt>Role</dt>
+      <dd>{{ page.project_summary.role | escape }}</dd>
+    </div>
+    <div>
+      <dt>Tools &amp; methods</dt>
+      <dd>{{ page.project_summary.tools | escape }}</dd>
+    </div>
+    <div>
+      <dt>Status</dt>
+      <dd>{{ page.project_summary.status | escape }}</dd>
+    </div>
+    <div>
+      <dt>Outcome</dt>
+      <dd>{{ page.project_summary.result | escape }}</dd>
+    </div>
+  </dl>
+</section>
