@@ -27,6 +27,7 @@ layout: default
           target="_blank"
           rel="noopener noreferrer"
           class="float-right"
+          aria-label="Download Ethan Mahajan’s resume PDF"
         >
           <i class="fa-solid fa-file-pdf"></i>
         </a>
@@ -127,7 +128,9 @@ layout: default
         {% assign exp = cv.sections.Experience | default: empty_array %}
         {% assign vol = cv.sections.Volunteer | default: empty_array %}
         {% assign combined_experience = exp | concat: vol %}
-        {% assign section_order = 'Professional Summary|Education|Skills|Projects|Experience|Volunteer|Involvement|Certificates|Languages|Interests' | split: '|' %}
+        {% assign section_order = 'Professional Summary|Education|Skills|Projects|Experience|Volunteer|Involvement|Certificates|Languages|Interests'
+          | split: '|'
+        %}
         {% for section_title in section_order %}
           {% assign section_entries = cv.sections[section_title] %}
           {% if section_title == 'Experience' %}

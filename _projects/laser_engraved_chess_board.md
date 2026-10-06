@@ -3,6 +3,8 @@ layout: page
 title: Laser-Engraved Chess Board
 description: In-progress digital fabrication and materials processing project
 importance: 3
+project_started: August 2026
+documentation_updated: 2026-10-06
 category: Design
 img: assets/img/ChessBoard.png
 ---

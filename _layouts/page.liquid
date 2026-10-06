@@ -15,6 +15,14 @@ layout: default
   </header>
 
   <article>
+    {% if page.collection == 'projects' and page.documentation_updated %}
+      <p class="text-muted">
+        <small>
+          {%- if page.project_started %}Started {{ page.project_started }} · {% endif %}Documentation updated
+          {{ page.documentation_updated | date: '%B %-d, %Y' -}}
+        </small>
+      </p>
+    {% endif %}
     {{ content }}
   </article>
 
@@ -24,5 +32,4 @@ layout: default
       {% bibliography --cited_in_order %}
     </div>
   {% endif %}
-
 </div>

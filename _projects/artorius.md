@@ -4,6 +4,8 @@ title: "Artorius: FDM 3D Printer"
 description: High-speed CoreXY printer designed, fabricated, tested, and revised from an older machine
 img: assets/img/artoriusRevised.png
 importance: 1
+project_started: June 2024
+documentation_updated: 2026-10-06
 category: Engineering
 github: https://github.com/EthanMahajan/Artorius
 ---

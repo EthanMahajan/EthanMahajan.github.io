@@ -4,7 +4,7 @@ title: Projects
 permalink: /projects/
 description: Selected engineering, design, and fabrication projects.
 nav: true
-nav_order: 3
+nav_order: 2
 display_categories: [Engineering, Design]
 horizontal: false
 ---
