@@ -2,44 +2,40 @@
 layout: page
 title: Air Purifier
 description: Engineering project in development
-importance: 1
+importance: 3
 category: Engineering
 github: https://github.com/EthanMahajan/Air-Purifier
 img: assets/img/PurifierPCB
 ---
 
-I am developing a smart DIY air purifier that reuses a 120 mm computer case fan inside a custom 3D-printed housing. The design is intended to improve room air quality while also serving as a white-noise generator for a dorm room. The project repository contains the current design files and documentation.
+| Role                                          | Tools / methods                     | Status             | Main result                                                  |
+| --------------------------------------------- | ----------------------------------- | ------------------ | ------------------------------------------------------------ |
+| Independent mechanical and electronics design | KiCad, CAD, planned FDM fabrication | Design in progress | Electrical schematics complete; physical integration pending |
+
+I am developing a smart air purifier that reuses a 120 mm computer case fan in a custom printed housing. The intended functions are room-air filtration and consistent background noise, with sensing and control added through a custom electronics design.
 
 ## Ideation
 
-The project began as a way to build a practical purifier from readily available computer hardware while adding useful automation. In addition to filtering room air, the purifier is intended to provide consistent background noise in a dorm-room environment.
+The project began with a practical dorm-room need: filtration and background noise in a compact device. Reusing readily available fan hardware offered a starting point for the airflow system while leaving room to learn electronics design through a useful application.
+
+I wanted the project to go beyond a fan in a box. Automatic response to particulate-matter levels and an indication of filter replacement needs became design goals, although neither has been implemented or tested yet.
 
 ## Design
 
-The purifier is designed around a 120 mm computer case fan and a particulate-matter sensor. The control system will adjust fan speed based on measured room PM levels and detect when the filter needs to be replaced. The electrical schematics are complete in KiCad; PCB component placement has not started yet.
+The concept combines a 120 mm fan, filter, custom housing, and particulate-matter sensor. The planned controller will adjust fan speed from sensor readings. Filter-replacement detection remains a feature to develop and validate.
+
+I completed the electrical schematics in KiCad. PCB component placement has not started, so the current work establishes the electrical design rather than a tested controller. The next design stage will address the board layout and integration with the housing, sensor, and fan.
+
+<div class="project-gallery">
+    {% include figure.liquid path="assets/img/PurifierPCB" alt="Current electronics-design documentation for the purifier." title="Current electronics-design documentation for the purifier." class="img-fluid rounded" zoomable=true caption="Current electronics-design documentation for the purifier." %}
+</div>
 
 ## Prototype
 
-The project is still in development. The next prototype work will include placing the PCB, fabricating the housing, assembling the electronics, and integrating the fan, filter, and sensor system.
+A complete physical prototype has not yet been assembled. The next steps are PCB placement, fabrication of the housing and board, and integration of the fan, filter, and sensor. This stage will test whether the electrical and mechanical designs work together as intended.
 
-## Project Media
+## Final Product
 
-Prototype photographs, CAD views, and KiCad screenshots will be added as fabrication progresses.
+The final purifier is pending. The current deliverable is the completed schematic work and developing system design. A finished build will need evaluation of airflow, particulate response, fan control, noise, and filter-replacement behavior before those features can be presented as demonstrated results.
 
-{% comment %}Add project images here when available, following the Artorius gallery pattern.{% endcomment %}
-{% comment %}
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/airPurifierCad.png" title="Air Purifier CAD" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/airPurifierPcb.png" title="KiCad PCB Layout" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-{% endcomment %}
-
-## Testing & Revision
-
-Testing and revisions are coming soon. Once the first assembled prototype is available, I will evaluate particulate-matter response, fan-speed control, filter replacement detection, noise output, and overall usability.
-
-[View the Air Purifier repository on GitHub](https://github.com/EthanMahajan/Air-Purifier){:target="_blank"}
+[View the Air Purifier repository](https://github.com/EthanMahajan/Air-Purifier)

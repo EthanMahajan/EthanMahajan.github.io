@@ -7,38 +7,32 @@ category: Design
 img: assets/img/ChessBoard.png
 ---
 
-I wanted to make a high-quality chess set while exploring what I could build in the Georgia Tech Invention Studio. The project includes a laser-engraved board and planned CNC-machined metal pieces.
+| Role                               | Tools / methods                             | Status                        | Main result                               |
+| ---------------------------------- | ------------------------------------------- | ----------------------------- | ----------------------------------------- |
+| Independent design and fabrication | CAD, laser engraving; planned CNC machining | Board fabrication in progress | Board work underway; metal pieces pending |
 
-The project combines digital design, laser engraving, CNC machining, and materials processing. The board is the current focus; the metal pieces are planned for a later fabrication stage.
+I am making a chess set through the Georgia Tech Invention Studio, combining a laser-engraved board with planned CNC-machined metal pieces. The project connects digital design with practical fabrication and material choices.
 
 ## Ideation
 
-My interest in chess led me to design a set that would be both visually distinctive and useful as an Invention Studio fabrication project. I planned the board and pieces together so the finished set could combine a clean appearance with stable, practical game pieces.
+My interest in chess gave me a useful object to design while exploring the Invention Studio's fabrication tools. I wanted the board and pieces to work as a coordinated set, with a clean appearance and stable pieces that remain practical to manufacture.
+
+The project also provides a way to learn different processes within one assembly: engraving for the playing surface and machining for the planned metal pieces. I separated these stages so the board could progress before committing to the more involved piece fabrication.
 
 ## Design
 
-I developed the CAD design quickly around a board that would be straightforward to manufacture. The planned pieces use a low center of mass to improve stability during play, while the board design accommodates the laser-engraved playing surface and the future CNC-machined pieces.
+I developed the board in CAD around a surface that could be manufactured with laser engraving. The piece concept uses a low center of mass to improve stability during play. Their CNC manufacturing is planned, so the finished machining approach and results are still pending.
+
+The important design questions are how the engraving defines the playing surface, how the board is finished, and how the eventual pieces feel and stand during use. These will guide the fabrication and evaluation as the set develops.
+
+<div class="project-gallery">
+    {% include figure.liquid path="assets/img/ChessBoard.png" alt="Current chess-board project image." title="Current chess-board project image." class="img-fluid rounded" zoomable=true caption="Current chess-board project image." %}
+</div>
 
 ## Prototype
 
-The board is currently about halfway through fabrication. The laser-engraved board is the only completed physical part so far; the CNC-machined metal pieces have not yet been produced.
+Board fabrication is approximately halfway complete. Work on the laser-engraved board is the physical progress to date; the CNC-machined metal pieces have not been made. This stage is being used to develop the playing surface before completing the full set.
 
-## Project Media
+## Final Product
 
-Fabrication photographs, CAD views, and engraving tests will be added as the board and pieces progress.
-
-{% comment %}Add project images here when available, following the Artorius gallery pattern.{% endcomment %}
-{% comment %}
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/chessBoardCad.png" title="Chess Board CAD" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/chessBoardEngraving.jpg" title="Laser-Engraved Board" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-{% endcomment %}
-
-## Testing & Revision
-
-Testing and revisions are coming soon. Future work will evaluate engraving quality, board fabrication, piece stability, and the fit and finish of the CNC-machined metal pieces.
+The complete chess set is pending. The current outcome is the board design and fabrication work. Completing the board and manufacturing the pieces will allow assessment of engraving quality, finish, and piece stability as a usable set.
