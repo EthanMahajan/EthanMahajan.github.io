@@ -1,0 +1,49 @@
+.cad-viewer {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.5rem;
+  &__canvas {
+    height: 420px;
+    width: 100%;
+    background: #edf1f4;
+  }
+  canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+  }
+  &__toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.75rem 0;
+  }
+  &__parts {
+    max-height: 240px;
+    overflow-y: auto;
+  }
+  &__part {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0;
+  }
+  &__part label {
+    flex: 1;
+    margin: 0;
+    overflow-wrap: anywhere;
+  }
+  button {
+    cursor: pointer;
+  }
+  [hidden] {
+    display: none !important;
+  }
+  @media (max-width: 575px) {
+    &__canvas {
+      height: 300px;
+    }
+  }
+}

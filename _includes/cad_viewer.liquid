@@ -1,0 +1,26 @@
+{% assign model_file = site.static_files | where: 'path', page.cad_model | first %}
+<section class="cad-viewer" data-cad-viewer data-model-url="{{ page.cad_model | relative_url }}" aria-labelledby="cad-viewer-title">
+  <h3 id="cad-viewer-title">Explore the Artorius assembly</h3>
+  {% if model_file %}
+    <p>Drag to orbit, right-drag to pan, and scroll or pinch to zoom. Toggle individual parts or isolate one below.</p>
+    <button type="button" class="btn btn-outline-primary" data-cad-load>Load 3D model</button>
+    <p data-cad-status role="status" aria-live="polite">The model loads on request.</p>
+    <div data-cad-interface hidden>
+      <div class="cad-viewer__canvas" data-cad-canvas></div>
+      <div class="cad-viewer__toolbar">
+        <button type="button" data-cad-reset>Reset view</button>
+        <button type="button" data-cad-all>Show all parts</button>
+        <button type="button" data-cad-zoom-in aria-label="Zoom in">+</button>
+        <button type="button" data-cad-zoom-out aria-label="Zoom out">−</button>
+      </div>
+      <details open>
+        <summary>Parts</summary>
+        <div class="cad-viewer__parts" data-cad-parts></div>
+      </details>
+    </div>
+    <a href="{{ page.cad_model | relative_url }}" download>Download assembly (.3mf)</a>
+    <noscript><p>Enable JavaScript to use the interactive model. You can still download the assembly.</p></noscript>
+  {% else %}
+    <p>The interactive assembly will be available here once the model is uploaded. The CAD images and printing video remain available below.</p>
+  {% endif %}
+</section>

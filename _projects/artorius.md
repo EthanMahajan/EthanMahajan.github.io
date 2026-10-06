@@ -6,6 +6,7 @@ img: assets/img/artoriusRevised.png
 importance: 1
 category: Engineering
 github: https://github.com/EthanMahajan/Artorius
+cad_model: /assets/models/artorius/artorius.3mf
 ---
 
 | Role                         | Tools / methods                              | Status                          | Main result                                        |
@@ -27,6 +28,8 @@ Reusing the BIQU B1's suitable motors and 24 V supply helped define the project 
 ## Design
 
 I developed the frame, motion system, and toolhead together in CAD, checking component placement and fabrication requirements. The key tradeoffs were stiffness versus packaging, toolhead mass distribution, and using printed fixtures where custom metal parts would be harder to manufacture.
+
+{% include cad_viewer.liquid %}
 
 ### Toolhead
 
