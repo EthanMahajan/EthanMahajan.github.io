@@ -7,11 +7,14 @@ project_started: August 2026
 documentation_updated: 2026-10-06
 category: Design
 img: assets/img/ChessBoard.png
+project_summary:
+  role: "Independent design and fabrication"
+  tools: "CAD, laser engraving; planned CNC machining"
+  status: "Board fabrication in progress"
+  result: "Board work underway; metal pieces pending"
 ---
 
-| Role                               | Tools / methods                             | Status                        | Main result                               |
-| ---------------------------------- | ------------------------------------------- | ----------------------------- | ----------------------------------------- |
-| Independent design and fabrication | CAD, laser engraving; planned CNC machining | Board fabrication in progress | Board work underway; metal pieces pending |
+{% include project_summary.liquid %}
 
 I am making a chess set through the Georgia Tech Invention Studio, combining a laser-engraved board with planned CNC-machined metal pieces. The project connects digital design with practical fabrication and material choices.
 

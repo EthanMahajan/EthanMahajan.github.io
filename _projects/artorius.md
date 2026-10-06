@@ -9,11 +9,14 @@ documentation_updated: 2026-10-06
 category: Engineering
 github: https://github.com/EthanMahajan/Artorius
 cad_model: /assets/models/artorius/artorius.3mf
+project_summary:
+  role: "Independent design and build"
+  tools: "CAD, FDM fabrication, CoreXY motion, CAN bus"
+  status: "Operational; refinement ongoing"
+  result: "Working custom printer and high-speed motion tests"
 ---
 
-| Role                         | Tools / methods                              | Status                          | Main result                                        |
-| ---------------------------- | -------------------------------------------- | ------------------------------- | -------------------------------------------------- |
-| Independent design and build | CAD, FDM fabrication, CoreXY motion, CAN bus | Operational; refinement ongoing | Working custom printer and high-speed motion tests |
+{% include project_summary.liquid %}
 
 Artorius is a CoreXY 3D printer I designed and built using suitable components from an older BIQU B1. It combines a custom toolhead, an extrusion frame, and serviceable electronics. The build gave me experience connecting mechanical design decisions to alignment, vibration, and actual printing behavior.
 

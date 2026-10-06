@@ -6,11 +6,14 @@ img: assets/img/phone-mount/thumbnail.jpg
 importance: 2
 documentation_updated: 2026-10-06
 category: Engineering
+project_summary:
+  role: "Independent design and fabrication"
+  tools: "Fusion 360, OrcaSlicer, ABS printing"
+  status: "Completed; usable first prototype"
+  result: "Adjustable iPhone filming mount; approximately $18 including extrusion"
 ---
 
-| Role                               | Tools / methods                      | Status                            | Main result                                                            |
-| ---------------------------------- | ------------------------------------ | --------------------------------- | ---------------------------------------------------------------------- |
-| Independent design and fabrication | Fusion 360, OrcaSlicer, ABS printing | Completed; usable first prototype | Adjustable iPhone filming mount; approximately $18 including extrusion |
+{% include project_summary.liquid %}
 
 I built a low-cost adjustable phone mount to film my engineering projects with an iPhone. Extrusion supplies the structure; printed fixtures provide the connections and camera positioning.
 

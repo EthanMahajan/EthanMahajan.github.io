@@ -6,11 +6,14 @@ importance: 2
 documentation_updated: 2026-10-06
 category: Design
 img: assets/img/SCLLogo_110.png
+project_summary:
+  role: "Website design and social-media contribution"
+  tools: "Content structure, digital communication, interdisciplinary collaboration"
+  status: "Contribution ongoing"
+  result: "Public-facing communication and website work"
 ---
 
-| Role                                         | Tools / methods                                                           | Status               | Main result                                  |
-| -------------------------------------------- | ------------------------------------------------------------------------- | -------------------- | -------------------------------------------- |
-| Website design and social-media contribution | Content structure, digital communication, interdisciplinary collaboration | Contribution ongoing | Public-facing communication and website work |
+{% include project_summary.liquid %}
 
 I contribute to Shape Machine's public-facing digital presence through website design and social-media work. Shape Machine is a team-developed shape-computation technology; my role focuses on how its work is presented and communicated, rather than developing the underlying computation system.
 
