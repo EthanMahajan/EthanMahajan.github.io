@@ -8,11 +8,14 @@ documentation_updated: 2026-10-06
 category: Engineering
 github: https://github.com/EthanMahajan/Air-Purifier
 img: assets/img/PurifierPCB
+project_summary:
+  role: "Independent mechanical and electronics design"
+  tools: "KiCad, CAD, planned FDM fabrication"
+  status: "Design in progress"
+  result: "Electrical schematics complete; physical integration pending"
 ---
 
-| Role                                          | Tools / methods                     | Status             | Main result                                                  |
-| --------------------------------------------- | ----------------------------------- | ------------------ | ------------------------------------------------------------ |
-| Independent mechanical and electronics design | KiCad, CAD, planned FDM fabrication | Design in progress | Electrical schematics complete; physical integration pending |
+{% include project_summary.liquid %}
 
 I am developing a smart air purifier that reuses a 120 mm computer case fan in a custom printed housing. The intended functions are room-air filtration and consistent background noise, with sensing and control added through a custom electronics design.
 
