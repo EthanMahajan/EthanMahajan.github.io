@@ -1,0 +1,14 @@
+updated: 2026-10-06
+items:
+  - title: Air purifier controller
+    status: Schematic complete; PCB layout pending
+    summary: Learning PCB design through a controller for a repurposed 120 mm fan.
+    milestone: Completed the electrical schematic in KiCad.
+    next: Place components, route the board, then fabricate and test a prototype.
+    url: /projects/air_purifier/
+  - title: Artorius
+    status: Operational; refinement ongoing
+    summary: Improving a custom CoreXY printer after the first working build.
+    milestone: Built a working printer with a revised frame and serviceable electronics.
+    next: Address frame squareness, vibration, and consistent print quality.
+    url: /projects/artorius/

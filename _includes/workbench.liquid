@@ -1,0 +1,27 @@
+{% if site.data.workbench.items.size > 0 %}
+  <section aria-labelledby="workbench-heading" class="mt-4 mb-4">
+    <h2 id="workbench-heading">On my workbench</h2>
+    <p class="text-muted">
+      <small>Updated {{ site.data.workbench.updated | date: '%B %-d, %Y' }}</small>
+    </p>
+    <div class="row">
+      {% for item in site.data.workbench.items %}
+        <div class="col-md-6 mb-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="h5">
+                <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+              </h3>
+              <p>
+                <strong>{{ item.status }}</strong>
+              </p>
+              <p>{{ item.summary }}</p>
+              <p><strong>Latest milestone:</strong> {{ item.milestone }}</p>
+              <p class="mb-0"><strong>Next step:</strong> {{ item.next }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+{% endif %}
