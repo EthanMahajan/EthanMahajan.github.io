@@ -2,6 +2,7 @@
 from html import escape
 from pathlib import Path
 import re
+from shutil import copyfile
 import yaml
 from PIL import Image as PILImage, ImageDraw, ImageFont
 from reportlab.lib import colors
@@ -140,6 +141,8 @@ def card(slug, title, subtitle, source):
 
 
 def main():
+    # Keep the original source asset while publishing it with a standard PNG extension.
+    copyfile(ROOT / "assets/img/PurifierPCB", ROOT / "assets/img/PurifierPCB.png")
     config = yaml.safe_load((ROOT / "_config.yml").read_text(encoding="utf-8"))
     socials = yaml.safe_load((ROOT / "_data/socials.yml").read_text(encoding="utf-8"))
     projects = [(path, frontmatter(path)) for path in sorted((ROOT / "_projects").glob("*.md"))]

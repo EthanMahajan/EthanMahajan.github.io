@@ -30,6 +30,8 @@ jobs:
         env:
           JEKYLL_ENV: production
         run: bundle exec jekyll build
+      - name: Check links, metadata, images, and portfolio PDF
+        run: python scripts/check_portfolio.py
       - uses: actions/upload-artifact@v4
         with:
           name: portfolio-preview-site

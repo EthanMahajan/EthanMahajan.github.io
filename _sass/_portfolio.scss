@@ -21,6 +21,28 @@ html[data-theme="dark"] {
 body {
   line-height: 1.65;
 }
+.text-muted {
+  color: var(--global-text-color-light) !important;
+}
+.skip-link {
+  position: fixed;
+  top: 0.5rem;
+  left: 1rem;
+  z-index: 2000;
+  padding: 0.65rem 1rem;
+  background: var(--global-bg-color);
+  transform: translateY(-200%);
+  border: 2px solid var(--global-theme-color);
+  border-radius: 0.25rem;
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+#light-toggle,
+.navbar-toggler {
+  min-width: 44px;
+  min-height: 44px;
+}
 .post-header {
   margin-bottom: 2rem;
 }

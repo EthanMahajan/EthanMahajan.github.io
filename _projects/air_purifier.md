@@ -10,7 +10,7 @@ documentation_updated: 2026-10-06
 category: Engineering
 github: https://github.com/EthanMahajan/Air-Purifier
 og_image: /assets/img/social/air_purifier.png
-img: assets/img/PurifierPCB
+img: assets/img/PurifierPCB.png
 project_summary:
   role: "Independent mechanical and electronics design"
   tools: "KiCad, CAD, planned FDM fabrication"
@@ -35,7 +35,7 @@ The concept combines a 120 mm fan, filter, custom housing, and particulate-matte
 I completed the electrical schematics in KiCad. PCB component placement has not started, so the current work establishes the electrical design rather than a tested controller. The next design stage will address the board layout and integration with the housing, sensor, and fan.
 
 <div class="project-gallery">
-    {% include figure.liquid path="assets/img/PurifierPCB" alt="Current electronics-design documentation for the purifier." title="Current electronics-design documentation for the purifier." class="img-fluid rounded" zoomable=true caption="Current electronics-design documentation for the purifier." %}
+    {% include figure.liquid path="assets/img/PurifierPCB.png" alt="Current electronics-design documentation for the purifier." title="Current electronics-design documentation for the purifier." class="img-fluid rounded" zoomable=true caption="Current electronics-design documentation for the purifier." %}
 </div>
 
 ## Prototype

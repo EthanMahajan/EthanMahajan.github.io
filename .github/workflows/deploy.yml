@@ -82,6 +82,7 @@ jobs:
           python3 scripts/build_portfolio.py
           export JEKYLL_ENV=production
           bundle exec jekyll build
+          python3 scripts/check_portfolio.py
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss

@@ -17,3 +17,5 @@ tmp/
 output/
 assets/pdf/Ethan_Mahajan_Portfolio.pdf
 assets/img/social/
+assets/img/PurifierPCB.png
+__pycache__/
