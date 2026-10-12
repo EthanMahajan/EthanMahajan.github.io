@@ -61,11 +61,14 @@
   {% assign preview_image = page.og_image | default: page.img | default: site.og_image %}
   {% if preview_image %}
     <meta property="og:image" content="{{ preview_image | absolute_url }}">
+    <meta property="og:image:alt" content="{{ page.title | default: author_name | escape }}: engineering portfolio">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
   {% endif %}
   <meta property="og:locale" content="{{ site.lang }}">
 
   <!-- Twitter card -->
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ title }}{% endif %}">
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   {% if preview_image %}

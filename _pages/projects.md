@@ -9,6 +9,11 @@ display_categories: [Engineering, Design]
 horizontal: false
 ---
 
+<div class="portfolio-download">
+  <div><p class="eyebrow">Take the work with you</p><p>A concise selection of builds, design decisions, and results.</p></div>
+  <a class="btn btn-outline-primary" href="{{ site.portfolio_pdf | relative_url }}" download>Download Portfolio (PDF)</a>
+</div>
+
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized projects -->

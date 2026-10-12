@@ -24,6 +24,16 @@
       {% elsif entry.details %}
         {{ entry.details }}
       {% endif %}
+      {% assign evidence_group = site.data.skill_evidence | where: 'skill', skill_name | first %}
+      {% if evidence_group %}
+        <ul class="skill-evidence" aria-label="Projects demonstrating {{ skill_name | escape }}">
+          {% for evidence in evidence_group.examples %}
+            <li>
+              <a href="{{ evidence.url | relative_url }}">{{ evidence.label }}</a><span>{{ evidence.context }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
     </div>
   {% endfor %}
 </div>

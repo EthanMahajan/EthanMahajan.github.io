@@ -2,10 +2,24 @@
 layout: page
 title: Phone Mount
 description: Adjustable, low-cost iPhone filming mount built from aluminum extrusion and 3D-printed fixtures
+og_image: /assets/img/social/phone_mount.png
 img: assets/img/phone-mount/thumbnail.jpg
 importance: 2
 documentation_updated: 2026-10-06
 category: Engineering
+card_label: Completed prototype
+card_description: "Adjustable filming mount: approximately $18, with custom ABS fixtures and reusable aluminum extrusion."
+hero:
+  image: assets/img/phone-mount/assembled-prototype.jpg
+  alt: Assembled phone filming mount with extrusion upright and adjustable arm
+  caption: "The usable first prototype: adjustable height, arm rotation, and phone orientation."
+  video: NBOV5k6CR7c
+  video_caption: "Design at 0:36, CAD at 1:31, slicing at 4:25, and the assembled prototype at 5:43."
+portfolio: true
+portfolio_highlights:
+  - Modeled fixtures in Fusion 360 for vertical positioning, arm rotation, and phone orientation.
+  - Printed the fixtures in ABS and assembled them using heat-set inserts, fasteners, and aluminum extrusion.
+  - Produced a usable filming mount for approximately $18; holder play and base shake remain possible refinements.
 project_summary:
   role: "Independent design and fabrication"
   tools: "Fusion 360, OrcaSlicer, ABS printing"
@@ -14,6 +28,8 @@ project_summary:
 ---
 
 {% include project_summary.liquid %}
+
+{% include project-highlights.liquid %}
 
 I built a low-cost adjustable phone mount to film my engineering projects with an iPhone. Extrusion supplies the structure; printed fixtures provide the connections and camera positioning.
 
@@ -62,21 +78,6 @@ The finished mount provided useful footage, although the phone holder had some p
 
 The first prototype became the mount I use to capture project footage. Its value is a practical filming setup built from reusable stock and a small set of custom parts, with the adjustment range needed for my recordings. Further stiffness improvements are possible, but a second build was not necessary for the intended use.
 
-The video documents the design, CAD, slicing, assembled prototype, and sample footage.
-
-<div class="embed-responsive embed-responsive-16by9 rounded z-depth-1">
-    <iframe
-        class="embed-responsive-item"
-        src="https://www.youtube-nocookie.com/embed/NBOV5k6CR7c"
-        title="Phone Mount — design, fabrication, and demonstration"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-    ></iframe>
-</div>
-
-<div class="caption">
-    Design overview at 0:36, CAD at 1:31, slicing at 4:25, and the assembled prototype at 5:43.
-</div>
+The demonstration at the top of this page documents the design, CAD, slicing, assembled prototype, and sample footage.
 
 [Watch the Phone Mount project on YouTube](https://www.youtube.com/watch?v=NBOV5k6CR7c){:target="\_blank"}

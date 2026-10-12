@@ -2,11 +2,14 @@
 layout: page
 title: Air Purifier
 description: Engineering project in development
+card_label: Design in progress
+card_description: "Smart air purifier controller: KiCad schematics complete, with PCB layout and physical testing next."
 importance: 3
 project_started: July 2026
 documentation_updated: 2026-10-06
 category: Engineering
 github: https://github.com/EthanMahajan/Air-Purifier
+og_image: /assets/img/social/air_purifier.png
 img: assets/img/PurifierPCB
 project_summary:
   role: "Independent mechanical and electronics design"

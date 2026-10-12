@@ -1,0 +1,12 @@
+<aside class="project-contact" aria-labelledby="project-contact-heading">
+  <div>
+    <p class="eyebrow">Let’s talk engineering</p>
+    <h2 id="project-contact-heading">Interested in this {{ include.subject | default: 'project' }}?</h2>
+    <p>I’m happy to discuss the design decisions, share more detail, or talk about internship, co-op, and project opportunities.</p>
+  </div>
+  <div class="portfolio-actions">
+    {% capture contact_subject %}{{ page.title }}: portfolio inquiry{% endcapture %}
+    <a class="btn btn-primary" href="mailto:{{ site.data.socials.email }}?subject={{ contact_subject | uri_escape }}">Email Ethan</a>
+    <a class="btn btn-outline-primary" href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}/">Connect on LinkedIn</a>
+  </div>
+</aside>

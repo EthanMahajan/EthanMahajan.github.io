@@ -1,0 +1,36 @@
+- skill: CAD & Design
+  examples:
+    - label: Phone mount
+      url: /projects/phone_mount.html#design
+      context: Fusion 360 fixtures, assembly clearances, and geometry for FDM fabrication.
+    - label: Artorius
+      url: /projects/artorius.html#design
+      context: Frame, motion system, and custom toolhead developed together in CAD.
+- skill: Manufacturing & Fabrication
+  examples:
+    - label: Phone mount
+      url: /projects/phone_mount.html#prototype
+      context: ABS printing, heat-set inserts, and assembly with aluminum extrusion.
+- skill: Electronics & Hardware
+  examples:
+    - label: Artorius
+      url: /projects/artorius.html#wiring--electronics
+      context: CAN-bus toolboard, motor drivers, wiring, and serviceable electronics.
+    - label: Air purifier
+      url: /projects/air_purifier.html#design
+      context: KiCad schematics complete; board layout and physical validation pending.
+- skill: Machinery & Tools
+  examples:
+    - label: Laser-engraved chess board
+      url: /projects/laser_engraved_chess_board.html#prototype
+      context: Board fabrication in progress; CNC-machined pieces are planned.
+- skill: Software & Systems
+  examples:
+    - label: Artorius repository
+      url: /projects/artorius.html
+      context: Documented mechanical build, motion testing, and electronics integration.
+- skill: Communication & Project Work
+  examples:
+    - label: Shape Machine
+      url: /projects/shape_machine.html#my-contributions
+      context: Content review and template maintenance within an interdisciplinary team.

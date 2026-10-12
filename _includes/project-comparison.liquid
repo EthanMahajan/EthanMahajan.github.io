@@ -1,0 +1,22 @@
+{% if page.comparison %}
+  <section class="project-comparison" aria-labelledby="comparison-heading">
+    <p class="eyebrow">Design iteration</p>
+    <h2 id="comparison-heading">{{ page.comparison.title }}</h2>
+    <p>{{ page.comparison.intro }}</p>
+    <div class="comparison-grid">
+      {% for stage in page.comparison.stages %}
+        <figure class="comparison-stage">
+          <div class="comparison-stage__image">
+            <img src="{{ stage.image | relative_url }}" alt="{{ stage.alt | escape }}" loading="lazy" width="800" height="600">
+          </div>
+          <figcaption>
+            <span class="eyebrow">{{ stage.label }}</span>
+            <h3>{{ stage.title }}</h3>
+            <p>{{ stage.caption }}</p>
+          </figcaption>
+        </figure>
+      {% endfor %}
+    </div>
+    <p class="comparison-takeaway"><strong>What I learned:</strong> {{ page.comparison.takeaway }}</p>
+  </section>
+{% endif %}

@@ -2,6 +2,7 @@
 layout: page
 title: "Artorius: FDM 3D Printer"
 description: High-speed CoreXY printer designed, fabricated, tested, and revised from an older machine
+og_image: /assets/img/social/artorius.png
 img: assets/img/artoriusRevised.png
 importance: 1
 project_started: June 2024
@@ -9,6 +10,35 @@ documentation_updated: 2026-10-06
 category: Engineering
 github: https://github.com/EthanMahajan/Artorius
 cad_model: /assets/models/artorius/artorius.3mf
+card_label: Independent build
+card_description: "Custom CoreXY printer: operational hardware, a revised frame, and integrated CAN-bus electronics."
+hero:
+  image: assets/img/artoriusRevised.png
+  alt: Revised CAD assembly of the Artorius CoreXY printer
+  caption: "Revised CAD assembly. The linked case study includes footage of the operational printer."
+  video_lead: true
+  video: ifcJKhLbfP0
+  video_caption: "Custom toolhead, frame, and electronics, followed by Benchy printing footage."
+portfolio: true
+portfolio_highlights:
+  - Designed the frame, motion system, and custom toolhead together in CAD around reusable components.
+  - Fabricated fixtures, assembled the machine, and integrated a CAN-bus toolboard and serviceable electronics.
+  - Motion tests explored approximately 1,000 mm/s; consistent print quality and alignment remain refinement goals.
+comparison:
+  title: From the first layout to a revised assembly
+  intro: "These CAD views document two stages of the design. The revision added frame support and improved electronics access, while leaving alignment and vibration as ongoing challenges."
+  stages:
+    - label: Before
+      title: Early frame and motion layout
+      image: assets/img/artoriusEarlyRender.png
+      alt: Early CAD assembly of the Artorius frame and motion system
+      caption: "The initial layout established the CoreXY architecture. Physical assembly later exposed rigidity and packaging issues that were less apparent in CAD."
+    - label: After
+      title: Revised frame and electronics
+      image: assets/img/artoriusRevised.png
+      alt: Revised Artorius CAD assembly with additional frame support and electronics enclosure
+      caption: "Additional extrusion and a serviceable electronics enclosure addressed support and access. Extra extrusion alone did not fully resolve resonance."
+  takeaway: "Plan packaging, wiring, and alignment early, then evaluate the assembly physically. A revised CAD model is a design change, not proof of a measured performance gain."
 project_summary:
   role: "Independent design and build"
   tools: "CAD, FDM fabrication, CoreXY motion, CAN bus"
@@ -17,6 +47,8 @@ project_summary:
 ---
 
 {% include project_summary.liquid %}
+
+{% include project-highlights.liquid %}
 
 Artorius is a CoreXY 3D printer I designed and built using suitable components from an older BIQU B1. It combines a custom toolhead, an extrusion frame, and serviceable electronics. The build gave me experience connecting mechanical design decisions to alignment, vibration, and actual printing behavior.
 
@@ -76,33 +108,20 @@ A reused 24 V power supply powers the main system, while an added 48 V supply po
 
 ## Testing & Revisions
 
+{% include project-comparison.liquid %}
+
 Motion testing reached speeds of approximately 1,000 mm/s and acceleration settings in the 50,000–100,000 mm/s² range. These describe the motion limits I explored, rather than a validated operating envelope for consistently high-quality printing.
 
 Testing also exposed limitations that extra frame extrusion did not fully resolve. Keeping the machine square and free of skew remains difficult; a front crossbar would make alignment easier in a future revision. Better component packaging, greater frame rigidity, and cleaner motor-mount placement are other priorities.
 
-The printer is operational, but I am continuing to work toward a better balance of speed, print quality, and reliability. The preview below shows the machine printing a Benchy from several angles, filmed using my custom phone mount.
+The printer is operational, but I am continuing to work toward a better balance of speed, print quality, and reliability. The demonstration at the top of this page shows Benchy printing from several angles, filmed using my custom phone mount.
 
 ## Final Product
 
-The current machine is operational and can print a Benchy, as shown in the preview below. The project demonstrates a complete path from custom CAD and fabrication through electronics integration and motion testing. Quality, alignment, and reliability remain active refinement goals rather than finished performance claims.
+The current machine is operational and can print a Benchy, as shown in the demonstration at the top of this page. The project demonstrates a complete path from custom CAD and fabrication through electronics integration and motion testing. Quality, alignment, and reliability remain active refinement goals rather than finished performance claims.
 
 <div class="project-gallery">
     {% include figure.liquid path="assets/img/artoriusRevised.png" alt="CAD rendering of the revised Artorius assembly." title="CAD rendering of the revised Artorius assembly." class="img-fluid rounded" zoomable=true caption="CAD rendering of the revised Artorius assembly." %}
-</div>
-
-<div class="embed-responsive embed-responsive-16by9 rounded z-depth-1">
-    <iframe
-        class="embed-responsive-item"
-        src="https://www.youtube-nocookie.com/embed/ifcJKhLbfP0"
-        title="Artorius CoreXY 3D Printer — features and Benchy printing preview"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-    ></iframe>
-</div>
-
-<div class="caption">
-    Artorius printing a Benchy, with an overview of the custom toolhead, frame, motor mounts, and electronics.
 </div>
 
 [Watch the Artorius preview on YouTube](https://www.youtube.com/watch?v=ifcJKhLbfP0){:target="\_blank"}

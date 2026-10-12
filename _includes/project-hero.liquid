@@ -1,0 +1,28 @@
+{% if page.hero %}
+  <section class="project-hero" aria-label="Project demonstration">
+    {% unless page.hero.video_lead %}
+      {% include figure.liquid path=page.hero.image alt=page.hero.alt caption=page.hero.caption class="project-hero__image" loading="eager" %}
+    {% endunless %}
+    {% if page.hero.video %}
+      {% if page.hero.video_lead %}
+        {% include project-video.liquid project=page %}
+      {% else %}
+        <details class="project-video">
+          <summary>Watch the working prototype</summary>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe
+              class="embed-responsive-item"
+              src="https://www.youtube-nocookie.com/embed/{{ page.hero.video }}"
+              title="{{ page.title | escape }}: working prototype"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p class="caption">{{ page.hero.video_caption }}</p>
+          <a href="https://www.youtube.com/watch?v={{ page.hero.video }}">Open the demonstration on YouTube</a>
+        </details>
+      {% endif %}
+    {% endif %}
+  </section>
+{% endif %}

@@ -2,10 +2,13 @@
 layout: page
 title: Laser-Engraved Chess Board
 description: In-progress digital fabrication and materials processing project
+card_label: Fabrication in progress
+card_description: "Custom chess set: laser-engraved board underway, with CNC-machined metal pieces planned."
 importance: 3
 project_started: August 2026
 documentation_updated: 2026-10-06
 category: Design
+og_image: /assets/img/social/laser_engraved_chess_board.png
 img: assets/img/ChessBoard.png
 project_summary:
   role: "Independent design and fabrication"

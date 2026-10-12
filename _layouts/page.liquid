@@ -15,6 +15,7 @@ layout: default
   </header>
 
   <article>
+    {% if page.collection == 'projects' %}{% include project-hero.liquid %}{% endif %}
     {% if page.collection == 'projects' and page.documentation_updated %}
       <p class="text-muted">
         <small>
@@ -24,6 +25,7 @@ layout: default
       </p>
     {% endif %}
     {{ content }}
+    {% if page.collection == 'projects' %}{% include project-contact.liquid %}{% endif %}
   </article>
 
   {% if page.related_publications %}

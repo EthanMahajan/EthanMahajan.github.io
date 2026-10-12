@@ -10,6 +10,7 @@ contact_note: >
   For internship, co-op, and engineering project opportunities, please connect by email or LinkedIn.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Mechanical engineering student focused on CAD, manufacturing, prototyping, and hands-on problem solving.
+portfolio_pdf: /assets/pdf/Ethan_Mahajan_Portfolio.pdf
 # footer_text: >
 #   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 #   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
@@ -46,7 +47,7 @@ max_width: 930px
 # see https://schema.org/docs/faq.html for more information
 serve_og_meta: true # Include Open Graph meta tags in the HTML head
 serve_schema_org: true # Include Schema.org in the HTML head
-og_image: /assets/img/prof_pic.jpg # The site-wide preview image
+og_image: /assets/img/social/portfolio.png # Branded preview generated with the portfolio
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -103,6 +104,11 @@ exclude:
   - purgecss.config.js
   - README.md
   - vendor
+  - tmp
+  - output
+  - docs
+  - scripts
+  - requirements-portfolio.txt
 keep_files:
   - CNAME
   - .nojekyll
@@ -267,7 +273,7 @@ enable_openpanel_analytics: false # enables Openpanel analytics (https://openpan
 enable_google_verification: false # enables google site verification
 enable_bing_verification: false # enables bing site verification
 enable_cookie_consent: false # enables GDPR-compliant cookie consent dialog (https://github.com/orestbida/cookieconsent)
-enable_masonry: true # enables automatic project cards arrangement
+enable_masonry: false # use a predictable, aligned project grid
 enable_math: false # no mathematical content is currently published
 enable_tooltips: false # enables automatic tooltip links generated for each section titles on pages and posts
 enable_darkmode: true # enables switching between light/dark modes

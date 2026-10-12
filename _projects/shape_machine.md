@@ -2,9 +2,12 @@
 layout: page
 title: Shape Machine
 description: Content improvements, error correction, and template fixes for an existing team website
+card_label: Team contribution
+card_description: "Shape Computation Lab website: clearer content, corrected mistakes, and maintained templates."
 importance: 2
 documentation_updated: 2026-10-06
 category: Design
+og_image: /assets/img/social/shape_machine.png
 img: assets/img/SCLLogo_110.png
 project_summary:
   role: "Website content and template improvements"
