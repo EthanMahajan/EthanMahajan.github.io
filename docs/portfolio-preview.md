@@ -41,6 +41,12 @@ Observed and fixed: nearly invisible category headings in light mode; full-width
 
 One YouTube embed failed after changing theme, while subsequent page navigation loaded embeds normally. The direct YouTube links remain available. Playback is an external dependency and needs a separate interaction check in the next cycle.
 
+### Visual review: cycle 2
+
+Score: **9.0/10** (clarity 1.8, navigation 1.8, hierarchy 1.8, responsive interaction 1.7, evidence 1.9). Reviewed the rebuilt output from commit `97c75d7` on desktop and 390 x 844 mobile, including dark resume, mobile homepage, and stacked Artorius CAD comparison. The resume overlap and fixed-footer obstruction are resolved. The printer video played successfully with advancing time and captions. All three forest-green PDF pages were rendered and inspected without clipping or overlap. The rebuilt ten-page link/metadata/PDF checker passed locally.
+
+The research page still had a low-contrast year heading and undersized PDF button. Restored heading contrast and enlarged the report button to a 44px touch target; gave the report filter an accessible name. Retained the direct video fallback because third-party player loading can fail transiently. The homepage is still fairly text-heavy and Artorius is a long case study; these remain honest presentation limitations rather than reasons to claim a score above 9.5.
+
 ## UX review rubric
 
 Each review cycle scores five dimensions out of two: clarity and relevance; navigation and contact; visual hierarchy and spacing; responsive and accessible interaction; presentation of project evidence. Record specific issues and changes, review no more than three cycles, and stop early only if the score is solidly above 9.5. No visual score is assigned without browser inspection.

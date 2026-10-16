@@ -42,6 +42,19 @@ html {
   font-size: 1.35rem;
   font-weight: 600;
 }
+.publications h2.bibliography {
+  color: var(--global-text-color-light);
+  text-align: left;
+  font-size: 1.25rem;
+}
+.publications ol.bibliography li .links a.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 64px;
+  font-size: 0.85rem;
+}
 .text-muted {
   color: var(--global-text-color-light) !important;
 }
