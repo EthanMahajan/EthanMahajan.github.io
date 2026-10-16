@@ -47,6 +47,16 @@ Score: **9.0/10** (clarity 1.8, navigation 1.8, hierarchy 1.8, responsive intera
 
 The research page still had a low-contrast year heading and undersized PDF button. Restored heading contrast and enlarged the report button to a 44px touch target; gave the report filter an accessible name. Retained the direct video fallback because third-party player loading can fail transiently. The homepage is still fairly text-heavy and Artorius is a long case study; these remain honest presentation limitations rather than reasons to claim a score above 9.5.
 
+A further contrast check in this cycle found that the base theme overrode project-card descriptions with gray even in dark mode. An explicit card-body selector now uses the portfolio text color in both themes.
+
+### Visual review: cycle 3 (final)
+
+Score: **9.3/10** (clarity 1.8, navigation 1.8, hierarchy 1.9, responsive interaction 1.9, evidence 1.9). Reviewed final rendered output from `86a37db` at desktop and 390 x 844 mobile in light/dark themes. Verified readable dark card descriptions (computed RGB 230, 236, 239), research year contrast, the enlarged report button, the filter's accessible name, mobile resume without overlap, compact mobile portrait, navigation, and keyboard skip-link activation. The prior cycles exercised the expandable phone demonstration, actual printer-video playback, and on-demand CAD viewer. No further source changes were needed in this cycle. The build and ten-page structural checker passed; all three PDF pages were visually inspected during cycle 2.
+
+Stopped at the requested maximum of three cycles, without claiming a score above 9.5. Remaining limitations: the homepage introduction is text-heavy, Artorius requires substantial scrolling, project cards repeat links to the same destination, and external video/CDN availability can affect media and viewer loading. Mobile review used a browser viewport, not a physical touch device. This was a visual and interaction review, not a full screen-reader or performance audit. Preview screenshots are retained locally under `output/ux-review/` (ignored by Git).
+
+The experimental branch starts only after this preview is complete. It will be separately reviewable and will retain the forest-green direction and the distinction between CAD renders and working hardware.
+
 ## UX review rubric
 
 Each review cycle scores five dimensions out of two: clarity and relevance; navigation and contact; visual hierarchy and spacing; responsive and accessible interaction; presentation of project evidence. Record specific issues and changes, review no more than three cycles, and stop early only if the score is solidly above 9.5. No visual score is assigned without browser inspection.
