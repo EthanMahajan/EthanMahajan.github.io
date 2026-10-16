@@ -11,6 +11,10 @@ category: Engineering
 github: https://github.com/EthanMahajan/Air-Purifier
 og_image: /assets/img/social/air_purifier.png
 img: assets/img/PurifierPCB.png
+pdf_summary:
+  caption: "Completed KiCad schematic; board layout and physical validation are pending."
+  design: "A dorm-room need for filtration and background noise motivated a compact purifier concept using a repurposed 120 mm fan. The planned assembly combines a printed housing, filter, particulate-matter sensor, and custom controller. I completed the electrical schematics in KiCad; PCB placement has not started."
+  evidence: "The demonstrated deliverable is schematic work, not a functioning purifier. Next steps are board layout, housing and board fabrication, and system integration. Airflow, fan control, sensor response, noise, and proposed filter-replacement detection still require physical testing."
 project_summary:
   role: "Independent mechanical and electronics design"
   tools: "KiCad, CAD, planned FDM fabrication"
@@ -34,7 +38,7 @@ The concept combines a 120 mm fan, filter, custom housing, and particulate-matte
 
 I completed the electrical schematics in KiCad. PCB component placement has not started, so the current work establishes the electrical design rather than a tested controller. The next design stage will address the board layout and integration with the housing, sensor, and fan.
 
-<div class="project-gallery">
+<div class="project-gallery project-gallery--detail">
     {% include figure.liquid path="assets/img/PurifierPCB.png" alt="Current electronics-design documentation for the purifier." title="Current electronics-design documentation for the purifier." class="img-fluid rounded" zoomable=true caption="Current electronics-design documentation for the purifier." %}
 </div>
 

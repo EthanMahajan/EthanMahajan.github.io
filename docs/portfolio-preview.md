@@ -21,9 +21,9 @@ bundle exec jekyll build
 python scripts/check_portfolio.py
 ```
 
-The generator reads `_config.yml`, `_data/socials.yml`, and `_projects/*.md`. Projects with `portfolio: true` appear in the PDF, ordered by `importance`. Each selected project uses its existing `description`, `hero`, `project_summary`, and `portfolio_highlights`. The website renders those same highlights.
+The generator reads `_config.yml`, `_data/socials.yml`, and **every** file in `_projects/*.md`, including unfinished projects. Engineering projects appear first, followed by design/team work. Within those groups, `importance` and title determine order. The PDF uses `project_summary`, `hero` (or the original thumbnail), and an edited `pdf_summary` with `design` and `evidence` paragraphs. Optional `pdf_summary.caption` supplies context for projects without a hero. It is a compact editorial document, not a concatenation of web-page Markdown. `portfolio: true` is only a homepage-curation flag on the experimental branch; it does not exclude projects from the PDF.
 
-Edit project content once, then rebuild. No separately maintained PDF copy or website scraping is required. To include another project, give it a hero image and concise portfolio highlights, then set `portfolio: true`. The generator fails clearly if a page's text would overflow.
+Edit project front matter, then rebuild. No separately maintained PDF file or website scraping is required. New project files need accurate `project_summary` and `pdf_summary` data and an image. ReportLab flows the summaries into print pages, automatically builds a linked contents table with page numbers, and adds project bookmarks and return-to-contents links. Body copy uses 9pt type with 11.5pt leading and 4pt paragraph gaps.
 
 Generated PDF and share-image files are excluded from Git and created before Jekyll builds on both preview and production workflows. The preview workflow uploads the complete `_site` as `portfolio-preview-site`; it does not deploy the production website.
 
@@ -56,6 +56,10 @@ Score: **9.3/10** (clarity 1.8, navigation 1.8, hierarchy 1.9, responsive intera
 Stopped at the requested maximum of three cycles, without claiming a score above 9.5. Remaining limitations: the homepage introduction is text-heavy, Artorius requires substantial scrolling, project cards repeat links to the same destination, and external video/CDN availability can affect media and viewer loading. Mobile review used a browser viewport, not a physical touch device. This was a visual and interaction review, not a full screen-reader or performance audit. Preview screenshots are retained locally under `output/ux-review/` (ignored by Git).
 
 The experimental branch starts only after this preview is complete. It will be separately reviewable and will retain the forest-green direction and the distinction between CAD renders and working hardware.
+
+## Subsequent requested refinement
+
+The next revision corrects theme-button alignment and button-label centering, removes added thumbnail framing, reflows project images beside relevant explanations, and removes decorative dot separators. The PDF now includes all five projects in two print-oriented pages with linked contents, exact-heading bookmarks, and edited project summaries. The original three-cycle scores above describe the earlier preview, not a new score for this revision. See `docs/portfolio-feature-audit.md` for the complete feature-necessity review and verification evidence.
 
 ## UX review rubric
 

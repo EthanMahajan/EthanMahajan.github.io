@@ -10,6 +10,10 @@ documentation_updated: 2026-10-06
 category: Design
 og_image: /assets/img/social/laser_engraved_chess_board.png
 img: assets/img/ChessBoard.png
+pdf_summary:
+  caption: "CAD render of the planned set; the metal pieces have not been manufactured."
+  design: "I am developing a coordinated chess set through Georgia Tech's Invention Studio, combining a laser-engraved board with planned CNC-machined metal pieces. The CAD design prioritizes a manufacturable playing surface and stable, low-center-of-mass pieces. Separating the board and piece stages lets fabrication progress incrementally."
+  evidence: "Board fabrication is approximately halfway complete. The metal pieces have not been made and the complete set is pending. Completing the board and developing the machining approach will enable evaluation of engraving quality, finish, and piece stability."
 project_summary:
   role: "Independent design and fabrication"
   tools: "CAD, laser engraving; planned CNC machining"
@@ -27,15 +31,20 @@ My interest in chess gave me a useful object to design while exploring the Inven
 
 The project also provides a way to learn different processes within one assembly: engraving for the playing surface and machining for the planned metal pieces. I separated these stages so the board could progress before committing to the more involved piece fabrication.
 
+<section class="project-section project-section--balanced">
+<div class="project-section__copy" markdown="1">
+
 ## Design
 
 I developed the board in CAD around a surface that could be manufactured with laser engraving. The piece concept uses a low center of mass to improve stability during play. Their CNC manufacturing is planned, so the finished machining approach and results are still pending.
 
 The important design questions are how the engraving defines the playing surface, how the board is finished, and how the eventual pieces feel and stand during use. These will guide the fabrication and evaluation as the set develops.
 
-<div class="project-gallery">
-    {% include figure.liquid path="assets/img/ChessBoard.png" alt="Current chess-board project image." title="Current chess-board project image." class="img-fluid rounded" zoomable=true caption="Current chess-board project image." %}
 </div>
+<div class="project-section__media">
+{% include figure.liquid path="assets/img/ChessBoard.png" alt="CAD render of the planned chess set; board fabrication is in progress." title="CAD render of the planned chess set; board fabrication is in progress." class="img-fluid rounded" zoomable=true caption="CAD render of the planned chess set; board fabrication is in progress." %}
+</div>
+</section>
 
 ## Prototype
 

@@ -21,3 +21,7 @@ The preview's three-cycle UX review remains in `docs/portfolio-preview.md`; expe
 Final implementation validation: GitHub Actions run `38970178389` for `3d3b633` passed, and its downloaded artifact passed the local ten-page checker. Inspected the revised desktop and 390 x 844 mobile homepage in light and dark themes, confirming stacked builds on mobile and no horizontal overflow. Activated the evidence link and verified it opens the resume's documented freelance experience. Screenshots are retained locally in `output/ux-review/`, including `experimental-desktop.png`. The viewport override was reset after testing.
 
 Limitations: the two spotlights add homepage length; the evidence strip repeats manually maintained historical CV figures; and YouTube/CDN loading still depends on external services. Browser viewport testing does not replace physical-device, screen-reader, or performance testing. No additional numerical UX score is claimed for this experiment.
+
+## Shared presentation refinement
+
+The subsequent preview refinement is carried into this branch: aligned theme control, centered button labels, original thumbnails without added pale framing, contextual project-image layouts, and the complete two-page PDF with linked contents for all five projects. The two curated homepage builds remain independent of PDF inclusion. Decorative dot separators were also removed from the experimental subtitle and client-work date. See `docs/portfolio-feature-audit.md` for optional features and the review evidence.

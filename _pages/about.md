@@ -3,7 +3,7 @@ layout: about
 title: About
 permalink: /
 headline: I turn CAD into working hardware.
-subtitle: Mechanical engineering at Georgia Tech · Design, fabrication, and iteration
+subtitle: Mechanical engineering at Georgia Tech. Design, fabrication, and iteration
 
 profile:
   align: right

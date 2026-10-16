@@ -10,12 +10,16 @@ category: Engineering
 card_label: Completed prototype
 card_description: "Adjustable filming mount: approximately $18, with custom ABS fixtures and reusable aluminum extrusion."
 hero:
+  summary_beside: true
   image: assets/img/phone-mount/assembled-prototype.jpg
   alt: Assembled phone filming mount with extrusion upright and adjustable arm
   caption: "The usable first prototype: adjustable height, arm rotation, and phone orientation."
   video: NBOV5k6CR7c
   video_caption: "Design at 0:36, CAD at 1:31, slicing at 4:25, and the assembled prototype at 5:43."
 portfolio: true
+pdf_summary:
+  design: "I needed an inexpensive, adjustable way to film engineering builds with an iPhone. I modeled Fusion 360 fixtures for height, arm rotation, and phone orientation, printed them in ABS, and assembled the mount with aluminum extrusion, heat-set inserts, and fasteners. Chamfers and clearances supported FDM fabrication and assembly."
+  evidence: "The usable first prototype cost approximately $18 including extrusion, or $4 excluding it, as estimated in the project video. It became my project filming mount. Assembly exposed a missing screw-access hole; holder play and base shake suggest future stiffness improvements. A second build was unnecessary for the intended use."
 portfolio_highlights:
   - Modeled fixtures in Fusion 360 for vertical positioning, arm rotation, and phone orientation.
   - Printed the fixtures in ABS and assembled them using heat-set inserts, fasteners, and aluminum extrusion.
@@ -27,11 +31,12 @@ project_summary:
   result: "Adjustable iPhone filming mount; approximately $18 including extrusion"
 ---
 
-{% include project_summary.liquid %}
-
 {% include project-highlights.liquid %}
 
 I built a low-cost adjustable phone mount to film my engineering projects with an iPhone. Extrusion supplies the structure; printed fixtures provide the connections and camera positioning.
+
+<section class="project-section project-section--balanced">
+<div class="project-section__copy" markdown="1">
 
 ## Ideation
 
@@ -39,9 +44,11 @@ I wanted a low-cost way to capture footage of my builds without buying a dedicat
 
 The build cost approximately $18 including aluminum extrusion, or about $4 excluding the extrusion, as estimated in the project video.
 
-<div class="project-gallery">
-    {% include figure.liquid path="assets/img/phone-mount/concept-sketch.jpg" alt="Concept sketch identifying the required adjustments." title="Concept sketch identifying the required adjustments." class="img-fluid rounded" zoomable=true caption="Concept sketch identifying the required adjustments." %}
 </div>
+<div class="project-section__media">
+{% include figure.liquid path="assets/img/phone-mount/concept-sketch.jpg" alt="Concept sketch identifying the required adjustments." title="Concept sketch identifying the required adjustments." class="img-fluid rounded" zoomable=true caption="Concept sketch identifying the required adjustments." %}
+</div>
+</section>
 
 ## Design
 
@@ -63,7 +70,7 @@ I exported the parts from Fusion 360, prepared them in OrcaSlicer, and printed t
 
 All of the parts printed successfully on the first attempt. I assembled the fixtures with the aluminum extrusion and fasteners, producing a working mount with the intended height and angular adjustments.
 
-<div class="project-gallery">
+<div class="project-gallery project-gallery--mixed">
     {% include figure.liquid path="assets/img/phone-mount/slicer-layout.jpg" alt="Fixtures prepared on separate OrcaSlicer plates." title="Fixtures prepared on separate OrcaSlicer plates." class="img-fluid rounded" zoomable=true caption="Fixtures prepared on separate OrcaSlicer plates." %}
     {% include figure.liquid path="assets/img/phone-mount/assembled-prototype.jpg" alt="Assembled first prototype with adjustable arm." title="Assembled first prototype with adjustable arm." class="img-fluid rounded" zoomable=true caption="Assembled first prototype with adjustable arm." %}
 </div>

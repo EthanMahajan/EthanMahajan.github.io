@@ -10,7 +10,7 @@ horizontal: false
 ---
 
 <div class="portfolio-download">
-  <div><p class="eyebrow">Take the work with you</p><p>A concise selection of builds, design decisions, and results.</p></div>
+  <div><p class="eyebrow">Take the work with you</p><p>Every project, including work in progress, in a compact PDF with linked contents.</p></div>
   <a class="btn btn-outline-primary" href="{{ site.portfolio_pdf | relative_url }}" download>Download Portfolio (PDF)</a>
 </div>
 

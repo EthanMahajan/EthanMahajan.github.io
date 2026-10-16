@@ -20,6 +20,9 @@ hero:
   video: ifcJKhLbfP0
   video_caption: "Custom toolhead, frame, and electronics, followed by Benchy printing footage."
 portfolio: true
+pdf_summary:
+  design: "Recurring problems with an older BIQU B1 led me to redesign its architecture around reusable motors and a 24 V supply. I developed a CoreXY frame, motion system, and custom toolhead in CAD, fabricated fixtures, assembled the machine, and integrated CAN-bus electronics with a serviceable enclosure."
+  evidence: "The printer is operational and the linked video shows Benchy printing. Motion tests explored approximately 1,000 mm/s; this is not a validated print-quality speed. Extra frame support did not fully resolve resonance. Alignment, packaging, vibration, and repeatable print quality remain refinement priorities."
 portfolio_highlights:
   - Designed the frame, motion system, and custom toolhead together in CAD around reusable components.
   - Fabricated fixtures, assembled the machine, and integrated a CAN-bus toolboard and serviceable electronics.
@@ -52,15 +55,20 @@ project_summary:
 
 Artorius is a CoreXY 3D printer I designed and built using suitable components from an older BIQU B1. It combines a custom toolhead, an extrusion frame, and serviceable electronics. The build gave me experience connecting mechanical design decisions to alignment, vibration, and actual printing behavior.
 
+<section class="project-section project-section--portrait">
+<div class="project-section__copy" markdown="1">
+
 ## Ideation
 
 Repeated reliability and troubleshooting problems with the original printer prompted me to reconsider its architecture. I wanted a machine that could explore higher speeds while remaining practical to fabricate and service, rather than simply replacing individual components on the original frame.
 
 Reusing the BIQU B1's suitable motors and 24 V supply helped define the project constraints. I focused the new design effort on the CoreXY motion system, frame, and toolhead, with rigidity, component access, and straightforward assembly as priorities alongside speed. The project became an opportunity to learn how these decisions interact once a CAD assembly becomes a working machine.
 
-<div class="project-gallery">
-    {% include figure.liquid path="assets/img/artoriusSketch.jpg" alt="Early feasibility and material-cost sketch." title="Early feasibility and material-cost sketch." class="img-fluid rounded" zoomable=true caption="Early feasibility and material-cost sketch." %}
 </div>
+<div class="project-section__media">
+{% include figure.liquid path="assets/img/artoriusSketch.jpg" alt="Early feasibility and material-cost sketch." title="Early feasibility and material-cost sketch." class="img-fluid rounded" zoomable=true caption="Early feasibility and material-cost sketch." %}
+</div>
+</section>
 
 ## Design
 
@@ -68,11 +76,23 @@ I developed the frame, motion system, and toolhead together in CAD, checking com
 
 {% include cad_viewer.liquid %}
 
+<section class="project-section project-section--balanced">
+<div class="project-section__copy" markdown="1">
+
 ### Toolhead
 
 I designed the toolhead from scratch around a BIQU H2 extruder and a generic four-screw hotend mounting pattern. A 5015 fan provides part cooling, while a 2510 fan cools the cold side of the hotend to help prevent heat-related clogs.
 
 I placed the extruder motor above the aluminum extrusion and arranged the other components to keep the toolhead's center of mass close to the gantry carriage. The toolboard sits on the side nearest the electronics enclosure to shorten wire paths and simplify cable routing.
+
+</div>
+<div class="project-section__media">
+{% include figure.liquid path="assets/img/toolheadMockup.jpg" alt="CAD render of the early custom toolhead concept." title="CAD render of the early custom toolhead concept." class="img-fluid rounded" zoomable=true caption="CAD render of the early custom toolhead concept." %}
+</div>
+</section>
+
+<section class="project-section project-section--balanced">
+<div class="project-section__copy" markdown="1">
 
 ### Frame
 
@@ -80,16 +100,19 @@ The frame uses standard 2020 aluminum extrusion, corner connectors, and printed 
 
 Some components extend outside the frame because the layout was already well developed before I recognized the packaging issue. That constraint led to awkward motor-mount placement and highlighted the value of planning the entire assembly early.
 
+</div>
+<div class="project-section__media">
+{% include figure.liquid path="assets/img/artoriusEarlyRender.png" alt="Early frame and motion-system CAD." title="Early frame and motion-system CAD." class="img-fluid rounded" zoomable=true caption="Early frame and motion-system CAD." %}
+</div>
+</section>
+
 ### Motors & Mounts
 
 RobotDigg NEMA17 2504 motors drive the XY gantry. Their mounts use double-shear support to support higher belt tension and include cooling-fan mounts. I configured the XY drivers for approximately 2 A motor current with a 48 V supply.
 
 The Z axis reuses less demanding motors from the BIQU B1 and runs from the 24 V system supply. Rigid front mounts and an adjustable rear mount make assembly and heated-bed attachment easier.
 
-<div class="project-gallery">
-    {% include figure.liquid path="assets/img/artoriusEarlyRender.png" alt="Early frame and motion-system CAD." title="Early frame and motion-system CAD." class="img-fluid rounded" zoomable=true caption="Early frame and motion-system CAD." %}
-    {% include figure.liquid path="assets/img/toolheadMockup.jpg" alt="CAD render of the early custom toolhead concept." title="CAD render of the early custom toolhead concept." class="img-fluid rounded" zoomable=true caption="CAD render of the early custom toolhead concept." %}
-</div>
+
 
 ## Prototype
 
@@ -116,13 +139,18 @@ Testing also exposed limitations that extra frame extrusion did not fully resolv
 
 The printer is operational, but I am continuing to work toward a better balance of speed, print quality, and reliability. The demonstration at the top of this page shows Benchy printing from several angles, filmed using my custom phone mount.
 
+<section class="project-section project-section--balanced">
+<div class="project-section__copy" markdown="1">
+
 ## Final Product
 
 The current machine is operational and can print a Benchy, as shown in the demonstration at the top of this page. The project demonstrates a complete path from custom CAD and fabrication through electronics integration and motion testing. Quality, alignment, and reliability remain active refinement goals rather than finished performance claims.
 
-<div class="project-gallery">
-    {% include figure.liquid path="assets/img/artoriusRevised.png" alt="CAD rendering of the revised Artorius assembly." title="CAD rendering of the revised Artorius assembly." class="img-fluid rounded" zoomable=true caption="CAD rendering of the revised Artorius assembly." %}
 </div>
+<div class="project-section__media">
+{% include figure.liquid path="assets/img/artoriusRevised.png" alt="CAD rendering of the revised Artorius assembly." title="CAD rendering of the revised Artorius assembly." class="img-fluid rounded" zoomable=true caption="CAD rendering of the revised Artorius assembly." %}
+</div>
+</section>
 
 [Watch the Artorius preview on YouTube](https://www.youtube.com/watch?v=ifcJKhLbfP0){:target="\_blank"}
 

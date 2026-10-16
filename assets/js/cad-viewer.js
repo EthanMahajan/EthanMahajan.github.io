@@ -4,7 +4,7 @@ if (loadButton) {
   const status = root.querySelector("[data-cad-status]");
   loadButton.addEventListener("click", async () => {
     loadButton.disabled = true;
-    status.textContent = "Loading viewer and model…";
+    status.textContent = "Loading viewer and model";
     let renderer;
     let controls;
     let observer;
@@ -29,7 +29,7 @@ if (loadButton) {
       const response = await fetch(root.dataset.modelUrl);
       if (!response.ok) throw new Error("Model download failed");
       const buffer = await response.arrayBuffer();
-      status.textContent = "Preparing assembly geometry…";
+      status.textContent = "Preparing assembly geometry";
       await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
       model = new ThreeMFLoader().parse(buffer);
       const meshes = [];

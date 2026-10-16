@@ -2,7 +2,7 @@
   <div class="card h-100 project-card">
     {% assign project_url = project.redirect | default: project.url | relative_url %}
     {% if project.img %}
-      <a class="project-card__image" href="{{ project_url }}" aria-label="Explore {{ project.title | escape }}">
+      <a class="project-card__image{% if project.thumbnail_light %} project-card__image--light{% endif %}" href="{{ project_url }}" aria-label="Explore {{ project.title | escape }}">
         {%
           include figure.liquid
           loading="lazy"
