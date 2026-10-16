@@ -78,6 +78,8 @@ def check(site):
     project_sources = (Path(__file__).resolve().parents[1] / "_projects").glob("*.md")
     expected_titles = [yaml.safe_load(p.read_text(encoding="utf-8").split("---", 2)[1])["title"] for p in project_sources]
     outline = {item.title: pdf.get_destination_page_number(item) for item in pdf.outline if not isinstance(item, list)}
+    if any(item.top is None or float(item.top) <= 0 for item in pdf.outline if not isinstance(item, list)):
+        errors.append("PDF: project bookmarks must target their headings")
     for title in expected_titles:
         if title not in outline:
             errors.append(f"PDF: missing project bookmark {title}")

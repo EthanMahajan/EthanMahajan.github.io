@@ -319,6 +319,31 @@ summary:focus-visible {
 .project-card__image figure {
   margin: 0;
 }
+.project-card__image--light {
+  background: #fff;
+}
+.project-hero--portrait {
+  display: grid;
+  grid-template-columns: minmax(200px, 0.7fr) minmax(0, 1.3fr);
+  align-items: start;
+  gap: 1.5rem;
+}
+.project-hero--portrait .project-hero__image {
+  height: 400px;
+  background: transparent;
+}
+.project-hero--portrait .project-summary-panel {
+  margin-bottom: 1rem;
+}
+@media (max-width: 767px) {
+  .project-hero--portrait {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .project-hero--portrait .project-hero__image {
+    height: 320px;
+  }
+}
 .projects .project-card .card-img-top {
   height: 185px;
   width: 100%;

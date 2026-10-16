@@ -9,6 +9,7 @@ documentation_updated: 2026-10-06
 category: Design
 og_image: /assets/img/social/shape_machine.png
 img: assets/img/SCLLogo_110.png
+thumbnail_light: true
 pdf_summary:
   caption: "Shape Computation Lab identity. The linked page distinguishes my role from the team's technology."
   design: "Within an interdisciplinary team, I improve the existing Shape Computation Lab website through content review, error correction, and template maintenance. The goal is to make explanations of Shape Machine's specialized shape-computation technology clearer and more consistent for visitors with varied technical backgrounds."

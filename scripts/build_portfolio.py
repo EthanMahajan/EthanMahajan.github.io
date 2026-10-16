@@ -33,7 +33,9 @@ class PortfolioDocument(BaseDocTemplate):
     def afterFlowable(self, flowable):
         key = getattr(flowable, "project_key", None)
         if key:
-            self.canv.bookmarkPage(key)
+            # Target the heading, not just the containing page, when several
+            # compact project summaries share one sheet.
+            self.canv.bookmarkHorizontalAbsolute(key, self.frame._y + flowable.height + flowable.getSpaceAfter())
             self.canv.addOutlineEntry(flowable.getPlainText(), key, 0)
             self.notify("TOCEntry", (0, flowable.getPlainText(), self.page, key))
 

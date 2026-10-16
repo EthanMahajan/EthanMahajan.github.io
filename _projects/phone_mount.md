@@ -10,6 +10,7 @@ category: Engineering
 card_label: Completed prototype
 card_description: "Adjustable filming mount: approximately $18, with custom ABS fixtures and reusable aluminum extrusion."
 hero:
+  summary_beside: true
   image: assets/img/phone-mount/assembled-prototype.jpg
   alt: Assembled phone filming mount with extrusion upright and adjustable arm
   caption: "The usable first prototype: adjustable height, arm rotation, and phone orientation."
@@ -29,8 +30,6 @@ project_summary:
   status: "Completed; usable first prototype"
   result: "Adjustable iPhone filming mount; approximately $18 including extrusion"
 ---
-
-{% include project_summary.liquid %}
 
 {% include project-highlights.liquid %}
 
