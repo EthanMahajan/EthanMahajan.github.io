@@ -88,7 +88,7 @@ The Z axis reuses less demanding motors from the BIQU B1 and runs from the 24 V 
 
 <div class="project-gallery">
     {% include figure.liquid path="assets/img/artoriusEarlyRender.png" alt="Early frame and motion-system CAD." title="Early frame and motion-system CAD." class="img-fluid rounded" zoomable=true caption="Early frame and motion-system CAD." %}
-    {% include figure.liquid path="assets/img/toolheadMockup.jpg" alt="Early custom toolhead concept." title="Early custom toolhead concept." class="img-fluid rounded" zoomable=true caption="Early custom toolhead concept." %}
+    {% include figure.liquid path="assets/img/toolheadMockup.jpg" alt="CAD render of the early custom toolhead concept." title="CAD render of the early custom toolhead concept." class="img-fluid rounded" zoomable=true caption="CAD render of the early custom toolhead concept." %}
 </div>
 
 ## Prototype
@@ -102,8 +102,8 @@ Wiring was initially an afterthought, so I redesigned its routing and enclosure 
 A reused 24 V power supply powers the main system, while an added 48 V supply powers the XY motor drivers. The toolboard connects through CAN bus, reducing the wiring carried to the toolhead. Integrating the BigTreeTech Eddy probe involved substantial setup and documentation troubleshooting; the connection now works.
 
 <div class="project-gallery">
-    {% include figure.liquid path="assets/img/artoriusBelts.png" alt="First-iteration CoreXY gantry and belt routing." title="First-iteration CoreXY gantry and belt routing." class="img-fluid rounded" zoomable=true caption="First-iteration CoreXY gantry and belt routing." %}
-    {% include figure.liquid path="assets/img/artoriusProgress.png" alt="Intermediate build before the additional frame extrusion." title="Intermediate build before the additional frame extrusion." class="img-fluid rounded" zoomable=true caption="Intermediate build before the additional frame extrusion." %}
+    {% include figure.liquid path="assets/img/artoriusBelts.png" alt="CAD render of the first-iteration CoreXY gantry and belt routing." title="CAD render of the first-iteration CoreXY gantry and belt routing." class="img-fluid rounded" zoomable=true caption="CAD render of the first-iteration CoreXY gantry and belt routing." %}
+    {% include figure.liquid path="assets/img/artoriusProgress.png" alt="Intermediate CAD assembly before the additional frame extrusion." title="Intermediate CAD assembly before the additional frame extrusion." class="img-fluid rounded" zoomable=true caption="Intermediate CAD assembly before the additional frame extrusion." %}
 </div>
 
 ## Testing & Revisions

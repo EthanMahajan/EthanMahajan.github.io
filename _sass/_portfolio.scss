@@ -22,6 +22,25 @@ html[data-theme="dark"] {
 
 body {
   line-height: 1.65;
+  font-weight: 400;
+}
+html {
+  scroll-padding-top: 6rem;
+}
+#toc-sidebar {
+  top: 5rem;
+}
+#toc-sidebar .nav-link {
+  color: var(--global-text-color);
+  font-size: 0.85rem;
+}
+#toc-sidebar .nav-link.active {
+  color: var(--global-theme-color);
+  font-weight: 600;
+}
+.cv .card-title {
+  font-size: 1.35rem;
+  font-weight: 600;
 }
 .text-muted {
   color: var(--global-text-color-light) !important;
@@ -254,6 +273,8 @@ summary:focus-visible {
   row-gap: 1.5rem;
 }
 .projects h2.category {
+  color: var(--global-text-color);
+  text-align: left;
   margin: 2.5rem 0 1.25rem;
   font-size: 1.5rem;
   font-weight: 600;
@@ -333,6 +354,9 @@ summary:focus-visible {
   line-height: 1.5;
 }
 @media (max-width: 767px) {
+  #toc-sidebar {
+    display: none;
+  }
   .comparison-grid {
     grid-template-columns: 1fr;
   }
@@ -345,6 +369,15 @@ summary:focus-visible {
   }
   .post-title {
     font-size: 2rem;
+  }
+}
+@media (max-width: 575px) {
+  .profile {
+    width: 120px;
+    margin-bottom: 0.75rem;
+  }
+  .portfolio-actions {
+    clear: both;
   }
 }
 @media (prefers-reduced-motion: reduce) {

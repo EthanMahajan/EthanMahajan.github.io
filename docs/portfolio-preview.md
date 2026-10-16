@@ -31,7 +31,15 @@ Generated PDF and share-image files are excluded from Git and created before Jek
 
 The initial GitHub Actions build passed. Its rendered output passed the portfolio checker across ten pages, including local links, fragment targets, image descriptions, unique IDs, metadata, 1200 x 630 share images, and PDF text and links. All three PDF pages were rendered and inspected locally.
 
-Browser access to the local preview was denied. Desktop/mobile screenshots, interaction testing, and a final visual UX score are pending permission. Static verification is not a substitute for a rendered-page UX review.
+Browser access succeeded in the fresh session on October 16, 2026. The previous permission blocker no longer reproduces.
+
+### Visual review: cycle 1
+
+Score: **7.8/10** (clarity 1.7, navigation 1.4, hierarchy 1.5, responsive interaction 1.3, evidence 1.9). Inspected desktop light/dark homepage, desktop project grid and full Artorius page, and 390 x 844 mobile homepage, Artorius viewer, phone mount, and resume. The mobile menu and prototype expansion worked; the Artorius viewer loaded 931 mesh parts.
+
+Observed and fixed: nearly invisible category headings in light mode; full-width mobile portrait delaying the introduction; mobile resume contents overlapping its title and contact card; fixed footer covering mobile content; thin body text; inconsistent resume heading sizing; internal project links using an external-link arrow. Clarified that Artorius's toolhead, belt-routing, and intermediate assembly stills are CAD renders. Added anchor clearance below the fixed header.
+
+One YouTube embed failed after changing theme, while subsequent page navigation loaded embeds normally. The direct YouTube links remain available. Playback is an external dependency and needs a separate interaction check in the next cycle.
 
 ## UX review rubric
 

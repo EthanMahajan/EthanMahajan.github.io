@@ -19,7 +19,7 @@
         <a href="{{ project_url }}">{{ project.title }}</a>
       </h2>
       <p class="card-text">{{ project.card_description | default: project.description }}</p>
-      <a class="project-card__link" href="{{ project_url }}">Explore the project <span aria-hidden="true">↗</span></a>
+      <a class="project-card__link" href="{{ project_url }}">Explore the project <span aria-hidden="true">→</span></a>
       {% if project.github %}
         <a class="project-github" href="{{ project.github }}" target="_blank" rel="noopener noreferrer">
           <i class="fa-brands fa-github"></i> GitHub repository
