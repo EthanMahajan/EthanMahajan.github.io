@@ -2,9 +2,12 @@
 layout: default
 ---
 <div class="post">
-  <header class="post-header">
+  <header class="post-header{% if page.headline %} home-header{% endif %}">
+    {% if page.headline %}<p class="eyebrow">{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}</p>{% endif %}
     <h1 class="post-title">
-      {% if site.title == 'blank' %}
+      {% if page.headline %}
+        {{ page.headline }}
+      {% elsif site.title == 'blank' %}
         <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
         {{ site.last_name }}
       {% else %}

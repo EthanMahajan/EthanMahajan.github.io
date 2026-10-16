@@ -1,0 +1,15 @@
+<section class="home-evidence" aria-labelledby="client-evidence-title">
+  <div class="home-section-heading">
+    <h2 id="client-evidence-title">Client work, in practice</h2>
+    <a href="{{ '/resume/#experience' | relative_url }}">Freelance experience <span aria-hidden="true">→</span></a>
+  </div>
+  <p class="caption">Fiverr · February 2024 to October 2025</p>
+  <dl class="evidence-strip">
+    {% for item in site.data.home_evidence %}
+      <div>
+        <dt>{{ item.label }}</dt>
+        <dd><strong>{{ item.value }}</strong><span>{{ item.detail }}</span></dd>
+      </div>
+    {% endfor %}
+  </dl>
+</section>

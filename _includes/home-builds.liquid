@@ -1,0 +1,24 @@
+<section class="home-builds" aria-labelledby="selected-builds-title">
+  <div class="home-section-heading">
+    <h2 id="selected-builds-title">Two builds, from design to use</h2>
+    <a href="{{ '/projects/' | relative_url }}">All projects <span aria-hidden="true">→</span></a>
+  </div>
+  <p>See the hardware, then explore the decisions and remaining refinements.</p>
+  <div class="home-build-grid">
+    {% assign selected_builds = site.projects | where: 'portfolio', true | sort: 'importance' %}
+    {% for project in selected_builds %}
+      <div class="home-build">
+        <p class="eyebrow">{{ project.card_label }}</p>
+        <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+        {% if project.hero.video_lead %}
+          {% include project-video.liquid project=project %}
+        {% else %}
+          {% include figure.liquid path=project.hero.image alt=project.hero.alt caption=project.hero.caption class="home-build__image" loading="lazy" %}
+        {% endif %}
+        <p class="home-build__result">{{ project.project_summary.result }}</p>
+        <p class="caption">{{ project.project_summary.status }}</p>
+        <a class="home-build__link" href="{{ project.url | relative_url }}">Explore {{ project.title }} <span aria-hidden="true">→</span></a>
+      </div>
+    {% endfor %}
+  </div>
+</section>
