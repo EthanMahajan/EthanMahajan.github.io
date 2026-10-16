@@ -35,7 +35,7 @@ back_to_top: true # set to false to disable the back to top button
 
 navbar_fixed: true
 footer_fixed: false
-bib_search: true
+bib_search: false
 
 # Dimensions
 max_width: 930px
@@ -279,7 +279,7 @@ enable_tooltips: false # enables automatic tooltip links generated for each sect
 enable_darkmode: true # enables switching between light/dark modes
 enable_project_categories: true # enables categorization of projects into multiple categories
 enable_medium_zoom: true # enables image zoom feature (as on medium.com)
-enable_progressbar: true # enables a horizontal progress bar linked to the vertical scroll position
+enable_progressbar: false # long case studies retain a table of contents and back-to-top control
 
 # -----------------------------------------------------------------------------
 # Library versions

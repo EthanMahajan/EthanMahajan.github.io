@@ -2,7 +2,7 @@
   <div class="card h-100 project-card">
     {% assign project_url = project.redirect | default: project.url | relative_url %}
     {% if project.img %}
-      <a class="project-card__image{% if project.thumbnail_light %} project-card__image--light{% endif %}" href="{{ project_url }}" aria-label="Explore {{ project.title | escape }}">
+      <div class="project-card__image{% if project.thumbnail_light %} project-card__image--light{% endif %}">
         {%
           include figure.liquid
           loading="lazy"
@@ -11,7 +11,7 @@
           alt=project.title
           class="card-img-top"
         %}
-      </a>
+      </div>
     {% endif %}
     <div class="card-body">
       <p class="eyebrow">{{ project.card_label | default: project.category }}</p>
@@ -19,7 +19,6 @@
         <a href="{{ project_url }}">{{ project.title }}</a>
       </h2>
       <p class="card-text">{{ project.card_description | default: project.description }}</p>
-      <a class="project-card__link" href="{{ project_url }}">Explore the project <span aria-hidden="true">→</span></a>
       {% if project.github %}
         <a class="project-github" href="{{ project.github }}" target="_blank" rel="noopener noreferrer">
           <i class="fa-brands fa-github"></i> GitHub repository

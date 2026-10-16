@@ -302,13 +302,15 @@ summary:focus-visible {
   font-weight: 600;
 }
 .project-card {
+  position: relative;
   box-shadow: none;
   border: 1px solid var(--global-divider-color);
   border-radius: 0.75rem;
   overflow: hidden;
   transition: border-color 0.15s ease;
 }
-.project-card:hover {
+.project-card:hover,
+.project-card:focus-within {
   border-color: var(--global-theme-color);
 }
 .project-card__image {
@@ -372,14 +374,39 @@ summary:focus-visible {
   line-height: 1.6;
   margin-bottom: 1.25rem;
 }
-.project-card__link {
-  margin-top: auto;
-  font-weight: 600;
-  font-size: 0.9rem;
+.project-card .card-title a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.project-card .card-title a:focus-visible {
+  outline: none;
+}
+.project-card .card-title a:focus-visible::after {
+  outline: 3px solid var(--global-theme-color);
+  outline-offset: -4px;
+  border-radius: 0.75rem;
 }
 .project-card .project-github {
-  font-size: 0.8rem;
-  margin-top: 0.75rem;
+  position: relative;
+  z-index: 2;
+  align-self: flex-start;
+  font-size: 0.85rem;
+  margin-top: auto;
+  padding: 0.5rem 0;
+}
+.portfolio-contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  clear: both;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--global-divider-color);
+}
+.portfolio-contact-links a {
+  padding: 0.5rem 0;
 }
 .skill-evidence {
   list-style: none;
