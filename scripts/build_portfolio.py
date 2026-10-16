@@ -12,7 +12,7 @@ from reportlab.pdfgen import canvas
 from reportlab.platypus import Paragraph
 
 ROOT = Path(__file__).resolve().parents[1]
-ACCENT, INK, MUTED, SURFACE = "#14665e", "#202c34", "#596773", "#f3f6f5"
+ACCENT, INK, MUTED, SURFACE = "#24563d", "#202c34", "#596773", "#f3f6f5"
 WIDTH, HEIGHT, MARGIN = 612, 792, 48
 CONTENT = WIDTH - 2 * MARGIN
 

@@ -1,6 +1,8 @@
 :root {
-  --global-theme-color: #14665e;
-  --global-hover-color: #0c4943;
+  --global-theme-color: #24563d;
+  --global-hover-color: #193e2c;
+  --portfolio-button-bg: #24563d;
+  --portfolio-button-hover-bg: #193e2c;
   --global-text-color: #202c34;
   --global-text-color-light: #596773;
   --global-code-bg-color: #f3f6f5;
@@ -9,8 +11,8 @@
 }
 
 html[data-theme="dark"] {
-  --global-theme-color: #81d5c5;
-  --global-hover-color: #b1ecdf;
+  --global-theme-color: #74a17e;
+  --global-hover-color: #92bd9b;
   --global-text-color: #e6ecef;
   --global-text-color-light: #b3bec5;
   --global-code-bg-color: #242d30;
@@ -98,8 +100,12 @@ summary:focus-visible {
   padding: 0.7rem 1rem;
 }
 .btn-primary {
-  background: var(--global-theme-color) !important;
-  color: var(--global-bg-color) !important;
+  background: var(--portfolio-button-bg) !important;
+  color: #fff !important;
+}
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background: var(--portfolio-button-hover-bg) !important;
 }
 .btn-outline-primary {
   border-color: var(--global-theme-color) !important;

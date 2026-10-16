@@ -8,7 +8,7 @@ Branch: `codex/portfolio-preview`. The live site remains on `main`.
 - Artorius includes a responsive, side-by-side comparison of early and revised CAD assemblies. Captions explain the changes and the remaining limitations.
 - Project cards use outcome descriptions with colons, consistent image frames, status labels, and aligned links.
 - Resume skill groups link to relevant project sections with a sentence explaining the demonstrated work. These links do not imply that every tool in a group was used in every project.
-- A restrained teal palette, consistent spacing, readable captions, dark-mode text colors, focus indicators, and a skip link carry through the site.
+- A forest-green palette, consistent spacing, readable captions, dark-mode text colors, focus indicators, and a skip link carry through the site. Dark-mode links use a lighter green for readability; primary buttons retain a deep forest-green fill in both themes.
 - Every project ends with an email and LinkedIn contact panel. Email subjects include the project title.
 - A generated PDF is available from the homepage and Projects page. Branded share images are generated for the homepage and every project.
 
