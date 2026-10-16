@@ -47,17 +47,24 @@ I also work on the templates used to present the website's content. Fixing these
 
 My contribution is ongoing and centers on incremental improvements to the existing site. It combines careful content review with practical template maintenance and collaboration with the team. Specific before-and-after examples can be added as the work is documented.
 
+<section class="project-section project-section--balanced">
+<div class="project-section__copy" markdown="1">
+
 ## Shape Machine in Context
 
 Shape Machine identifies matching geometric elements in drawings and can apply transformations across those matches, conceptually similar to find-and-replace operations. The demonstration below shows the team's technology and provides context for the website content I help improve.
 
-<div class="project-gallery project-gallery--detail">
-    <figure>
-        <img src="{{ '/assets/gif/ShapeMachineApps_Figure.gif' | relative_url }}" alt="Demonstration of team-developed Shape Machine applications" class="img-fluid rounded" loading="lazy">
-        <figcaption class="caption">Team-developed Shape Machine applications.</figcaption>
-    </figure>
-</div>
+
 
 - [Shape Computation Lab website](https://shape.gatech.edu)
 - [What Is Shape Machine?](https://youtu.be/wlHdKuWjhsE)
 - [Shape Machine CAD demonstration](https://shape.gatech.edu/Machine/demo.html)
+
+</div>
+<div class="project-section__media">
+<figure>
+        <img src="{{ '/assets/gif/ShapeMachineApps_Figure.gif' | relative_url }}" alt="Demonstration of team-developed Shape Machine applications" class="img-fluid rounded" loading="lazy">
+        <figcaption class="caption">Team-developed Shape Machine applications.</figcaption>
+    </figure>
+</div>
+</section>

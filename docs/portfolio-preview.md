@@ -57,6 +57,10 @@ Stopped at the requested maximum of three cycles, without claiming a score above
 
 The experimental branch starts only after this preview is complete. It will be separately reviewable and will retain the forest-green direction and the distinction between CAD renders and working hardware.
 
+## Subsequent requested refinement
+
+The next revision corrects theme-button alignment and button-label centering, removes added thumbnail framing, reflows project images beside relevant explanations, and removes decorative dot separators. The PDF now includes all five projects in two print-oriented pages with linked contents, exact-heading bookmarks, and edited project summaries. The original three-cycle scores above describe the earlier preview, not a new score for this revision. See `docs/portfolio-feature-audit.md` for the complete feature-necessity review and verification evidence.
+
 ## UX review rubric
 
 Each review cycle scores five dimensions out of two: clarity and relevance; navigation and contact; visual hierarchy and spacing; responsive and accessible interaction; presentation of project evidence. Record specific issues and changes, review no more than three cycles, and stop early only if the score is solidly above 9.5. No visual score is assigned without browser inspection.

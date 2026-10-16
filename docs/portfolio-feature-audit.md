@@ -44,8 +44,16 @@ Dormant theme features such as the printer text animation, charts, maps, math re
 - Removed the theme button's vertical translation and aligned it with desktop navigation.
 - Centered button labels through flex alignment and equalized primary/outline borders.
 - Removed added thumbnail padding and pale framing; preserved the original image contents on a theme-matching card surface.
-- Paired Artorius ideation, toolhead, frame, and final-outcome text with their corresponding images. Paired the phone-mount sketch with ideation and the chess render with design text. Enlarged the purifier schematic and Shape Machine animation. Kept the phone prototype gallery proportional to its mixed landscape/portrait images.
+- Paired Artorius ideation, toolhead, frame, and final-outcome text with their corresponding images. Paired the phone-mount sketch with ideation and the chess render with design text. Enlarged the purifier schematic and paired the Shape Machine animation with its context and links. Kept the phone prototype gallery proportional to its mixed landscape/portrait images. The phone hero places its summary beside the portrait photo on desktop and stacks on mobile.
 - Removed decorative dot separators and loading ellipses while retaining normal sentence punctuation, decimal numbers, and actual list bullets.
 - Replaced the selected-project PDF with a two-page document containing all five project summaries, including unfinished work. The contents table and outline link to exact headings. Paragraph spacing is optimized for print; the website retains breathing room.
 
-Rendered verification results are recorded after the final build.
+## Verification
+
+All five project pages were inspected as complete desktop pages and at a 390 x 844 mobile viewport. The project index was checked in light and dark modes; the monochrome Shape Machine logo retains a white backing for legibility. All image includes were checked against the pre-revision source and retained. Revised text/image pairs stack on mobile without horizontal overflow.
+
+The theme button's vertical center measured 30px against 29.992px for the navigation links. Artorius contact labels measured 0px horizontal and -0.1px vertical offset from their button centers. The phone demonstration expands successfully beside the summary. The final phone hero and index were inspected in light mode as well as dark mode.
+
+The first two rendered builds passed the ten-page link, anchor, image, metadata, share-card, and PDF checker. The PDF was visually inspected on both pages and has five project outline entries. Its internal destinations use distinct heading positions, including projects sharing a page. The build checker now requires all project titles in the contents and outline and validates heading destinations. Source checks preserve project-card descriptions without em dashes and retain actual list bullets while removing decorative dot separators.
+
+Screenshots are stored locally under `output/ux-review/`. Browser viewport review is not a physical-device or full assistive-technology audit. External video and CDN availability remain dependencies.
