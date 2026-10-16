@@ -1,6 +1,33 @@
 # Portfolio presentation audit
 
-Reviewed for recruiters scanning for capability, evidence, role, status, and contact details, and community visitors seeking build information. Optional features are listed for review, not removed automatically.
+Reviewed for recruiters scanning for capability, evidence, role, status, and contact details, and community visitors seeking build information. The optional-feature inventory below records the original audit; the authorized changes are recorded next.
+
+## Decluttering implemented
+
+- Removed the single-report search, scroll progress bar, homepage workbench cards, and duplicated homepage research preview.
+- Replaced the automatic 404 redirect with a stable explanation and Home/Projects links.
+- Made each project card a single case-study destination, including its thumbnail area, with a separate GitHub link where relevant. Keyboard users encounter one case-study link per card.
+- Replaced the oversized homepage social icons with labeled Email, LinkedIn, and GitHub links.
+- Limited the back-to-top control to the long Artorius and Phone Mount case studies.
+- Simplified the assembly viewer to orbit, pan, zoom, reset, and download. Removed the export's hundreds of individual mesh controls.
+- Removed duplicate occurrences of Artorius's early/final CAD views, retaining both in the comparison. Removed the repeated phone prototype photograph, retaining it in the hero and pairing fabrication text with the slicer image. Every unique image remains available.
+- Shortened repeated contact panels to a heading and the two contact actions.
+- The experimental homepage retains its two-project curation but removes duplicate case-study links and the manually repeated client-metrics strip. Client achievements remain in the resume.
+
+## Further suggestions
+
+- Combine overlapping introductory, highlight, and outcome copy on the two longest case studies after deciding which level of technical detail to prioritize.
+- Group long resume skill lists by demonstrated capability and move less relevant details lower on the page.
+- Replace sparse unfinished-project stage headings with one clear current-status and next-steps section when their documentation is revised.
+- Give Artorius a strong photograph of the physical printer alongside its video, while continuing to label CAD renders accurately.
+- Add repeatable test evidence when available: print settings, measured quality, alignment checks, and limitations. Do not promote exploratory motion settings into validated print speeds.
+- Develop a permission-cleared client case study showing the brief, personal contribution, constraints, and deliverable; do not invent client details.
+
+## PDF automation
+
+`portfolio-preview.yml` runs `python scripts/build_portfolio.py` before Jekyll on pushes to either portfolio branch and on manual workflow runs. The script includes all projects, including unfinished work, using edited `pdf_summary` front matter rather than concatenating web pages. The two-page PDF has linked contents, project bookmarks, and compact print spacing. The built website artifact includes the generated PDF.
+
+The deployment workflow also contains this generation step, but these preview changes do not alter main or the live site. Local source editing or running Jekyll alone does not regenerate the PDF; run the Python script first.
 
 ## Retain as core presentation
 

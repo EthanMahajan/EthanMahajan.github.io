@@ -1,5 +1,6 @@
 ---
 layout: page
+back_to_top: true
 title: Phone Mount
 description: Adjustable, low-cost iPhone filming mount built from aluminum extrusion and 3D-printed fixtures
 og_image: /assets/img/social/phone_mount.png
@@ -64,16 +65,20 @@ I also designed the printed geometry around FDM manufacturing. Chamfers, clearan
     {% include figure.liquid path="assets/img/phone-mount/base-cad.jpg" alt="Braced base supporting the upright." title="Braced base supporting the upright." class="img-fluid rounded" zoomable=true caption="Braced base supporting the upright." %}
 </div>
 
+<section class="project-section project-section--balanced">
+<div class="project-section__copy" markdown="1">
+
 ## Prototype
 
 I exported the parts from Fusion 360, prepared them in OrcaSlicer, and printed the fixtures in ABS. I arranged the parts for individual printing and used a Hilbert-curve infill pattern based on my previous experience with ABS warping.
 
 All of the parts printed successfully on the first attempt. I assembled the fixtures with the aluminum extrusion and fasteners, producing a working mount with the intended height and angular adjustments.
 
-<div class="project-gallery project-gallery--mixed">
-    {% include figure.liquid path="assets/img/phone-mount/slicer-layout.jpg" alt="Fixtures prepared on separate OrcaSlicer plates." title="Fixtures prepared on separate OrcaSlicer plates." class="img-fluid rounded" zoomable=true caption="Fixtures prepared on separate OrcaSlicer plates." %}
-    {% include figure.liquid path="assets/img/phone-mount/assembled-prototype.jpg" alt="Assembled first prototype with adjustable arm." title="Assembled first prototype with adjustable arm." class="img-fluid rounded" zoomable=true caption="Assembled first prototype with adjustable arm." %}
 </div>
+<div class="project-section__media">
+{% include figure.liquid path="assets/img/phone-mount/slicer-layout.jpg" alt="Fixtures prepared on separate OrcaSlicer plates." title="Fixtures prepared on separate OrcaSlicer plates." class="img-fluid rounded" zoomable=true caption="Fixtures prepared on separate OrcaSlicer plates." %}
+</div>
+</section>
 
 ## Testing & Revisions
 

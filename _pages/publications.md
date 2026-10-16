@@ -19,10 +19,6 @@ The full report below includes the methods, results, and limitations.
 
 ## Full report
 
-<!-- Bibsearch Feature -->
-
-{% include bib_search.liquid %}
-
 <div class="publications">
 
 {% bibliography %}

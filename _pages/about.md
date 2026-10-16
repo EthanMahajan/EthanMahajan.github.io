@@ -11,8 +11,7 @@ profile:
   image_alt: Ethan Mahajan
   image_circular: false # crops the image to make it circular
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+social: true # compact contact and profile links
 ---
 
 I'm Ethan Mahajan, a mechanical engineering student at Georgia Tech. I design, fabricate, and revise physical prototypes, from a custom CoreXY printer to an adjustable filming mount.
@@ -28,4 +27,3 @@ I am seeking internship, co-op, and project opportunities where I can contribute
 
 {% include home-builds.liquid %}
 
-{% include home-evidence.liquid %}

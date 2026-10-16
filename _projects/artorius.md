@@ -1,5 +1,6 @@
 ---
 layout: page
+back_to_top: true
 title: "Artorius: FDM 3D Printer"
 description: High-speed CoreXY printer designed, fabricated, tested, and revised from an older machine
 og_image: /assets/img/social/artorius.png
@@ -91,20 +92,11 @@ I placed the extruder motor above the aluminum extrusion and arranged the other 
 </div>
 </section>
 
-<section class="project-section project-section--balanced">
-<div class="project-section__copy" markdown="1">
-
 ### Frame
 
 The frame uses standard 2020 aluminum extrusion, corner connectors, and printed joining parts. I revised the initially less rigid structure with additional extrusion to reduce resonance, although the improvement was limited.
 
 Some components extend outside the frame because the layout was already well developed before I recognized the packaging issue. That constraint led to awkward motor-mount placement and highlighted the value of planning the entire assembly early.
-
-</div>
-<div class="project-section__media">
-{% include figure.liquid path="assets/img/artoriusEarlyRender.png" alt="Early frame and motion-system CAD." title="Early frame and motion-system CAD." class="img-fluid rounded" zoomable=true caption="Early frame and motion-system CAD." %}
-</div>
-</section>
 
 ### Motors & Mounts
 
@@ -139,18 +131,9 @@ Testing also exposed limitations that extra frame extrusion did not fully resolv
 
 The printer is operational, but I am continuing to work toward a better balance of speed, print quality, and reliability. The demonstration at the top of this page shows Benchy printing from several angles, filmed using my custom phone mount.
 
-<section class="project-section project-section--balanced">
-<div class="project-section__copy" markdown="1">
-
-## Final Product
+## Current outcome
 
 The current machine is operational and can print a Benchy, as shown in the demonstration at the top of this page. The project demonstrates a complete path from custom CAD and fabrication through electronics integration and motion testing. Quality, alignment, and reliability remain active refinement goals rather than finished performance claims.
-
-</div>
-<div class="project-section__media">
-{% include figure.liquid path="assets/img/artoriusRevised.png" alt="CAD rendering of the revised Artorius assembly." title="CAD rendering of the revised Artorius assembly." class="img-fluid rounded" zoomable=true caption="CAD rendering of the revised Artorius assembly." %}
-</div>
-</section>
 
 [Watch the Artorius preview on YouTube](https://www.youtube.com/watch?v=ifcJKhLbfP0){:target="\_blank"}
 

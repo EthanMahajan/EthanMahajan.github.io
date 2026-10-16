@@ -9,7 +9,7 @@
     {% for project in selected_builds %}
       <div class="home-build">
         <p class="eyebrow">{{ project.card_label }}</p>
-        <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+        <h3>{{ project.title }}</h3>
         {% if project.hero.video_lead %}
           {% include project-video.liquid project=project %}
         {% else %}
