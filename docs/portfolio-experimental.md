@@ -12,4 +12,8 @@ The project index, case studies, resume, PDF generator, forest-green colors, and
 
 ## Validation
 
-Build and rendered checks will be recorded after implementation. The preview's three-cycle UX review remains in `docs/portfolio-preview.md`; experimental validation is separate and does not add preview review cycles.
+The first experimental GitHub Actions build (`38969940101`, commit `dc80d3a`) passed. Its artifact also passed the ten-page local link, anchor, image-description, metadata, share-card, and three-page PDF checker. A source check confirmed the three client metrics match the existing CV and all project-card descriptions remain free of em dashes.
+
+Inspected desktop and 390 x 844 mobile rendering in the supported browser. No horizontal overflow was found (390px viewport, body, and document width). The initial layout delayed the project media behind the evidence strip, so the final order puts the builds first and reduces the desktop portrait to 22% of the content width. The historical evidence strip follows the builds, with its date aligned to the section title. Final rendered checks are recorded below.
+
+The preview's three-cycle UX review remains in `docs/portfolio-preview.md`; experimental validation is separate and does not add preview review cycles.

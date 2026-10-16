@@ -26,6 +26,6 @@ I am seeking internship, co-op, and project opportunities where I can contribute
   <a class="btn btn-outline-primary" href="mailto:{{ site.data.socials.email }}">Contact Me</a>
 </div>
 
-{% include home-evidence.liquid %}
-
 {% include home-builds.liquid %}
+
+{% include home-evidence.liquid %}

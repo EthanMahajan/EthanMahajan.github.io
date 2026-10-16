@@ -3,6 +3,14 @@
   font-size: clamp(2.3rem, 5vw, 3.5rem);
   margin-bottom: 1rem;
 }
+.home-evidence > .caption {
+  text-align: left;
+}
+@media (min-width: 576px) {
+  .home-header + article .profile {
+    width: 22%;
+  }
+}
 .home-evidence,
 .home-builds {
   clear: both;
