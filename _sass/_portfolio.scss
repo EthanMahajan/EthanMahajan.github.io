@@ -330,7 +330,8 @@ summary:focus-visible {
 .project-card .card-title a {
   color: var(--global-text-color);
 }
-.project-card .card-text {
+.project-card .card-body .card-text {
+  color: var(--global-text-color);
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 1.25rem;
