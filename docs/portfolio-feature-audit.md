@@ -29,6 +29,12 @@ Reviewed for recruiters scanning for capability, evidence, role, status, and con
 
 The deployment workflow also contains this generation step, but these preview changes do not alter main or the live site. Local source editing or running Jekyll alone does not regenerate the PDF; run the Python script first.
 
+## Decluttering validation and limitation
+
+Preview run `38983179006` (`14c87a7`) and experimental run `38983215279` (`03c706a`) passed. Both downloaded artifacts passed the ten-page checker with the complete linked two-page PDF. Additional rendered-HTML checks confirmed one case-study destination per card, the stable 404, removal of the research search/progress bar/homepage duplicates, and conditional back-to-top loading. Source checks confirmed every unique project image remains referenced and project-card descriptions have no em dashes. The revised CAD JavaScript passed Node's syntax check.
+
+Fresh visual and interaction verification of this cleanup could not be completed. The supported browser initially showed `ERR_CONNECTION_REFUSED`. After restarting the authorized preview server, navigation was blocked with `Blocked browser navigation by Browser Use URL policy: data:text/html;charset=utf-8,...`, referring to the browser's generated connection-error page. The local server separately returned HTTP 200. The user's default and exact localhost Always allow settings are already enabled. No alternate browser or raw browser protocol was used. Earlier screenshots and review scores below apply to the preceding layout revision, not this cleanup; no new visual UX score is claimed.
+
 ## Retain as core presentation
 
 | Feature | Purpose |
