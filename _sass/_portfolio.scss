@@ -17,7 +17,7 @@ html[data-theme="dark"] {
   --global-text-color-light: #b3bec5;
   --global-code-bg-color: #242d30;
   --portfolio-surface: #242d30;
-  --portfolio-image-bg: #e9eeec;
+  --portfolio-image-bg: #242d30;
 }
 
 body {
@@ -123,6 +123,14 @@ summary:focus-visible {
   border-radius: 0.2rem;
 }
 .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 46px;
+  text-align: center;
+  line-height: 1.4;
+  vertical-align: middle;
   margin: 0;
   box-shadow: none;
   text-transform: none;
@@ -132,6 +140,7 @@ summary:focus-visible {
   padding: 0.7rem 1rem;
 }
 .btn-primary {
+  border: 2px solid var(--portfolio-button-bg) !important;
   background: var(--portfolio-button-bg) !important;
   color: #fff !important;
 }
@@ -304,8 +313,8 @@ summary:focus-visible {
 }
 .project-card__image {
   display: block;
-  background: var(--portfolio-image-bg);
-  padding: 0.75rem;
+  background: var(--global-card-bg-color);
+  padding: 0;
 }
 .project-card__image figure {
   margin: 0;
@@ -314,7 +323,9 @@ summary:focus-visible {
   height: 185px;
   width: 100%;
   object-fit: contain;
-  border-radius: 0.25rem;
+  border-radius: 0;
+  border: 0;
+  box-shadow: none;
 }
 .project-card .card-body {
   display: flex;

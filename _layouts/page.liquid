@@ -19,7 +19,7 @@ layout: default
     {% if page.collection == 'projects' and page.documentation_updated %}
       <p class="text-muted">
         <small>
-          {%- if page.project_started %}Started {{ page.project_started }} · {% endif %}Documentation updated
+          {%- if page.project_started %}Started {{ page.project_started }}. {% endif %}Documentation updated
           {{ page.documentation_updated | date: '%B %-d, %Y' -}}
         </small>
       </p>

@@ -7,6 +7,7 @@ from urllib.parse import unquote, urlsplit, urljoin
 
 from PIL import Image
 from pypdf import PdfReader
+import yaml
 
 
 class Page(HTMLParser):
@@ -73,7 +74,20 @@ def check(site):
                 errors.append(f"{path}: incorrect share-image size")
     pdf = PdfReader(site / "assets/pdf/Ethan_Mahajan_Portfolio.pdf")
     if len(pdf.pages) < 2:
-        errors.append("Expected a cover and at least one selected project in the PDF")
+        errors.append("Expected a compact portfolio with linked contents and project summaries")
+    project_sources = (Path(__file__).resolve().parents[1] / "_projects").glob("*.md")
+    expected_titles = [yaml.safe_load(p.read_text(encoding="utf-8").split("---", 2)[1])["title"] for p in project_sources]
+    outline = {item.title: pdf.get_destination_page_number(item) for item in pdf.outline if not isinstance(item, list)}
+    for title in expected_titles:
+        if title not in outline:
+            errors.append(f"PDF: missing project bookmark {title}")
+        elif title not in pdf.pages[outline[title]].extract_text():
+            errors.append(f"PDF: project bookmark points to wrong page: {title}")
+        if title not in pdf.pages[0].extract_text():
+            errors.append(f"PDF: project missing from contents: {title}")
+    internal_links = [annotation.get_object() for p in pdf.pages for annotation in p.get("/Annots", []) if annotation.get_object().get("/Dest")]
+    if len(internal_links) < len(expected_titles):
+        errors.append("PDF: contents must link internally to every project")
     for index, page in enumerate(pdf.pages):
         if len(page.extract_text()) < 200:
             errors.append(f"PDF page {index + 1}: missing text")
