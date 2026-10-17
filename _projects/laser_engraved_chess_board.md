@@ -46,10 +46,8 @@ The important design questions are how the engraving defines the playing surface
 </div>
 </section>
 
-## Prototype
+## Current status and next steps
 
-Board fabrication is approximately halfway complete. Work on the laser-engraved board is the physical progress to date; the CNC-machined metal pieces have not been made. This stage is being used to develop the playing surface before completing the full set.
+Board fabrication is approximately halfway complete. The metal pieces have not been made, and the complete set is pending. Next I need to finish the board and develop the CNC manufacturing approach for the pieces.
 
-## Final Product
-
-The complete chess set is pending. The current outcome is the board design and fabrication work. Completing the board and manufacturing the pieces will allow assessment of engraving quality, finish, and piece stability as a usable set.
+Completing the set will allow assessment of engraving quality, finish, and piece stability during use.

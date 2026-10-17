@@ -11,6 +11,7 @@ documentation_updated: 2026-10-06
 category: Engineering
 github: https://github.com/EthanMahajan/Artorius
 cad_model: /assets/models/artorius/artorius.3mf
+cad_preview: /assets/models/artorius/artorius-preview.3mf
 card_label: Independent build
 card_description: "Custom CoreXY printer: operational hardware, a revised frame, and integrated CAN-bus electronics."
 hero:
@@ -24,10 +25,6 @@ portfolio: true
 pdf_summary:
   design: "Recurring problems with an older BIQU B1 led me to redesign its architecture around reusable motors and a 24 V supply. I developed a CoreXY frame, motion system, and custom toolhead in CAD, fabricated fixtures, assembled the machine, and integrated CAN-bus electronics with a serviceable enclosure."
   evidence: "The printer is operational and the linked video shows Benchy printing. Motion tests explored approximately 1,000 mm/s; this is not a validated print-quality speed. Extra frame support did not fully resolve resonance. Alignment, packaging, vibration, and repeatable print quality remain refinement priorities."
-portfolio_highlights:
-  - Designed the frame, motion system, and custom toolhead together in CAD around reusable components.
-  - Fabricated fixtures, assembled the machine, and integrated a CAN-bus toolboard and serviceable electronics.
-  - Motion tests explored approximately 1,000 mm/s; consistent print quality and alignment remain refinement goals.
 comparison:
   title: From the first layout to a revised assembly
   intro: "These CAD views document two stages of the design. The revision added frame support and improved electronics access, while leaving alignment and vibration as ongoing challenges."
@@ -51,10 +48,6 @@ project_summary:
 ---
 
 {% include project_summary.liquid %}
-
-{% include project-highlights.liquid %}
-
-Artorius is a CoreXY 3D printer I designed and built using suitable components from an older BIQU B1. It combines a custom toolhead, an extrusion frame, and serviceable electronics. The build gave me experience connecting mechanical design decisions to alignment, vibration, and actual printing behavior.
 
 <section class="project-section project-section--portrait">
 <div class="project-section__copy" markdown="1">
@@ -129,12 +122,6 @@ Motion testing reached speeds of approximately 1,000 mm/s and acceleration setti
 
 Testing also exposed limitations that extra frame extrusion did not fully resolve. Keeping the machine square and free of skew remains difficult; a front crossbar would make alignment easier in a future revision. Better component packaging, greater frame rigidity, and cleaner motor-mount placement are other priorities.
 
-The printer is operational, but I am continuing to work toward a better balance of speed, print quality, and reliability. The demonstration at the top of this page shows Benchy printing from several angles, filmed using my custom phone mount.
-
-## Current outcome
-
-The current machine is operational and can print a Benchy, as shown in the demonstration at the top of this page. The project demonstrates a complete path from custom CAD and fabrication through electronics integration and motion testing. Quality, alignment, and reliability remain active refinement goals rather than finished performance claims.
-
-[Watch the Artorius preview on YouTube](https://www.youtube.com/watch?v=ifcJKhLbfP0){:target="\_blank"}
+The operational printer demonstrates a complete path from CAD and fabrication through electronics integration and motion testing. The video at the top shows Benchy printing, filmed with my custom phone mount. Repeatable print quality, alignment, and reliability remain refinement priorities.
 
 [View the Artorius repository on GitHub](https://github.com/EthanMahajan/Artorius){:target="\_blank"}

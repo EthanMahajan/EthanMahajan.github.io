@@ -23,29 +23,17 @@ project_summary:
 
 {% include project_summary.liquid %}
 
-I contribute to the Shape Computation Lab website by improving existing content, catching mistakes, and fixing templates. My work supports the presentation of Shape Machine, a team-developed shape-computation technology, through targeted improvements to the team's existing website.
-
 ## Project Context
 
-The website introduces a specialized design technology to visitors with different levels of technical background. My role is to make its explanations and supporting materials clearer and more consistent while working within an established site and an interdisciplinary team.
+Shape Machine is a team-developed shape-computation technology. I support its presentation on the Shape Computation Lab website, working within an interdisciplinary team to make specialized explanations clearer for visitors with varied technical backgrounds.
 
 ## My Contributions
 
-### Content improvements
+- **Content:** revise wording and organization so visitors can follow the explanations.
+- **Corrections:** identify and fix mistakes or inconsistencies in existing materials.
+- **Templates:** address presentation issues in shared templates to improve consistency across pages.
 
-I review and revise website content to help visitors understand the project's purpose and follow its explanations. The focus is on clearer wording, better organization, and making existing material easier to navigate and interpret.
-
-### Catching and correcting mistakes
-
-Reviewing the existing website is an important part of my contribution. I look for mistakes and inconsistencies in the content and presentation, then correct them so they do not distract from the team's work or confuse visitors.
-
-### Template fixes
-
-I also work on the templates used to present the website's content. Fixing these helps address presentation issues at their source and supports consistency across pages that share the same structure.
-
-## Ongoing Work
-
-My contribution is ongoing and centers on incremental improvements to the existing site. It combines careful content review with practical template maintenance and collaboration with the team. Specific before-and-after examples can be added as the work is documented.
+This work is ongoing. Specific before-and-after examples remain to be documented; the demonstrations below show the team's underlying technology.
 
 <section class="project-section project-section--balanced">
 <div class="project-section__copy" markdown="1">

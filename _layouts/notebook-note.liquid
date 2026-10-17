@@ -1,0 +1,18 @@
+---
+layout: default
+---
+{% assign project_path = page.project | prepend: '_projects/' | append: '.md' %}
+{% assign linked_project = site.projects | where: 'path', project_path | first %}
+<div class="post notebook-note">
+  <header class="post-header">
+    <p class="eyebrow">Engineering notebook</p>
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+    <p class="caption"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time>{% if linked_project %} / <a href="{{ linked_project.url | relative_url }}">{{ linked_project.title | escape }}</a>{% endif %}</p>
+    <p class="post-description">{{ page.description | escape }}</p>
+  </header>
+  <article>{{ content }}</article>
+  <nav class="portfolio-secondary-links" aria-label="Notebook navigation">
+    <a href="{{ '/notebook/' | relative_url }}">All notebook entries</a>
+    {% if linked_project %}<a href="{{ linked_project.url | relative_url }}">Back to the project</a>{% endif %}
+  </nav>
+</div>

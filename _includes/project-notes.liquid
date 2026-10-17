@@ -1,0 +1,12 @@
+{% assign project_key = page.path | split: '/' | last | remove: '.md' %}
+{% assign project_notes = site.notes | where: 'project', project_key | sort: 'date' | reverse %}
+{% if project_notes.size > 0 %}
+<section class="project-notes" aria-labelledby="project-notes-title">
+  <h2 id="project-notes-title">From the engineering notebook</h2>
+  <ul>
+  {% for note in project_notes %}
+    <li><a href="{{ note.url | relative_url }}">{{ note.title | escape }}</a> <span class="caption">{{ note.date | date: '%B %-d, %Y' }}</span></li>
+  {% endfor %}
+  </ul>
+</section>
+{% endif %}

@@ -71,6 +71,9 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 collections:
   projects:
     output: true
+  notes:
+    output: true
+    permalink: /notebook/:name/
 
 # -----------------------------------------------------------------------------
 # Jekyll settings

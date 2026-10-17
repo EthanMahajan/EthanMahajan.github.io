@@ -12,6 +12,7 @@ from reportlab.platypus import (
     TableStyle, Image, KeepTogether,
 )
 from reportlab.platypus.tableofcontents import TableOfContents
+from build_browser_model import build_browser_model
 
 ROOT = Path(__file__).resolve().parents[1]
 ACCENT, INK, MUTED, SURFACE = "#24563d", "#202c34", "#596773", "#f3f6f5"
@@ -163,6 +164,7 @@ def card(slug, title, subtitle, source):
 
 
 def main():
+    build_browser_model()
     # Keep the original source asset while publishing it with a standard PNG extension.
     copyfile(ROOT / "assets/img/PurifierPCB", ROOT / "assets/img/PurifierPCB.png")
     config = yaml.safe_load((ROOT / "_config.yml").read_text(encoding="utf-8"))

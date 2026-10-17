@@ -9,6 +9,8 @@ display_categories: [Engineering, Design]
 horizontal: false
 ---
 
+<p class="caption">For shorter build notes and lessons learned, visit the <a href="{{ '/notebook/' | relative_url }}">engineering notebook</a>.</p>
+
 <div class="portfolio-download">
   <div><p class="eyebrow">Take the work with you</p><p>Every project, including work in progress, in a compact PDF with linked contents.</p></div>
   <a class="btn btn-outline-primary" href="{{ site.portfolio_pdf | relative_url }}" download>Download Portfolio (PDF)</a>

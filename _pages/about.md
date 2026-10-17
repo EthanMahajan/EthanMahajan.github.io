@@ -20,10 +20,12 @@ I am seeking internship, co-op, and project opportunities where I can contribute
 
 <div class="portfolio-actions">
   <a class="btn btn-primary" href="{{ '/projects/' | relative_url }}">View Projects</a>
-  <a class="btn btn-outline-primary" href="{{ site.data.socials.cv_pdf | relative_url }}">Download Resume (PDF)</a>
-  <a class="btn btn-outline-primary" href="{{ site.portfolio_pdf | relative_url }}" download>Portfolio (PDF)</a>
   <a class="btn btn-outline-primary" href="mailto:{{ site.data.socials.email }}">Contact Me</a>
 </div>
+<nav class="portfolio-secondary-links" aria-label="Downloads">
+  <a href="{{ site.data.socials.cv_pdf | relative_url }}">Download Resume (PDF)</a>
+  <a href="{{ site.portfolio_pdf | relative_url }}" download>Download Portfolio (PDF)</a>
+</nav>
 
 {% include home-builds.liquid %}
 
