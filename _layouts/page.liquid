@@ -25,7 +25,10 @@ layout: default
       </p>
     {% endif %}
     {{ content }}
-    {% if page.collection == 'projects' %}{% include project-contact.liquid %}{% endif %}
+    {% if page.collection == 'projects' %}
+      {% include project-notes.liquid %}
+      {% include project-contact.liquid %}
+    {% endif %}
   </article>
 
   {% if page.related_publications %}

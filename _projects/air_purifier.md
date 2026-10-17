@@ -42,12 +42,10 @@ I completed the electrical schematics in KiCad. PCB component placement has not 
     {% include figure.liquid path="assets/img/PurifierPCB.png" alt="Current electronics-design documentation for the purifier." title="Current electronics-design documentation for the purifier." class="img-fluid rounded" zoomable=true caption="Current electronics-design documentation for the purifier." %}
 </div>
 
-## Prototype
+## Current status and next steps
 
-A complete physical prototype has not yet been assembled. The next steps are PCB placement, fabrication of the housing and board, and integration of the fan, filter, and sensor. This stage will test whether the electrical and mechanical designs work together as intended.
+The electrical schematics are complete; PCB placement and a physical prototype are pending. Next I need to lay out the board, fabricate the housing and board, and integrate the fan, filter, and sensor.
 
-## Final Product
-
-The final purifier is pending. The current deliverable is the completed schematic work and developing system design. A finished build will need evaluation of airflow, particulate response, fan control, noise, and filter-replacement behavior before those features can be presented as demonstrated results.
+The assembled system will need testing for airflow, particulate response, fan control, noise, and filter-replacement behavior before those functions can be presented as demonstrated results.
 
 [View the Air Purifier repository](https://github.com/EthanMahajan/Air-Purifier)

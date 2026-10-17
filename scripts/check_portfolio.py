@@ -1,9 +1,15 @@
 """Check rendered portfolio links, IDs, images, metadata, and PDF structure."""
 import argparse
 from collections import Counter
+from datetime import date
+from hashlib import sha256
 from html.parser import HTMLParser
+import json
+from math import isfinite
 from pathlib import Path
 from urllib.parse import unquote, urlsplit, urljoin
+from zipfile import ZipFile
+import xml.etree.ElementTree as ET
 
 from PIL import Image
 from pypdf import PdfReader
@@ -23,6 +29,8 @@ class Page(HTMLParser):
             self.ids.append(attrs["id"])
         if tag in ("a", "link") and attrs.get("href"):
             self.links.append(attrs["href"])
+        if attrs.get("data-model-url"):
+            self.links.append(attrs["data-model-url"])
         if tag == "img":
             self.images.append(attrs)
         if tag == "iframe":
@@ -72,6 +80,48 @@ def check(site):
         with Image.open(path) as image:
             if image.size != (1200, 630):
                 errors.append(f"{path}: incorrect share-image size")
+    model_folder = site / 'assets/models/artorius'
+    report = json.loads((model_folder / 'preview-manifest.json').read_text())
+    for key, filename in (('source', 'artorius.3mf'), ('preview', 'artorius-preview.3mf')):
+        model = model_folder / filename
+        if sha256(model.read_bytes()).hexdigest() != report[key + '_sha256']:
+            errors.append(f'Model: {key} checksum does not match generated manifest')
+    if report['preview_bytes'] >= report['source_bytes'] * 0.3:
+        errors.append('Model: browser preview should be under 30% of the original download size')
+    meshes, faces = 0, 0
+    core = '{http://schemas.microsoft.com/3dmanufacturing/core/2015/02}'
+    with ZipFile(model_folder / 'artorius-preview.3mf') as archive:
+        with archive.open('3D/3dmodel.model') as stream:
+            for _, element in ET.iterparse(stream, events=('end',)):
+                if element.tag != core + 'object':
+                    continue
+                mesh = element.find(core + 'mesh')
+                if mesh is not None:
+                    meshes += 1
+                    vertices = mesh.find(core + 'vertices')
+                    for vertex in vertices:
+                        if not all(isfinite(float(vertex.get(k))) for k in ('x', 'y', 'z')):
+                            errors.append('Model: non-finite vertex')
+                    triangles = mesh.find(core + 'triangles')
+                    faces += len(triangles)
+                    if not len(triangles):
+                        errors.append('Model: an assembly mesh disappeared')
+                    for triangle in triangles:
+                        if not all(0 <= int(triangle.get(k)) < len(vertices) for k in ('v1', 'v2', 'v3')):
+                            errors.append('Model: invalid triangle indices')
+                element.clear()
+    if meshes != report['meshes'] or faces != report['preview_triangles']:
+        errors.append('Model: preview mesh or triangle counts differ from the generation report')
+    root = Path(__file__).resolve().parents[1]
+    project_keys = {p.stem for p in (root / '_projects').glob('*.md')}
+    for note in (root / '_notes').glob('*.md'):
+        data = yaml.safe_load(note.read_text(encoding='utf-8').split('---', 2)[1])
+        if data.get('published') is False:
+            continue
+        if not all(data.get(k) for k in ('title', 'description', 'date', 'project')):
+            errors.append(f'{note.name}: notebook entry is missing required metadata')
+        if data.get('project') not in project_keys or not isinstance(data.get('date'), date):
+            errors.append(f'{note.name}: notebook entry needs a valid project and actual YAML date')
     pdf = PdfReader(site / "assets/pdf/Ethan_Mahajan_Portfolio.pdf")
     if len(pdf.pages) < 2:
         errors.append("Expected a compact portfolio with linked contents and project summaries")
@@ -97,7 +147,7 @@ def check(site):
             errors.append(f"PDF page {index + 1}: missing links")
     if errors:
         raise SystemExit("\n".join(sorted(set(errors))))
-    print(f"PASS: {len(pages)} pages, local links and anchors, image descriptions, share cards, and linked {len(pdf.pages)}-page PDF")
+    print(f"PASS: {len(pages)} pages, local links and anchors, image descriptions, share cards, notebook metadata, browser model, and linked {len(pdf.pages)}-page PDF")
 
 
 if __name__ == "__main__":

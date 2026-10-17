@@ -21,20 +21,12 @@ portfolio: true
 pdf_summary:
   design: "I needed an inexpensive, adjustable way to film engineering builds with an iPhone. I modeled Fusion 360 fixtures for height, arm rotation, and phone orientation, printed them in ABS, and assembled the mount with aluminum extrusion, heat-set inserts, and fasteners. Chamfers and clearances supported FDM fabrication and assembly."
   evidence: "The usable first prototype cost approximately $18 including extrusion, or $4 excluding it, as estimated in the project video. It became my project filming mount. Assembly exposed a missing screw-access hole; holder play and base shake suggest future stiffness improvements. A second build was unnecessary for the intended use."
-portfolio_highlights:
-  - Modeled fixtures in Fusion 360 for vertical positioning, arm rotation, and phone orientation.
-  - Printed the fixtures in ABS and assembled them using heat-set inserts, fasteners, and aluminum extrusion.
-  - Produced a usable filming mount for approximately $18; holder play and base shake remain possible refinements.
 project_summary:
   role: "Independent design and fabrication"
   tools: "Fusion 360, OrcaSlicer, ABS printing"
   status: "Completed; usable first prototype"
   result: "Adjustable iPhone filming mount; approximately $18 including extrusion"
 ---
-
-{% include project-highlights.liquid %}
-
-I built a low-cost adjustable phone mount to film my engineering projects with an iPhone. Extrusion supplies the structure; printed fixtures provide the connections and camera positioning.
 
 <section class="project-section project-section--balanced">
 <div class="project-section__copy" markdown="1">
@@ -82,14 +74,8 @@ All of the parts printed successfully on the first attempt. I assembled the fixt
 
 ## Testing & Revisions
 
-The prototype was good enough for final use filming with my iPhone. Assembly revealed one small design oversight: a missing access hole made an extrusion-mounting screw harder to reach. I worked around it during assembly and identified the access opening as a straightforward improvement.
+The first prototype became the mount I use to film project footage. Assembly exposed a missing access hole for an extrusion-mounting screw, which I worked around and identified for a future revision.
 
-The finished mount provided useful footage, although the phone holder had some play and touching the base introduced visible shake. Improving holder stiffness and base stability would be the next refinements; the first prototype already met my practical recording needs.
+The phone holder has some play, and touching the base introduces visible shake. Improving holder stiffness and base stability are possible refinements; a second build was unnecessary for my recording needs.
 
-## Final Product
-
-The first prototype became the mount I use to capture project footage. Its value is a practical filming setup built from reusable stock and a small set of custom parts, with the adjustment range needed for my recordings. Further stiffness improvements are possible, but a second build was not necessary for the intended use.
-
-The demonstration at the top of this page documents the design, CAD, slicing, assembled prototype, and sample footage.
-
-[Watch the Phone Mount project on YouTube](https://www.youtube.com/watch?v=NBOV5k6CR7c){:target="\_blank"}
+The expandable demonstration at the top documents the design, CAD, slicing, assembled mount, and sample footage.

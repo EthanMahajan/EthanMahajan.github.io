@@ -13,20 +13,18 @@ profile:
 social: true # compact contact and profile links
 ---
 
-I am Ethan Mahajan, a mechanical engineering student at the Georgia Institute of Technology.
-
-I enjoy turning engineering concepts into reliable physical products through CAD design, additive manufacturing, machining, and iterative testing.
-
-My experience includes designing and revising a high-speed FDM 3D printer, completing freelance CAD and manufacturing work, and researching microplastic contamination from 3D-printed cups. I am currently building experience across digital design, materials, fabrication, and engineering communication.
+I am Ethan Mahajan, a mechanical engineering student at the Georgia Institute of Technology. My work connects CAD, manufacturing, and testing through a custom FDM printer, freelance design and manufacturing work, and research into particles observed in water held in 3D-printed cups.
 
 I am seeking internship, co-op, and project opportunities where I can contribute to hands-on mechanical design and manufacturing work.
 
 <div class="portfolio-actions">
   <a class="btn btn-primary" href="{{ '/projects/' | relative_url }}">View Projects</a>
-  <a class="btn btn-outline-primary" href="{{ site.data.socials.cv_pdf | relative_url }}">Download Resume (PDF)</a>
-  <a class="btn btn-outline-primary" href="{{ site.portfolio_pdf | relative_url }}" download>Portfolio (PDF)</a>
   <a class="btn btn-outline-primary" href="mailto:{{ site.data.socials.email }}">Contact Me</a>
 </div>
+<nav class="portfolio-secondary-links" aria-label="Downloads">
+  <a href="{{ site.data.socials.cv_pdf | relative_url }}">Download Resume (PDF)</a>
+  <a href="{{ site.portfolio_pdf | relative_url }}" download>Download Portfolio (PDF)</a>
+</nav>
 
 ## Featured build: Artorius
 
