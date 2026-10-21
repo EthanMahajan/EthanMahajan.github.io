@@ -48,6 +48,20 @@
 .project-section--portrait {
   grid-template-columns: minmax(0, 1fr) minmax(180px, 240px);
 }
+.project-section--media-left {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+}
+.project-section--portrait.project-section--media-left {
+  grid-template-columns: minmax(180px, 240px) minmax(0, 1fr);
+}
+.project-section--media-left > .project-section__media {
+  grid-column: 1;
+  grid-row: 1;
+}
+.project-section--media-left > .project-section__copy {
+  grid-column: 2;
+  grid-row: 1;
+}
 .project-section__copy,
 .project-section__media {
   min-width: 0;
@@ -91,9 +105,16 @@
 }
 @media (max-width: 767px) {
   .project-section,
-  .project-section--portrait {
+  .project-section--portrait,
+  .project-section--media-left,
+  .project-section--portrait.project-section--media-left {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+  .project-section--media-left > .project-section__copy,
+  .project-section--media-left > .project-section__media {
+    grid-column: auto;
+    grid-row: auto;
   }
   .project-section--portrait .project-section__media {
     width: min(100%, 270px);

@@ -6,7 +6,7 @@ cv:
 
   social_networks:
     - network: LinkedIn
-      username: ethan-mahajan-546827355
+      username: ethan-mahajan
     - network: GitHub
       username: EthanMahajan
 
@@ -88,7 +88,7 @@ cv:
         summary: In-progress Invention Studio project combining CAD, laser engraving, and planned CNC-machined metal pieces.
         highlights:
           - "Developed a quickly manufacturable board design and planned low-center-of-mass pieces for stability."
-          - "Completed approximately half of the board fabrication; CNC-machined metal pieces are coming soon."
+          - "Fabricated the laser-engraved playing surface and personalized reverse; CNC-machined metal pieces remain planned."
         start_date: "2026-08"
         end_date: present
 
@@ -114,6 +114,7 @@ cv:
         highlights:
           - "Launched Shape Machine's digital presence through social-media outreach."
           - "Collaborated with an interdisciplinary team to publish the Shape Computation Lab website."
+          - "Contribute GitHub documentation and website fixes through the team's enterprise repository."
 
       - company: Wyzant
         position: Freelance Private Tutor

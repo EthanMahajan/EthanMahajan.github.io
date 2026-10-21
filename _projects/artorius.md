@@ -2,12 +2,13 @@
 layout: page
 back_to_top: true
 title: "Artorius: FDM 3D Printer"
+project_intro: "Artorius is a CoreXY 3D printer I designed and built around suitable components from an older BIQU B1. The project connects a custom frame and toolhead with fabrication, CAN-bus electronics, and physical motion testing."
 description: High-speed CoreXY printer designed, fabricated, tested, and revised from an older machine
 og_image: /assets/img/social/artorius.png
 img: assets/img/artoriusRevised.png
 importance: 1
 project_started: June 2024
-documentation_updated: 2026-10-06
+documentation_updated: 2026-10-20
 category: Engineering
 github: https://github.com/EthanMahajan/Artorius
 cad_model: /assets/models/artorius/artorius.3mf
@@ -39,15 +40,12 @@ comparison:
       image: assets/img/artoriusRevised.png
       alt: Revised Artorius CAD assembly with additional frame support and electronics enclosure
       caption: "Additional extrusion and a serviceable electronics enclosure addressed support and access. Extra extrusion alone did not fully resolve resonance."
-  takeaway: "Plan packaging, wiring, and alignment early, then evaluate the assembly physically. A revised CAD model is a design change, not proof of a measured performance gain."
 project_summary:
   role: "Independent design and build"
   tools: "CAD, FDM fabrication, CoreXY motion, CAN bus"
   status: "Operational; refinement ongoing"
   result: "Working custom printer and high-speed motion tests"
 ---
-
-{% include project_summary.liquid %}
 
 <section class="project-section project-section--portrait">
 <div class="project-section__copy" markdown="1">
@@ -70,7 +68,7 @@ I developed the frame, motion system, and toolhead together in CAD, checking com
 
 {% include cad_viewer.liquid %}
 
-<section class="project-section project-section--balanced">
+<section class="project-section project-section--balanced project-section--media-left">
 <div class="project-section__copy" markdown="1">
 
 ### Toolhead
@@ -99,9 +97,21 @@ The Z axis reuses less demanding motors from the BIQU B1 and runs from the 24 V 
 
 
 
+<section class="project-section project-section--balanced">
+<div class="project-section__copy" markdown="1">
+
 ## Prototype
 
 I fabricated the printed fixtures and assembled them with extrusion, motion components, and electronics. The first build allowed me to evaluate the gantry arrangement physically and exposed weaknesses that were less apparent in CAD. I then revised the frame and wiring while retaining usable components.
+
+</div>
+<div class="project-section__media">
+{% include figure.liquid path="assets/img/artoriusBelts.png" alt="CAD render of the first-iteration CoreXY gantry and belt routing." title="CAD render of the first-iteration CoreXY gantry and belt routing." class="img-fluid rounded" zoomable=true caption="CAD render of the first-iteration CoreXY gantry and belt routing." %}
+</div>
+</section>
+
+<section class="project-section project-section--balanced project-section--media-left">
+<div class="project-section__copy" markdown="1">
 
 ### Wiring & Electronics
 
@@ -109,10 +119,11 @@ Wiring was initially an afterthought, so I redesigned its routing and enclosure 
 
 A reused 24 V power supply powers the main system, while an added 48 V supply powers the XY motor drivers. The toolboard connects through CAN bus, reducing the wiring carried to the toolhead. Integrating the BigTreeTech Eddy probe involved substantial setup and documentation troubleshooting; the connection now works.
 
-<div class="project-gallery">
-    {% include figure.liquid path="assets/img/artoriusBelts.png" alt="CAD render of the first-iteration CoreXY gantry and belt routing." title="CAD render of the first-iteration CoreXY gantry and belt routing." class="img-fluid rounded" zoomable=true caption="CAD render of the first-iteration CoreXY gantry and belt routing." %}
-    {% include figure.liquid path="assets/img/artoriusProgress.png" alt="Intermediate CAD assembly before the additional frame extrusion." title="Intermediate CAD assembly before the additional frame extrusion." class="img-fluid rounded" zoomable=true caption="Intermediate CAD assembly before the additional frame extrusion." %}
 </div>
+<div class="project-section__media">
+{% include figure.liquid path="assets/img/artoriusProgress.png" alt="Intermediate CAD assembly before the additional frame extrusion." title="Intermediate CAD assembly before the additional frame extrusion." class="img-fluid rounded" zoomable=true caption="Intermediate CAD assembly before the additional frame extrusion." %}
+</div>
+</section>
 
 ## Testing & Revisions
 

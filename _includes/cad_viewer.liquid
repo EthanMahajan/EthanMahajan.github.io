@@ -3,9 +3,8 @@
 <section class="cad-viewer" data-cad-viewer data-model-url="{{ page.cad_preview | relative_url }}" aria-labelledby="cad-viewer-title">
   <h3 id="cad-viewer-title">Explore the Artorius assembly</h3>
   {% if preview_file %}
-    <p class="caption">Lightweight CAD preview. Fine details are simplified; the original assembly is available below.</p>
-    <p>Drag to orbit, right-drag to pan, and scroll or pinch to zoom.</p>
-    <button type="button" class="btn btn-outline-primary" data-cad-load>Load 3D preview</button>
+    <p class="cad-viewer__instructions">Drag to orbit, right-drag to pan, and scroll or pinch to zoom.</p>
+    <button type="button" class="btn btn-outline-primary" data-cad-load>Load 3D model</button>
     <p data-cad-status role="status" aria-live="polite">The model loads on request.</p>
     <div data-cad-interface hidden>
       <div class="cad-viewer__canvas" data-cad-canvas></div>

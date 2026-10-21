@@ -1,12 +1,13 @@
 ---
 layout: page
 title: Air Purifier
+project_intro: "I am developing a smart air purifier that reuses a 120 mm computer fan in a printed housing. The current deliverable is the KiCad schematic; fabrication, sensing, and control integration are still pending."
 description: Engineering project in development
 card_label: Design in progress
 card_description: "Smart air purifier controller: KiCad schematics complete, with PCB layout and physical testing next."
 importance: 3
 project_started: July 2026
-documentation_updated: 2026-10-06
+documentation_updated: 2026-10-20
 category: Engineering
 github: https://github.com/EthanMahajan/Air-Purifier
 og_image: /assets/img/social/air_purifier.png
@@ -21,10 +22,6 @@ project_summary:
   status: "Design in progress"
   result: "Electrical schematics complete; physical integration pending"
 ---
-
-{% include project_summary.liquid %}
-
-I am developing a smart air purifier that reuses a 120 mm computer case fan in a custom printed housing. The intended functions are room-air filtration and consistent background noise, with sensing and control added through a custom electronics design.
 
 ## Ideation
 

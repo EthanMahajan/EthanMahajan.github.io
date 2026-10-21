@@ -3,7 +3,7 @@
 # for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
 cv_pdf: /assets/rendercv/rendercv_output/Ethan_Mahajan_CV.pdf # path to your resume PDF file
 email: emahajan7@gatech.edu # your professional email address
-linkedin_username: ethan-mahajan-546827355
+linkedin_username: ethan-mahajan
 github_username: EthanMahajan
 # inspirehep_id: 1010907 # Inspire HEP author ID
 # rss_icon: true # comment this line to hide the RSS icon

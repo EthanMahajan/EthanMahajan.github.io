@@ -26,6 +26,9 @@
       context: Board fabrication in progress; CNC-machined pieces are planned.
 - skill: Software & Systems
   examples:
+    - label: Shape Machine documentation
+      url: /projects/shape_machine.html#my-contributions
+      context: GitHub documentation and website contributions in the team's enterprise repository; repository access is restricted.
     - label: Artorius repository
       url: /projects/artorius.html
       context: Documented mechanical build, motion testing, and electronics integration.
