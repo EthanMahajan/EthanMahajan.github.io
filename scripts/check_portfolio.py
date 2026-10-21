@@ -31,6 +31,11 @@ class Page(HTMLParser):
             self.links.append(attrs["href"])
         if attrs.get("data-model-url"):
             self.links.append(attrs["data-model-url"])
+        if tag in ("video", "source"):
+            if attrs.get("src"):
+                self.links.append(attrs["src"])
+            if attrs.get("poster"):
+                self.links.append(attrs["poster"])
         if tag == "img":
             self.images.append(attrs)
         if tag == "iframe":

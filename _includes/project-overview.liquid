@@ -1,0 +1,13 @@
+<section class="project-overview" aria-label="Project overview">
+  <div class="project-overview__description">
+    <h2>Overview</h2>
+    <p>{{ page.project_intro | escape }}</p>
+    {% if page.hero.summary_beside %}
+      {% include figure.liquid path=page.hero.image alt=page.hero.alt caption=page.hero.caption class="project-overview__image" loading="eager" %}
+    {% endif %}
+  </div>
+  <div class="project-overview__facts">
+    {% include project_summary.liquid %}
+    {% if page.hero.summary_beside and page.hero.video %}{% include project-video-details.liquid %}{% endif %}
+  </div>
+</section>

@@ -1,10 +1,12 @@
 <aside class="project-contact" aria-labelledby="project-contact-heading">
-  <div>
-    <h2 id="project-contact-heading">Discuss this project</h2>
+  <div class="project-contact__copy">
+    <h2 id="project-contact-heading">Interested in the project?</h2>
+    <p>Feel free to reach out with questions or feedback.</p>
   </div>
-  <div class="portfolio-actions">
+  <div class="project-contact__links">
     {% capture contact_subject %}{{ page.title }}: portfolio inquiry{% endcapture %}
-    <a class="btn btn-primary" href="mailto:{{ site.data.socials.email }}?subject={{ contact_subject | uri_escape }}">Email Ethan</a>
-    <a class="btn btn-outline-primary" href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}/">Connect on LinkedIn</a>
+    <a href="mailto:{{ site.data.socials.email }}?subject={{ contact_subject | uri_escape }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg> Email <span aria-hidden="true">↗</span></a>
+    <a href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}/">LinkedIn <span aria-hidden="true">↗</span></a>
+    {% include copyright.liquid %}
   </div>
 </aside>

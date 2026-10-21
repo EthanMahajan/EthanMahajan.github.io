@@ -2,11 +2,12 @@
 layout: page
 back_to_top: true
 title: Phone Mount
+project_intro: "I designed and built this adjustable iPhone mount to film my engineering projects. Aluminum extrusion provides the structure, while custom ABS fixtures allow height, arm rotation, and phone orientation to be adjusted."
 description: Adjustable, low-cost iPhone filming mount built from aluminum extrusion and 3D-printed fixtures
 og_image: /assets/img/social/phone_mount.png
 img: assets/img/phone-mount/thumbnail.jpg
 importance: 2
-documentation_updated: 2026-10-06
+documentation_updated: 2026-10-20
 category: Engineering
 card_label: Completed prototype
 card_description: "Adjustable filming mount: approximately $18, with custom ABS fixtures and reusable aluminum extrusion."
@@ -57,7 +58,7 @@ I also designed the printed geometry around FDM manufacturing. Chamfers, clearan
     {% include figure.liquid path="assets/img/phone-mount/base-cad.jpg" alt="Braced base supporting the upright." title="Braced base supporting the upright." class="img-fluid rounded" zoomable=true caption="Braced base supporting the upright." %}
 </div>
 
-<section class="project-section project-section--balanced">
+<section class="project-section project-section--balanced project-section--media-left">
 <div class="project-section__copy" markdown="1">
 
 ## Prototype
