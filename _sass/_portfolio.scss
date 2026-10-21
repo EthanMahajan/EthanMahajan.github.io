@@ -78,7 +78,7 @@ html {
   min-height: 44px;
 }
 .post-header {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 .post-title {
   font-weight: 600;
@@ -91,7 +91,7 @@ html {
   line-height: 1.6;
 }
 .post article > h2 {
-  margin-top: 2.75rem;
+  margin-top: 2.25rem;
   margin-bottom: 1rem;
   font-weight: 600;
   letter-spacing: -0.02em;
@@ -238,7 +238,7 @@ summary:focus-visible {
   margin: 1rem;
 }
 .project-comparison {
-  margin: 3rem 0;
+  margin: 2rem 0;
 }
 .project-comparison > h2 {
   font-weight: 600;
@@ -346,7 +346,13 @@ summary:focus-visible {
   grid-template-columns: minmax(0, 1.3fr) minmax(300px, 0.9fr);
   align-items: start;
   gap: 2.5rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
+}
+.project-overview .project-video-lead {
+  margin-top: 1.25rem;
+}
+.project-overview .embed-responsive {
+  background: var(--portfolio-surface);
 }
 .project-overview__description h2 {
   margin: 0 0 0.75rem;

@@ -2,6 +2,7 @@
 layout: page
 title: Air Purifier
 project_intro: "I am developing a smart air purifier that reuses a 120 mm computer fan in a printed housing. The current deliverable is the KiCad schematic; fabrication, sensing, and control integration are still pending."
+overview_detail: "I completed the electrical schematics in KiCad. PCB component placement has not started, so the current work establishes the electrical design rather than a tested controller. The next design stage will address the board layout and integration with the housing, sensor, and fan."
 description: Engineering project in development
 card_label: Design in progress
 card_description: "Smart air purifier controller: KiCad schematics complete, with PCB layout and physical testing next."
@@ -32,8 +33,6 @@ I wanted the project to go beyond a fan in a box. Automatic response to particul
 ## Design
 
 The concept combines a 120 mm fan, filter, custom housing, and particulate-matter sensor. The planned controller will adjust fan speed from sensor readings. Filter-replacement detection remains a feature to develop and validate.
-
-I completed the electrical schematics in KiCad. PCB component placement has not started, so the current work establishes the electrical design rather than a tested controller. The next design stage will address the board layout and integration with the housing, sensor, and fan.
 
 <div class="project-gallery project-gallery--detail">
     {% include figure.liquid path="assets/img/PurifierPCB.png" alt="Current electronics-design documentation for the purifier." title="Current electronics-design documentation for the purifier." class="img-fluid rounded" zoomable=true caption="Current electronics-design documentation for the purifier." %}
