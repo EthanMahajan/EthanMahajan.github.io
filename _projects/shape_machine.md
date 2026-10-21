@@ -17,10 +17,10 @@ pdf_summary:
   design: "Within an interdisciplinary team, I improve the existing Shape Computation Lab website through content review, error correction, template maintenance, and GitHub documentation in the team’s enterprise repository. The goal is to make explanations of Shape Machine's specialized shape-computation technology clearer and more consistent for visitors with varied technical backgrounds."
   evidence: "My contribution is ongoing and focuses on the website's existing content and presentation. The case study describes those responsibilities and links to demonstrations of the team's technology for context. Specific before-and-after contribution examples remain to be documented; I do not claim authorship of the underlying technology."
 project_summary:
-  role: "Website content and template improvements"
-  tools: "Content editing, website templates, GitHub documentation, team collaboration"
+  role: "Website content and documentation"
+  tools: "Content editing, templates, GitHub"
   status: "Contribution ongoing"
-  result: "Clearer content and corrections to existing website materials"
+  result: "Corrected content and maintained templates"
 ---
 
 ## My Contributions
