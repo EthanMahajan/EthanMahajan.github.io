@@ -12,6 +12,7 @@ table.table-cv {
   td,
   th {
     padding: 1px;
+    color: var(--global-text-color);
   }
 }
 
@@ -218,3 +219,42 @@ ul.timeline li::before {
      color: var(--global-text-color);
 }
 */
+
+// Portfolio resume: readable document sections and compact metadata.
+.cv-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  .post-title { margin: 0; }
+  .post-description { flex-basis: 100%; }
+}
+.cv-download {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 0.9rem;
+}
+.cv .font-weight-light { font-weight: 400 !important; }
+.cv .card .list-group-item { padding: 1rem 0; }
+.cv > .cv-section:first-child { margin-top: 0; }
+.cv .table.table-cv td:first-child { width: 9rem; }
+.cv-entry {
+  display: grid;
+  grid-template-columns: 9rem minmax(0, 1fr);
+  gap: 1rem;
+}
+.cv-entry__body { min-width: 0; }
+.cv-date,
+.cv-entry .location {
+  color: var(--global-text-color-light);
+  font-size: 0.8rem;
+  white-space: normal;
+}
+.cv-entry .items { padding-left: 1.2rem; }
+@media (max-width: 575px) {
+  .cv-entry { grid-template-columns: 1fr; gap: 0.35rem; }
+  .cv-entry .location { margin-bottom: 0; }
+  .cv .table.table-cv td:first-child { width: 7rem; }
+}

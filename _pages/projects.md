@@ -9,20 +9,18 @@ display_categories: [Engineering, Design]
 horizontal: false
 ---
 
-<p class="caption">For shorter build notes and lessons learned, visit the <a href="{{ '/notebook/' | relative_url }}">engineering notebook</a>.</p>
+<p class="project-index-note">For shorter build notes and lessons learned, visit the <a href="{{ '/notebook/' | relative_url }}">engineering notebook</a>.</p>
 
 <div class="portfolio-download">
-  <div><p class="eyebrow">Take the work with you</p><p>Every project, including work in progress, in a compact PDF with linked contents.</p></div>
-  <a class="btn btn-outline-primary" href="{{ site.portfolio_pdf | relative_url }}" download>Download Portfolio (PDF)</a>
+  <p>Every project, including work in progress, in one PDF with linked contents.</p>
+  <a class="portfolio-download__link" href="{{ site.portfolio_pdf | relative_url }}" download>Download Portfolio (PDF)</a>
 </div>
 
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized projects -->
   {% for category in page.display_categories %}
-  <a id="{{ category }}" href=".#{{ category }}">
-    <h2 class="category">{{ category }}</h2>
-  </a>
+  <h2 class="category" id="{{ category }}">{{ category }}</h2>
   {% assign categorized_projects = site.projects | where: "category", category %}
   {% assign sorted_projects = categorized_projects | sort: "importance" %}
   <!-- Generate cards for each project -->
@@ -35,7 +33,7 @@ horizontal: false
     </div>
   </div>
   {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
     {% for project in sorted_projects %}
       {% include projects.liquid %}
     {% endfor %}
@@ -61,7 +59,7 @@ horizontal: false
     </div>
   </div>
   {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
     {% for project in sorted_projects %}
       {% include projects.liquid %}
     {% endfor %}

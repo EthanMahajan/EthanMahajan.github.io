@@ -8,8 +8,8 @@
 <ul class="card-text font-weight-light list-group list-group-flush">
   {% for entry in entries %}
     <li class="list-group-item">
-      <div class="row">
-        <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column">
+      <div class="cv-entry">
+        <div class="cv-entry__metadata">
           {% capture start_date %}
             {% if entry.start_date %}{{ entry.start_date }}{% elsif entry.startDate %}{{ entry.startDate }}{% endif %}
           {% endcapture %}
@@ -80,7 +80,7 @@
               <tr>
                 <td>
                   {% if date %}
-                    <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">{{ date }}</span>
+                    <span class="cv-date">{{ date }}</span>
                   {% endif %}
                 </td>
               </tr>
@@ -91,7 +91,7 @@
                 <tr>
                   <td>
                     <p class="location">
-                      <i class="fa-solid fa-location-dot iconlocation"></i>
+
                       {{ location }}
                     </p>
                   </td>
@@ -100,25 +100,25 @@
             </tbody>
           </table>
         </div>
-        <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0">
+        <div class="cv-entry__body">
           {% capture study_type %}
             {% if entry.studyType %}{{ entry.studyType }}{% elsif entry.degree %}{{ entry.degree }}{% endif %}
           {% endcapture %}
 
           {% if entry.url %}
-            <h6 class="title font-weight-bold ml-1 ml-md-4">
+            <h6 class="title font-weight-bold ">
               <a href="{{ entry.url }}">{{ study_type }}</a>
             </h6>
           {% elsif study_type != '' %}
-            <h6 class="title font-weight-bold ml-1 ml-md-4">{{ study_type }}</h6>
+            <h6 class="title font-weight-bold ">{{ study_type }}</h6>
           {% endif %}
 
           {% if entry.institution %}
-            <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ entry.institution }}</h6>
+            <h6 class="" style="font-size: 0.95rem">{{ entry.institution }}</h6>
           {% endif %}
 
           {% if entry.area %}
-            <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ entry.area }}</h6>
+            <h6 class="" style="font-size: 0.95rem; font-style: italic">{{ entry.area }}</h6>
           {% endif %}
 
           {% if entry.courses or entry.highlights %}

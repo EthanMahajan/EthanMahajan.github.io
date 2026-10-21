@@ -5,9 +5,6 @@
 <div class="card-text font-weight-light">
   {% for entry in entries %}
     <div class="skill-item">
-      {% if entry.icon %}
-        <i class="{{ entry.icon }}"></i>
-      {% endif %}
       {% assign skill_name = entry.name | default: entry.label %}
       <strong>
         {{- skill_name -}}
@@ -37,9 +34,3 @@
     </div>
   {% endfor %}
 </div>
-
-<style>
-  .skill-item {
-    padding: 0.5rem 0;
-  }
-</style>
