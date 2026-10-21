@@ -1,11 +1,10 @@
 .cad-viewer {
-  margin: 1.75rem 0 2.75rem;
+  margin: 1.75rem 0 2rem;
   width: 100%;
   min-width: 0;
   box-sizing: border-box;
-  padding: 1.5rem;
-  border: 1px solid var(--global-divider-color);
-  border-radius: 0.5rem;
+  padding: 1.25rem 0 0;
+  border-top: 1px solid var(--global-divider-color);
   > h3 {
     margin: 0 0 0.75rem;
     font-size: 1.4rem;
@@ -53,7 +52,6 @@
     display: none !important;
   }
   @media (max-width: 575px) {
-    padding: 1rem;
     &__canvas {
       height: min(280px, 40vh);
       min-height: 200px;

@@ -90,7 +90,8 @@ html {
   color: var(--global-text-color-light);
   line-height: 1.6;
 }
-.post article > h2 {
+.post article > h2,
+#about-copy h2 {
   margin-top: 2.25rem;
   margin-bottom: 1rem;
   font-weight: 600;
@@ -98,6 +99,8 @@ html {
 }
 .post article > h3 {
   margin-top: 1.75rem;
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 .post article > p {
   max-width: 76ch;
@@ -117,7 +120,8 @@ html {
 }
 a:focus-visible,
 button:focus-visible,
-summary:focus-visible {
+summary:focus-visible,
+canvas:focus-visible {
   outline: 3px solid var(--global-theme-color);
   outline-offset: 4px;
   border-radius: 0.2rem;
@@ -222,13 +226,12 @@ summary:focus-visible {
   margin: 0.75rem 0 1rem;
 }
 .project-video {
-  border: 1px solid var(--global-divider-color);
-  border-radius: 0.5rem;
-  overflow: hidden;
+  margin-top: 1rem;
+  border-block: 1px solid var(--global-divider-color);
 }
 .project-video summary {
   cursor: pointer;
-  padding: 1rem;
+  padding: 0.75rem 0;
   color: var(--global-theme-color);
   font-weight: 600;
 }
@@ -252,14 +255,10 @@ summary:focus-visible {
 }
 .comparison-stage {
   margin: 0;
-  border: 1px solid var(--global-divider-color);
-  border-radius: 0.75rem;
-  overflow: hidden;
+  min-width: 0;
 }
 .comparison-stage__image {
-  background: var(--portfolio-image-bg);
   aspect-ratio: 4 / 3;
-  padding: 1rem;
 }
 .comparison-stage img {
   width: 100%;
@@ -267,7 +266,11 @@ summary:focus-visible {
   object-fit: contain;
 }
 .comparison-stage figcaption {
-  padding: 1.25rem;
+  padding-top: 0.85rem;
+  font-size: 0.9rem;
+}
+.comparison-stage .eyebrow {
+  color: var(--global-text-color-light);
 }
 .comparison-stage h3 {
   font-size: 1.15rem;
@@ -276,50 +279,39 @@ summary:focus-visible {
 .comparison-stage figcaption p:last-child {
   margin-bottom: 0;
 }
-.comparison-takeaway {
-  padding: 1rem 1.25rem;
-  border-left: 3px solid var(--global-theme-color);
-  background: var(--portfolio-surface);
-}
 .project-highlights {
   padding-left: 1.25rem;
 }
 .project-highlights li {
   margin-bottom: 0.6rem;
 }
+.project-ending {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--global-divider-color);
+}
+.project-pagination,
 .project-contact {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 1rem 2rem;
-  margin: 3rem 0 0;
-  padding: 1.25rem 0;
-  border-top: 1px solid var(--global-divider-color);
+  gap: 0.5rem 1.5rem;
 }
-.project-contact h2 {
-  margin: 0 0 0.35rem;
-  font-size: 1rem;
-  font-weight: 600;
-}
-.project-contact p {
-  margin: 0;
-  font-size: 0.9rem;
-  color: var(--global-text-color-light);
-}
-.project-contact__links {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem 1.25rem;
-  font-size: 0.85rem;
-}
+.project-pagination a,
 .project-contact__links a {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.35rem;
   min-height: 44px;
+}
+.project-pagination {
+  font-size: 0.95rem;
+}
+.project-contact__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  font-size: 0.85rem;
 }
 .portfolio-copyright {
   color: var(--global-text-color-light);
@@ -371,54 +363,36 @@ summary:focus-visible {
   height: 340px;
   object-fit: contain;
 }
-.project-overview .project-summary-panel {
-  margin-bottom: 0;
-  padding: 0.875rem 1rem;
-}
-.project-overview .project-summary {
-  grid-template-columns: 1fr;
-  gap: 0;
-}
-.project-overview .project-summary > div {
-  display: grid;
-  grid-template-columns: 90px minmax(0, 1fr);
-  gap: 0.75rem;
-  padding: 0.5rem 0;
-  border: 0;
-  border-bottom: 1px solid var(--global-divider-color);
-  background: transparent;
-}
-.project-overview .project-summary > div:last-child {
-  border-bottom: 0;
-  padding-bottom: 0;
-}
-.project-overview .project-summary dt {
-  margin: 0;
-}
-.project-overview .project-summary dd {
-  font-size: 0.9rem;
-}
 .project-video--local video {
   display: block;
   width: 100%;
   max-height: 460px;
 }
+.project-index-note {
+  font-size: 0.9rem;
+  color: var(--global-text-color-light);
+}
 .portfolio-download {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
-  padding: 1.25rem 1.5rem;
-  background: var(--portfolio-surface);
-  border: 1px solid var(--global-divider-color);
-  border-radius: 0.75rem;
-  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--global-divider-color);
+  margin-bottom: 1.5rem;
 }
-.portfolio-download p:last-child {
-  margin-bottom: 0;
+.portfolio-download p {
+  flex: 1 1 20rem;
+  margin: 0;
+  font-size: 0.9rem;
 }
-.portfolio-download .btn {
-  flex-shrink: 0;
+.portfolio-download__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 .projects .row {
   row-gap: 1.5rem;
@@ -432,19 +406,23 @@ summary:focus-visible {
 }
 .project-card {
   position: relative;
+  background: transparent;
   box-shadow: none;
-  border: 1px solid var(--global-divider-color);
-  border-radius: 0.75rem;
-  overflow: hidden;
-  transition: border-color 0.15s ease;
+  border: 0;
+  border-radius: 0;
 }
-.project-card:hover,
-.project-card:focus-within {
-  border-color: var(--global-theme-color);
+.project-card:hover .card-title a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.project-card__status {
+  margin: 0 0 0.5rem;
+  color: var(--global-text-color-light);
+  font-size: 0.8rem;
 }
 .project-card__image {
   display: block;
-  background: var(--global-card-bg-color);
+  background: transparent;
   padding: 0;
 }
 .project-card__image figure {
@@ -464,7 +442,7 @@ summary:focus-visible {
 .project-card .card-body {
   display: flex;
   flex-direction: column;
-  padding: 1.25rem;
+  padding: 1rem 0 0;
 }
 .project-card .card-title {
   font-size: 1.2rem;
@@ -492,13 +470,16 @@ summary:focus-visible {
 }
 .project-card .card-title a:focus-visible::after {
   outline: 3px solid var(--global-theme-color);
-  outline-offset: -4px;
-  border-radius: 0.75rem;
+  outline-offset: 5px;
+  border-radius: 0.2rem;
 }
 .project-card .project-github {
   position: relative;
   z-index: 2;
   align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   font-size: 0.85rem;
   margin-top: auto;
   padding: 0.5rem 0;
@@ -523,11 +504,12 @@ summary:focus-visible {
   display: grid;
   gap: 0.65rem;
 }
+.skill-item {
+  padding: 0.65rem 0;
+}
 .skill-evidence li {
-  padding: 0.75rem 1rem;
-  border-left: 2px solid var(--global-theme-color);
-  background: var(--portfolio-surface);
-  border-radius: 0 0.25rem 0.25rem 0;
+  padding: 0.5rem 0 0.5rem 1rem;
+  border-left: 1px solid var(--global-divider-color);
 }
 .skill-evidence a {
   font-weight: 600;
@@ -538,19 +520,14 @@ summary:focus-visible {
   font-size: 0.85rem;
   line-height: 1.5;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   #toc-sidebar {
     display: none;
   }
+}
+@media (max-width: 767px) {
   .comparison-grid {
     grid-template-columns: 1fr;
-  }
-  .portfolio-download {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .project-contact {
-    align-items: flex-start;
   }
   .project-overview {
     grid-template-columns: 1fr;
@@ -571,10 +548,5 @@ summary:focus-visible {
   }
   .portfolio-actions {
     clear: both;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .project-card {
-    transition: none;
   }
 }

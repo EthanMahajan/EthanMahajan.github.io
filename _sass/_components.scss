@@ -96,16 +96,20 @@ ul.task-list input[type="checkbox"] {
   margin-bottom: 40px;
 
   .card {
-    background-color: var(--global-card-bg-color);
-    border: 1px solid var(--global-divider-color);
+    background: transparent;
+    border: 0;
+    border-top: 1px solid var(--global-divider-color);
+    border-radius: 0;
+    padding: 1.25rem 0 0;
+    margin-top: 1.75rem;
 
     .list-group-item {
       background-color: inherit;
       border-color: var(--global-divider-color);
 
       .badge {
-        color: var(--global-card-bg-color) !important;
-        background-color: var(--global-theme-color) !important;
+        color: var(--global-text-color-light) !important;
+        background: transparent !important;
       }
     }
   }

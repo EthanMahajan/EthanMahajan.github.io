@@ -1,12 +1,25 @@
-<aside class="project-contact" aria-labelledby="project-contact-heading">
-  <div class="project-contact__copy">
-    <h2 id="project-contact-heading">Interested in the project?</h2>
-    <p>Feel free to reach out with questions or feedback.</p>
-  </div>
-  <div class="project-contact__links">
-    {% capture contact_subject %}{{ page.title }}: portfolio inquiry{% endcapture %}
-    <a href="mailto:{{ site.data.socials.email }}?subject={{ contact_subject | uri_escape }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg> Email <span aria-hidden="true">↗</span></a>
-    <a href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}/">LinkedIn <span aria-hidden="true">↗</span></a>
+{% assign ordered_projects = site.projects | sort: 'importance' %}
+{% for project in ordered_projects %}
+  {% if project.url == page.url %}
+    {% assign next_index = forloop.index %}
+    {% if forloop.last %}{% assign next_index = 0 %}{% endif %}
+    {% assign next_project = ordered_projects[next_index] %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+<footer class="project-ending">
+  <nav class="project-pagination" aria-label="Project navigation">
+    <a href="{{ '/projects/' | relative_url }}">&larr; All projects</a>
+    {% if next_project and ordered_projects.size > 1 %}
+      <a href="{{ next_project.url | relative_url }}">Next: {{ next_project.title | escape }} &rarr;</a>
+    {% endif %}
+  </nav>
+  <div class="project-contact">
+    <nav class="project-contact__links" aria-label="Contact about this project">
+      {% capture contact_subject %}{{ page.title }}: portfolio inquiry{% endcapture %}
+      <a href="mailto:{{ site.data.socials.email }}?subject={{ contact_subject | uri_escape }}">Email</a>
+      <a href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}/">LinkedIn</a>
+    </nav>
     {% include copyright.liquid %}
   </div>
-</aside>
+</footer>
