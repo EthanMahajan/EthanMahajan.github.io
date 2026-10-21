@@ -2,9 +2,13 @@
   <div class="project-overview__description">
     <h2>Overview</h2>
     <p>{{ page.project_intro | escape }}</p>
-    {% if page.hero.summary_beside %}
-      {% include figure.liquid path=page.hero.image alt=page.hero.alt caption=page.hero.caption class="project-overview__image" loading="eager" %}
+    {% if page.overview_detail %}<p>{{ page.overview_detail | escape }}</p>{% endif %}
+    {% if page.overview_media %}
+      {% include figure.liquid path=page.overview_media.image alt=page.overview_media.alt caption=page.overview_media.caption class="project-overview__image" loading="eager" zoomable=true %}
+    {% elsif page.hero.summary_beside %}
+      {% include figure.liquid path=page.hero.image alt=page.hero.alt caption=page.hero.caption class="project-overview__image" loading="eager" zoomable=true %}
     {% endif %}
+    {% if page.hero.video_lead %}{% include project-video.liquid project=page %}{% endif %}
   </div>
   <div class="project-overview__facts">
     {% include project_summary.liquid %}

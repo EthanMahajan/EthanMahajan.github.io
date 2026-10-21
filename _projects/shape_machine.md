@@ -2,6 +2,7 @@
 layout: page
 title: Shape Machine
 project_intro: "I contribute to the Shape Computation Lab website through content edits, corrections, template fixes, and GitHub documentation. I work in the team’s enterprise repository; the underlying Shape Machine technology is the team’s work."
+overview_detail: "This work is ongoing. Specific before-and-after examples remain to be documented; the demonstrations show the team’s underlying technology."
 description: Content improvements, error correction, and template fixes for an existing team website
 card_label: Team contribution
 card_description: "Shape Computation Lab website: clearer content, corrected mistakes, and maintained templates."
@@ -28,8 +29,6 @@ project_summary:
 - **Corrections:** identify and fix mistakes or inconsistencies in existing materials.
 - **Templates:** address presentation issues in shared templates to improve consistency across pages.
 - **GitHub documentation:** contribute through the team’s enterprise repository. Access to that repository is restricted.
-
-This work is ongoing. Specific before-and-after examples remain to be documented; the demonstrations below show the team's underlying technology.
 
 <section class="project-section project-section--balanced project-section--media-left">
 <div class="project-section__copy" markdown="1">

@@ -11,6 +11,10 @@ documentation_updated: 2026-10-20
 category: Design
 og_image: /assets/img/social/laser_engraved_chess_board.png
 img: assets/img/chess-board/board-front.jpg
+overview_media:
+  image: assets/img/chess-board/board-front.jpg
+  alt: Photograph of the physical wooden chess board with its laser-engraved playing surface
+  caption: "Physical board with the engraved playing surface; metal pieces remain planned."
 pdf_summary:
   caption: "Physical laser-engraved board; the CNC-machined metal pieces have not been made."
   design: "I am developing a coordinated chess set through Georgia Tech's Invention Studio, combining a laser-engraved board with planned CNC-machined metal pieces. The CAD design prioritizes a manufacturable playing surface and stable, low-center-of-mass pieces. Separating the board and piece stages lets fabrication progress incrementally."
@@ -43,9 +47,6 @@ The important design questions are how the engraving defines the playing surface
 </div>
 </section>
 
-<section class="project-section project-section--balanced project-section--media-left">
-<div class="project-section__copy" markdown="1">
-
 ## Board fabrication
 
 The photographs show the physical wooden board, with its laser-engraved playing surface and personalized reverse. These document the board work; the CNC-machined metal pieces have not been made.
@@ -61,13 +62,7 @@ The clip records the laser engraving process.
   <p class="caption">Laser engraving the playing surface.</p>
 </details>
 
-</div>
-<div class="project-section__media">
-{% include figure.liquid path="assets/img/chess-board/board-front.jpg" alt="Photograph of the physical wooden chess board with its laser-engraved playing surface." class="img-fluid rounded" zoomable=true caption="Physical board with the engraved playing surface." %}
-</div>
-</section>
-
-<section class="project-section project-section--balanced">
+<section class="project-section project-section--balanced project-section--media-left">
 <div class="project-section__copy" markdown="1">
 
 ## Current status and next steps
