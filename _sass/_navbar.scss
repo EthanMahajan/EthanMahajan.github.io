@@ -172,9 +172,14 @@
   }
 }
 
+.navbar-nav .toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
 @media (min-width: 576px) {
-  #light-toggle {
-    transform: translateY(4px);
+  .navbar-nav {
+    align-items: center;
   }
 }
 

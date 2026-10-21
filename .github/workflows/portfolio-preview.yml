@@ -1,0 +1,39 @@
+name: Build portfolio preview
+
+on:
+  push:
+    branches: ["codex/portfolio-preview", "codex/portfolio-experimental"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3.5"
+          bundler-cache: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install asset dependencies
+        run: |
+          sudo apt-get update && sudo apt-get install -y imagemagick
+          pip install -r requirements-portfolio.txt
+      - name: Generate portfolio and share cards
+        run: python scripts/build_portfolio.py
+      - name: Build site
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build
+      - name: Check links, metadata, images, and portfolio PDF
+        run: python scripts/check_portfolio.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-preview-site
+          path: _site
+          retention-days: 14

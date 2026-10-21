@@ -17,6 +17,8 @@ on:
       - "**.yml"
       - "Gemfile"
       - "Gemfile.lock"
+      - "scripts/**"
+      - "requirements-portfolio.txt"
       - "!.github/workflows/axe.yml"
       - "!.github/workflows/broken-links.yml"
       - "!.github/workflows/prettier.yml"
@@ -37,6 +39,8 @@ on:
       - "**.yml"
       - "Gemfile"
       - "Gemfile.lock"
+      - "scripts/**"
+      - "requirements-portfolio.txt"
       - "!.github/workflows/axe.yml"
       - "!.github/workflows/broken-links.yml"
       - "!.github/workflows/prettier.yml"
@@ -74,8 +78,11 @@ jobs:
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
           pip3 install --upgrade nbconvert
+          pip3 install -r requirements-portfolio.txt
+          python3 scripts/build_portfolio.py
           export JEKYLL_ENV=production
           bundle exec jekyll build
+          python3 scripts/check_portfolio.py
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss

@@ -14,9 +14,8 @@ layout: default
 {% endcomment %}
 
 <div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {{ page.title }}
+  <header class="post-header cv-header">
+    <h1 class="post-title">{{ page.title }}</h1>
       {% if page.cv_pdf %}
         <a
           {% if page.cv_pdf contains '://' %}
@@ -26,13 +25,12 @@ layout: default
           {% endif %}
           target="_blank"
           rel="noopener noreferrer"
-          class="float-right"
+          class="cv-download"
           aria-label="Download Ethan Mahajan’s resume PDF"
         >
-          <i class="fa-solid fa-file-pdf"></i>
+          Download resume (PDF)
         </a>
       {% endif %}
-    </h1>
     {% if page.description %}
       <p class="post-description">{{ page.description }}</p>
     {% endif %}
@@ -64,8 +62,8 @@ layout: default
         <!-- Header/Contact Information -->
         {% assign cv_headline = cv.label | default: cv.headline %}
         {% if cv.name or cv_headline or cv.location or cv.email or cv.phone or cv.website %}
-          <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Contact Information</h3>
+          <div class="card cv-section">
+            <h2 class="card-title font-weight-medium">Contact Information</h2>
             <table class="table table-cv table-sm table-borderless">
               {% if cv.name %}
                 <tr>
@@ -82,7 +80,7 @@ layout: default
               {% if cv.email %}
                 <tr>
                   <td class="p-1 pr-2 font-weight-bold"><b>Email</b></td>
-                  <td class="p-1 pl-2 font-weight-light">{{ cv.email }}</td>
+                  <td class="p-1 pl-2 font-weight-light"><a href="mailto:{{ cv.email }}">{{ cv.email }}</a></td>
                 </tr>
               {% endif %}
               {% if cv.phone %}
@@ -116,8 +114,8 @@ layout: default
 
         <!-- Summary -->
         {% if cv.summary %}
-          <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Professional Summary</h3>
+          <div class="card cv-section">
+            <h2 class="card-title font-weight-medium">Professional Summary</h2>
             <p>{{ cv.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>
           </div>
         {% endif %}
@@ -146,8 +144,8 @@ layout: default
           {% endif %}
 
           <a class="anchor" id="{{ section_title | slugify }}"></a>
-          <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">{{ section_title }}</h3>
+          <div class="card cv-section">
+            <h2 class="card-title font-weight-medium">{{ section_title }}</h2>
             <div>
               {% if section_title == 'Education' %}
                 {% assign entries = section_entries %}
@@ -207,8 +205,8 @@ layout: default
             {% continue %}
           {% endif %}
           <a class="anchor" id="{{ section_title | slugify }}"></a>
-          <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">{{ section_title }}</h3>
+          <div class="card cv-section">
+            <h2 class="card-title font-weight-medium">{{ section_title }}</h2>
             <div>
               {% if section_title == 'Education' %}
                 {% assign entries = section_entries %}
@@ -265,8 +263,8 @@ layout: default
 
         <!-- Contact Information -->
         {% if site.data.resume.basics %}
-          <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Contact Information</h3>
+          <div class="card cv-section">
+            <h2 class="card-title font-weight-medium">Contact Information</h2>
             {% assign basics = site.data.resume.basics %}
             <table class="table table-cv table-sm table-borderless">
               {% if basics.name %}
@@ -284,7 +282,7 @@ layout: default
               {% if basics.email %}
                 <tr>
                   <td class="p-1 pr-2 font-weight-bold"><b>Email</b></td>
-                  <td class="p-1 pl-2 font-weight-light">{{ basics.email }}</td>
+                  <td class="p-1 pl-2 font-weight-light"><a href="mailto:{{ basics.email }}">{{ basics.email }}</a></td>
                 </tr>
               {% endif %}
               {% if basics.phone %}
@@ -318,8 +316,8 @@ layout: default
 
         <!-- Summary -->
         {% if site.data.resume.basics.summary %}
-          <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Professional Summary</h3>
+          <div class="card cv-section">
+            <h2 class="card-title font-weight-medium">Professional Summary</h2>
             <p>{{ site.data.resume.basics.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>
           </div>
         {% endif %}
@@ -331,8 +329,8 @@ layout: default
         {% assign combined_experience = work | concat: vol %}
         {% if combined_experience.size > 0 %}
           <a class="anchor" id="experience"></a>
-          <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Experience</h3>
+          <div class="card cv-section">
+            <h2 class="card-title font-weight-medium">Experience</h2>
             <div>
               {% assign entries = combined_experience %}
               {% include cv/experience.liquid %}
@@ -343,8 +341,8 @@ layout: default
         <!-- Education -->
         {% if site.data.resume.education.size > 0 %}
           <a class="anchor" id="education"></a>
-          <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Education</h3>
+          <div class="card cv-section">
+            <h2 class="card-title font-weight-medium">Education</h2>
             <div>
               {% assign entries = site.data.resume.education %}
               {% include cv/education.liquid %}
@@ -355,8 +353,8 @@ layout: default
         <!-- Awards -->
         {% if site.data.resume.awards.size > 0 %}
           <a class="anchor" id="awards"></a>
-          <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Awards</h3>
+          <div class="card cv-section">
+            <h2 class="card-title font-weight-medium">Awards</h2>
             <div>
               {% assign entries = site.data.resume.awards %}
               {% include cv/awards.liquid %}
@@ -367,8 +365,8 @@ layout: default
         <!-- Publications -->
         {% if site.data.resume.publications.size > 0 %}
           <a class="anchor" id="publications"></a>
-          <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Publications</h3>
+          <div class="card cv-section">
+            <h2 class="card-title font-weight-medium">Publications</h2>
             <div>
               {% assign entries = site.data.resume.publications %}
               {% include cv/publications.liquid %}
@@ -379,8 +377,8 @@ layout: default
         <!-- Skills -->
         {% if site.data.resume.skills.size > 0 %}
           <a class="anchor" id="skills"></a>
-          <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Skills</h3>
+          <div class="card cv-section">
+            <h2 class="card-title font-weight-medium">Skills</h2>
             <div>
               {% assign entries = site.data.resume.skills %}
               {% include cv/skills.liquid %}
@@ -391,8 +389,8 @@ layout: default
         <!-- Languages -->
         {% if site.data.resume.languages.size > 0 %}
           <a class="anchor" id="languages"></a>
-          <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Languages</h3>
+          <div class="card cv-section">
+            <h2 class="card-title font-weight-medium">Languages</h2>
             <div>
               {% assign entries = site.data.resume.languages %}
               {% include cv/languages.liquid %}
@@ -403,8 +401,8 @@ layout: default
         <!-- Interests -->
         {% if site.data.resume.interests.size > 0 %}
           <a class="anchor" id="interests"></a>
-          <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Interests</h3>
+          <div class="card cv-section">
+            <h2 class="card-title font-weight-medium">Interests</h2>
             <div>
               {% assign entries = site.data.resume.interests %}
               {% include cv/interests.liquid %}
@@ -415,8 +413,8 @@ layout: default
         <!-- Certificates -->
         {% if site.data.resume.certificates.size > 0 %}
           <a class="anchor" id="certificates"></a>
-          <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Certificates</h3>
+          <div class="card cv-section">
+            <h2 class="card-title font-weight-medium">Certificates</h2>
             <div>
               {% assign entries = site.data.resume.certificates %}
               {% include cv/certificates.liquid %}
@@ -427,8 +425,8 @@ layout: default
         <!-- Projects -->
         {% if site.data.resume.projects.size > 0 %}
           <a class="anchor" id="projects"></a>
-          <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Projects</h3>
+          <div class="card cv-section">
+            <h2 class="card-title font-weight-medium">Projects</h2>
             <div>
               {% assign entries = site.data.resume.projects %}
               {% include cv/projects.liquid %}
@@ -439,8 +437,8 @@ layout: default
         <!-- References -->
         {% if site.data.resume.references.size > 0 %}
           <a class="anchor" id="references"></a>
-          <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">References</h3>
+          <div class="card cv-section">
+            <h2 class="card-title font-weight-medium">References</h2>
             <div>
               {% assign entries = site.data.resume.references %}
               {% include cv/references.liquid %}

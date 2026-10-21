@@ -1,0 +1,14 @@
+<div class="project-video-lead">
+  <div class="embed-responsive embed-responsive-16by9 rounded">
+    <iframe
+      class="embed-responsive-item"
+      src="https://www.youtube-nocookie.com/embed/{{ include.project.hero.video }}"
+      title="{{ include.project.title | escape }}: working prototype"
+      loading="lazy"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <p class="caption">{{ include.project.hero.video_caption }}</p>
+  <a href="https://www.youtube.com/watch?v={{ include.project.hero.video }}">Watch on YouTube <span aria-hidden="true">↗</span></a>
+</div>

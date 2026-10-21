@@ -1,26 +1,29 @@
 <div class="col">
-  <div class="card h-100 hoverable">
+  <div class="card h-100 project-card">
     {% assign project_url = project.redirect | default: project.url | relative_url %}
     {% if project.img %}
-      <a href="{{ project_url }}">
+      <div class="project-card__image{% if project.thumbnail_light %} project-card__image--light{% endif %}">
         {%
           include figure.liquid
-          loading="eager"
+          loading="lazy"
           path=project.img
           sizes = "250px"
           alt=project.title
           class="card-img-top"
         %}
-      </a>
+      </div>
     {% endif %}
     <div class="card-body">
-      <h2 class="card-title"><a href="{{ project_url }}">{{ project.title }}</a></h2>
-      <p class="card-text">{{ project.description }}</p>
+      <p class="project-card__status">{{ project.card_label | default: project.category }}</p>
+      <h3 class="card-title">
+        <a href="{{ project_url }}">{{ project.title }}</a>
+      </h3>
+      <p class="card-text">{{ project.card_description | default: project.description }}</p>
       {% if project.github %}
         <a class="project-github" href="{{ project.github }}" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-github"></i> GitHub repository
+          GitHub repository
         </a>
       {% endif %}
-      </div>
     </div>
+  </div>
 </div>

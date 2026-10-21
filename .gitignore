@@ -13,3 +13,11 @@ assets/rendercv/rendercv_output/*.typ
 Gemfile.lock
 node_modules/
 vendor
+tmp/
+output/
+assets/pdf/Ethan_Mahajan_Portfolio.pdf
+assets/img/social/
+assets/img/PurifierPCB.png
+__pycache__/
+assets/models/artorius/artorius-preview.3mf
+assets/models/artorius/preview-manifest.json

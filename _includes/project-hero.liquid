@@ -1,0 +1,8 @@
+{% if page.hero %}
+  {% unless page.hero.summary_beside or page.hero.video_lead %}
+    <section class="project-hero" aria-label="Project demonstration">
+      {% include figure.liquid path=page.hero.image alt=page.hero.alt caption=page.hero.caption class="project-hero__image" loading="eager" %}
+      {% if page.hero.video %}{% include project-video-details.liquid %}{% endif %}
+    </section>
+  {% endunless %}
+{% endif %}

@@ -1,11 +1,27 @@
 ---
 layout: page
+back_to_top: true
 title: Phone Mount
+project_intro: "I designed and built this adjustable iPhone mount to film my engineering projects. Aluminum extrusion provides the structure, while custom ABS fixtures allow height, arm rotation, and phone orientation to be adjusted."
 description: Adjustable, low-cost iPhone filming mount built from aluminum extrusion and 3D-printed fixtures
+og_image: /assets/img/social/phone_mount.png
 img: assets/img/phone-mount/thumbnail.jpg
 importance: 2
-documentation_updated: 2026-10-06
+documentation_updated: 2026-10-20
 category: Engineering
+card_label: Completed prototype
+card_description: "Adjustable filming mount: approximately $18, with custom ABS fixtures and reusable aluminum extrusion."
+hero:
+  summary_beside: true
+  image: assets/img/phone-mount/assembled-prototype.jpg
+  alt: Assembled phone filming mount with extrusion upright and adjustable arm
+  caption: "The usable first prototype: adjustable height, arm rotation, and phone orientation."
+  video: NBOV5k6CR7c
+  video_caption: "Design at 0:36, CAD at 1:31, slicing at 4:25, and the assembled prototype at 5:43."
+portfolio: true
+pdf_summary:
+  design: "I needed an inexpensive, adjustable way to film engineering builds with an iPhone. I modeled Fusion 360 fixtures for height, arm rotation, and phone orientation, printed them in ABS, and assembled the mount with aluminum extrusion, heat-set inserts, and fasteners. Chamfers and clearances supported FDM fabrication and assembly."
+  evidence: "The usable first prototype cost approximately $18 including extrusion, or $4 excluding it, as estimated in the project video. It became my project filming mount. Assembly exposed a missing screw-access hole; holder play and base shake suggest future stiffness improvements. A second build was unnecessary for the intended use."
 project_summary:
   role: "Independent design and fabrication"
   tools: "Fusion 360, OrcaSlicer, ABS printing"
@@ -13,9 +29,8 @@ project_summary:
   result: "Adjustable iPhone filming mount; approximately $18 including extrusion"
 ---
 
-{% include project_summary.liquid %}
-
-I built a low-cost adjustable phone mount to film my engineering projects with an iPhone. Extrusion supplies the structure; printed fixtures provide the connections and camera positioning.
+<section class="project-section project-section--balanced">
+<div class="project-section__copy" markdown="1">
 
 ## Ideation
 
@@ -23,9 +38,11 @@ I wanted a low-cost way to capture footage of my builds without buying a dedicat
 
 The build cost approximately $18 including aluminum extrusion, or about $4 excluding the extrusion, as estimated in the project video.
 
-<div class="project-gallery">
-    {% include figure.liquid path="assets/img/phone-mount/concept-sketch.jpg" alt="Concept sketch identifying the required adjustments." title="Concept sketch identifying the required adjustments." class="img-fluid rounded" zoomable=true caption="Concept sketch identifying the required adjustments." %}
 </div>
+<div class="project-section__media">
+{% include figure.liquid path="assets/img/phone-mount/concept-sketch.jpg" alt="Concept sketch identifying the required adjustments." title="Concept sketch identifying the required adjustments." class="img-fluid rounded" zoomable=true caption="Concept sketch identifying the required adjustments." %}
+</div>
+</section>
 
 ## Design
 
@@ -41,42 +58,25 @@ I also designed the printed geometry around FDM manufacturing. Chamfers, clearan
     {% include figure.liquid path="assets/img/phone-mount/base-cad.jpg" alt="Braced base supporting the upright." title="Braced base supporting the upright." class="img-fluid rounded" zoomable=true caption="Braced base supporting the upright." %}
 </div>
 
+<section class="project-section project-section--balanced project-section--media-left">
+<div class="project-section__copy" markdown="1">
+
 ## Prototype
 
 I exported the parts from Fusion 360, prepared them in OrcaSlicer, and printed the fixtures in ABS. I arranged the parts for individual printing and used a Hilbert-curve infill pattern based on my previous experience with ABS warping.
 
 All of the parts printed successfully on the first attempt. I assembled the fixtures with the aluminum extrusion and fasteners, producing a working mount with the intended height and angular adjustments.
 
-<div class="project-gallery">
-    {% include figure.liquid path="assets/img/phone-mount/slicer-layout.jpg" alt="Fixtures prepared on separate OrcaSlicer plates." title="Fixtures prepared on separate OrcaSlicer plates." class="img-fluid rounded" zoomable=true caption="Fixtures prepared on separate OrcaSlicer plates." %}
-    {% include figure.liquid path="assets/img/phone-mount/assembled-prototype.jpg" alt="Assembled first prototype with adjustable arm." title="Assembled first prototype with adjustable arm." class="img-fluid rounded" zoomable=true caption="Assembled first prototype with adjustable arm." %}
 </div>
+<div class="project-section__media">
+{% include figure.liquid path="assets/img/phone-mount/slicer-layout.jpg" alt="Fixtures prepared on separate OrcaSlicer plates." title="Fixtures prepared on separate OrcaSlicer plates." class="img-fluid rounded" zoomable=true caption="Fixtures prepared on separate OrcaSlicer plates." %}
+</div>
+</section>
 
 ## Testing & Revisions
 
-The prototype was good enough for final use filming with my iPhone. Assembly revealed one small design oversight: a missing access hole made an extrusion-mounting screw harder to reach. I worked around it during assembly and identified the access opening as a straightforward improvement.
+The first prototype became the mount I use to film project footage. Assembly exposed a missing access hole for an extrusion-mounting screw, which I worked around and identified for a future revision.
 
-The finished mount provided useful footage, although the phone holder had some play and touching the base introduced visible shake. Improving holder stiffness and base stability would be the next refinements; the first prototype already met my practical recording needs.
+The phone holder has some play, and touching the base introduces visible shake. Improving holder stiffness and base stability are possible refinements; a second build was unnecessary for my recording needs.
 
-## Final Product
-
-The first prototype became the mount I use to capture project footage. Its value is a practical filming setup built from reusable stock and a small set of custom parts, with the adjustment range needed for my recordings. Further stiffness improvements are possible, but a second build was not necessary for the intended use.
-
-The video documents the design, CAD, slicing, assembled prototype, and sample footage.
-
-<div class="embed-responsive embed-responsive-16by9 rounded z-depth-1">
-    <iframe
-        class="embed-responsive-item"
-        src="https://www.youtube-nocookie.com/embed/NBOV5k6CR7c"
-        title="Phone Mount — design, fabrication, and demonstration"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-    ></iframe>
-</div>
-
-<div class="caption">
-    Design overview at 0:36, CAD at 1:31, slicing at 4:25, and the assembled prototype at 5:43.
-</div>
-
-[Watch the Phone Mount project on YouTube](https://www.youtube.com/watch?v=NBOV5k6CR7c){:target="\_blank"}
+The expandable demonstration at the top documents the design, CAD, slicing, assembled mount, and sample footage.

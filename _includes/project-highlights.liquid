@@ -1,0 +1,10 @@
+{% if page.portfolio_highlights %}
+  <section class="project-highlights-panel" aria-labelledby="highlights-heading">
+    <h2 id="highlights-heading" class="h5">Build highlights</h2>
+    <ul class="project-highlights">
+      {% for highlight in page.portfolio_highlights %}
+        <li>{{ highlight }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}

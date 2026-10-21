@@ -1,10 +1,12 @@
-# Artorius browser model
+# Artorius model exports
 
-Upload the assembly as `artorius.3mf` in this folder:
+`artorius.3mf` is the original, full-resolution assembly download. It is never overwritten by the preview generator.
 
-`assets/models/artorius/artorius.3mf`
+`python scripts/build_portfolio.py` generates `artorius-preview.3mf` and `preview-manifest.json` before Jekyll. Both generated files are ignored by Git and included in the built website. Install `requirements-portfolio.txt` first. Preview and deployment workflows run this command automatically.
 
-The Artorius project page detects this file at build time. Until it exists, the viewer displays a placeholder. GitHub Pages must rebuild after upload.
+The display export simplifies each mesh in separate material groups, preserving object identities, assembly transforms, resource references, and material assignments. An adaptive triangle target backs off when a component's bounds change beyond the generation tolerance. Every mesh remains represented. Fine geometric details are approximate; the preview is not a manufacturing file.
+
+The manifest records source/preview checksums, byte sizes, triangle counts, and mesh count. Generation reuses a matching local output; replacing the source or changing the recipe regenerates it. The site checker verifies hashes, size reduction, mesh/triangle counts, and valid finite indexed geometry.
 
 ## Export from Fusion
 
@@ -13,6 +15,4 @@ The Artorius project page detects this file at build time. Until it exists, the 
 3. Export the complete assembly in its assembled position, with the intended bodies visible.
 4. Upload the file with the exact name above. Check that all expected parts appear in the viewer.
 
-The viewer lists separate mesh objects from the exported file. It supports visibility checkboxes, isolating one mesh, showing all, and resetting the camera. It does not recreate Fusion's feature history or guarantee the original component hierarchy/names. If the export combines bodies, it cannot separate them afterward. Exporting finer meshes increases load time and memory usage. There is no automatic simplification.
-
-The file is publicly downloadable. Keep your editable CAD in the separate Artorius repository; this folder is for the display export. Models load only when visitors click **Load 3D model**. Three.js and its loader are pinned to 0.160.0 on jsDelivr; an internet connection and WebGL are required.
+The viewer provides orbit, pan, zoom, and reset controls. It does not recreate Fusion's feature history. The full source assembly remains publicly downloadable; keep editable CAD in the separate Artorius repository. Only the lightweight preview loads when a visitor clicks **Load 3D preview**. Three.js and its loader are pinned to 0.160.0 on jsDelivr; an internet connection and WebGL are required.

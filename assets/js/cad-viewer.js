@@ -4,7 +4,7 @@ if (loadButton) {
   const status = root.querySelector("[data-cad-status]");
   loadButton.addEventListener("click", async () => {
     loadButton.disabled = true;
-    status.textContent = "Loading viewer and model…";
+    status.textContent = "Loading viewer and model";
     let renderer;
     let controls;
     let observer;
@@ -29,7 +29,7 @@ if (loadButton) {
       const response = await fetch(root.dataset.modelUrl);
       if (!response.ok) throw new Error("Model download failed");
       const buffer = await response.arrayBuffer();
-      status.textContent = "Preparing assembly geometry…";
+      status.textContent = "Preparing assembly geometry";
       await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
       model = new ThreeMFLoader().parse(buffer);
       const meshes = [];
@@ -81,44 +81,6 @@ if (loadButton) {
         render();
       };
       controls.addEventListener("change", render);
-      const list = root.querySelector("[data-cad-parts]");
-      const checkboxes = [];
-      meshes.forEach((mesh, index) => {
-        const row = document.createElement("div");
-        row.className = "cad-viewer__part";
-        const checkbox = document.createElement("input");
-        checkbox.type = "checkbox";
-        checkbox.checked = mesh.visible;
-        checkbox.id = `cad-part-${index}`;
-        checkboxes.push(checkbox);
-        const label = document.createElement("label");
-        label.htmlFor = checkbox.id;
-        label.textContent = mesh.name || mesh.parent?.name || `Part ${index + 1}`;
-        checkbox.addEventListener("change", () => {
-          mesh.visible = checkbox.checked;
-          render();
-        });
-        const isolate = document.createElement("button");
-        isolate.type = "button";
-        isolate.textContent = "Isolate";
-        isolate.setAttribute("aria-label", `Isolate ${label.textContent}`);
-        isolate.addEventListener("click", () => {
-          meshes.forEach((part, i) => {
-            part.visible = i === index;
-            checkboxes[i].checked = i === index;
-          });
-          render();
-        });
-        row.append(checkbox, label, isolate);
-        list.append(row);
-      });
-      root.querySelector("[data-cad-all]").addEventListener("click", () => {
-        meshes.forEach((mesh, i) => {
-          mesh.visible = true;
-          checkboxes[i].checked = true;
-        });
-        render();
-      });
       root.querySelector("[data-cad-reset]").addEventListener("click", reset);
       const zoom = (factor) => {
         const offset = camera.position.clone().sub(controls.target);
@@ -141,11 +103,10 @@ if (loadButton) {
         { once: true }
       );
       loadButton.hidden = true;
-      status.textContent = `${meshes.length} mesh parts loaded. Part names and grouping depend on the export.`;
+      status.textContent = "Assembly loaded. Drag to orbit, or use zoom and reset.";
     } catch (error) {
       dispose();
       root.querySelector("[data-cad-interface]").hidden = true;
-      root.querySelector("[data-cad-parts]").replaceChildren();
       status.textContent =
         "The 3D model could not be opened. Try again or download the assembly. Large or unsupported exports may need a simpler mesh.";
       loadButton.disabled = false;

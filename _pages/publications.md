@@ -9,7 +9,7 @@ nav_order: 3
 
 ## Microplastics Within 3D Printed Cups
 
-**AP Research study · 2025 · Independent experimental research**
+**AP Research study, 2025. Independent experimental research.**
 
 I investigated how filament type and print settings affect particles observed in water held in FDM-printed cups. The procedure used 300 mL of water, a five-minute contact period, and microscopic particle counting, followed by analysis of patterns across the tested conditions.
 
@@ -18,10 +18,6 @@ The observed relationship between infill and particle presence differed by mater
 The full report below includes the methods, results, and limitations.
 
 ## Full report
-
-<!-- Bibsearch Feature -->
-
-{% include bib_search.liquid %}
 
 <div class="publications">
 
