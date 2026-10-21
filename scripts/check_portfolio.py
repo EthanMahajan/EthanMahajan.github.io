@@ -80,6 +80,8 @@ def check(site):
                 errors.append(f"{name}: missing anchor {reference}")
         if not page.meta.get("description") or not page.meta.get("og:image"):
             errors.append(f"{name}: missing description or share image")
+        if any('main.css?v=d41d8cd98f00b204e9800998ecf8427e' in link for link in page.links):
+            errors.append(f"{name}: compiled stylesheet uses the empty-content cache key")
     for name in ("portfolio", "artorius", "phone_mount", "air_purifier", "laser_engraved_chess_board", "shape_machine"):
         path = site / "assets/img/social" / (name + ".png")
         with Image.open(path) as image:

@@ -10,5 +10,6 @@
 - Added web-sized copies of `IMG_2061.JPG` and `IMG_2062.JPG` for the physical board's front and reverse, retaining the CAD concept separately. Added an on-demand, browser-compatible version of `IMG_2094.MOV`, which records laser engraving. Original user files remain untouched. Public copies omit camera metadata.
 - Updated chess-board descriptions/PDF evidence to match the new physical documentation. CNC-machined metal pieces remain explicitly unmade; no machining results or unprovided measurements are claimed.
 - Added Shape Machine to Software & Systems evidence for GitHub documentation, using Ethan's confirmation of enterprise repository contributions. No private repository address or access is implied.
+- Fixed stylesheet versioning after browser review found `bust_css_cache` emitted the empty-content hash for compiled CSS. A build timestamp now changes the stylesheet URL on each build, so updated markup cannot retain an older cached layout.
 
 The preview and experimental branches retain their distinct homepage approaches. Main and the live deployment remain unchanged. Browser checks cover desktop/mobile layout, light/dark readability, media controls, and links; they do not establish performance on physical phones or constitute a full screen-reader audit.
