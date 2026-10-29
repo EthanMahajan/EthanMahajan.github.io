@@ -13,6 +13,7 @@ from reportlab.platypus import (
 )
 from reportlab.platypus.tableofcontents import TableOfContents
 from build_browser_model import build_browser_model
+from build_image_metadata import build_image_metadata
 
 ROOT = Path(__file__).resolve().parents[1]
 ACCENT, INK, MUTED, SURFACE = "#24563d", "#202c34", "#596773", "#f3f6f5"
@@ -179,6 +180,7 @@ def main():
     for path, project in projects:
         card(path.stem, project["title"], project.get("card_label", project["category"]), project.get("hero", {}).get("image", project["img"]))
     print("Generated 1200 x 630 homepage and project share cards")
+    build_image_metadata()
 
 
 if __name__ == "__main__":

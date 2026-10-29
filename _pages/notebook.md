@@ -3,12 +3,15 @@ layout: page
 title: Engineering notebook
 permalink: /notebook/
 description: Short project notes about design decisions, fabrication problems, tests, and lessons learned.
+nav: true
+nav_order: 4
 ---
 
 Short notes from the work behind the case studies: a problem encountered, a change tried, and the evidence behind the next decision.
 
 {% assign notebook_entries = site.notes | sort: 'date' | reverse %}
 {% if notebook_entries.size > 0 %}
+
 <ol class="notebook-list">
 {% for note in notebook_entries %}
   {% assign project_path = note.project | prepend: '_projects/' | append: '.md' %}

@@ -8,7 +8,7 @@ og_image: /assets/img/social/artorius.png
 img: assets/img/artoriusRevised.png
 importance: 1
 project_started: June 2024
-documentation_updated: 2026-10-20
+documentation_updated: 2026-10-29
 category: Engineering
 github: https://github.com/EthanMahajan/Artorius
 cad_model: /assets/models/artorius/artorius.3mf
@@ -95,8 +95,6 @@ RobotDigg NEMA17 2504 motors drive the XY gantry. Their mounts use double-shear 
 
 The Z axis reuses less demanding motors from the BIQU B1 and runs from the 24 V system supply. Rigid front mounts and an adjustable rear mount make assembly and heated-bed attachment easier.
 
-
-
 <section class="project-section project-section--balanced">
 <div class="project-section__copy" markdown="1">
 
@@ -126,6 +124,10 @@ A reused 24 V power supply powers the main system, while an added 48 V supply po
 </section>
 
 ## Testing & Revisions
+
+### Resonance guided the next design decisions
+
+[Read the design story: how resonances affected Artorius →]({{ '/notebook/artorius-resonance/' | relative_url }})
 
 {% include project-comparison.liquid %}
 

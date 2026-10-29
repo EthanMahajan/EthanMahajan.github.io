@@ -1,6 +1,7 @@
 {% assign img_path = include.path | remove: '.jpg' | remove: '.jpeg' | remove: '.png' | remove: '.tiff' | remove: '.gif' %}
 {% assign parts = include.path | split: '.' %}
 {% assign ext = parts.last %}
+{% assign intrinsic = site.data.image_dimensions[include.path] %}
 
 <figure
   {% if include.slot %}
@@ -38,14 +39,16 @@
       {% endif %}
       {% if include.width %}
         width="{{ include.width }}"
-      {% else %}
-        width="100%"
       {% endif %}
       {% if include.height %}
         height="{{ include.height }}"
-      {% else %}
-        height="auto"
       {% endif %}
+      {% unless include.width or include.height %}
+        {% if intrinsic %}
+          width="{{ intrinsic.width }}"
+          height="{{ intrinsic.height }}"
+        {% endif %}
+      {% endunless %}
       {% if include['min-width'] or include['min-height'] or include['max-width'] or include['max-height'] %}
         style="
           {% if include['min-width'] %}
@@ -63,10 +66,10 @@
         "
       {% endif %}
       {% if include.alt %}
-        alt="{{ include.alt }}"
+        alt="{{ include.alt | escape }}"
       {% endif %}
       {% if include.title %}
-        title="{{ include.title }}"
+        title="{{ include.title | escape }}"
       {% endif %}
       {% if include.zoomable %}
         data-zoomable
@@ -76,11 +79,17 @@
       {% elsif site.lazy_loading_images %}
         loading="lazy"
       {% endif %}
-      onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
+      onerror="this.onerror=null; this.parentElement.querySelectorAll('source').forEach(function(source) { source.remove(); });"
     >
   </picture>
 
   {% if include.caption %}
-    <figcaption class="caption">{{ include.caption }}</figcaption>
+    <figcaption class="caption">
+      {{ include.caption }}
+      {% if include.original_link %}
+        <a href="{{ include.path | relative_url }}" aria-label="Open full-resolution image: {{ include.alt | escape }}">Open full-resolution image</a
+        >.
+      {% endif %}
+    </figcaption>
   {% endif %}
 </figure>

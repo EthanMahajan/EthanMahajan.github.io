@@ -9,12 +9,11 @@ display_categories: [Engineering, Design]
 horizontal: false
 ---
 
-<p class="project-index-note">For shorter build notes and lessons learned, visit the <a href="{{ '/notebook/' | relative_url }}">engineering notebook</a>.</p>
-
-<div class="portfolio-download">
-  <p>Every project, including work in progress, in one PDF with linked contents.</p>
-  <a class="portfolio-download__link" href="{{ site.portfolio_pdf | relative_url }}" download>Download Portfolio (PDF)</a>
-</div>
+<nav class="portfolio-secondary-links project-index-links" aria-label="Project resources">
+  <a href="{{ site.portfolio_pdf | relative_url }}" download aria-label="Download complete portfolio PDF">Portfolio (PDF)</a>
+  <a href="{{ '/notebook/' | relative_url }}">Engineering notebook</a>
+  <a href="{{ '/notebook/artorius-resonance/' | relative_url }}">Artorius resonance story</a>
+</nav>
 
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
@@ -67,3 +66,5 @@ horizontal: false
   {% endif %}
 {% endif %}
 </div>
+
+<p class="caption">The portfolio PDF includes every project, including work in progress, with linked contents. The engineering notebook contains shorter build notes and lessons learned.</p>

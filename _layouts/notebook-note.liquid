@@ -7,12 +7,31 @@ layout: default
   <header class="post-header">
     <p class="eyebrow">Engineering notebook</p>
     <h1 class="post-title">{{ page.title | escape }}</h1>
-    <p class="caption"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time>{% if linked_project %} / <a href="{{ linked_project.url | relative_url }}">{{ linked_project.title | escape }}</a>{% endif %}</p>
+    <p class="caption">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time>
+      {%- if linked_project %}
+        / <a href="{{ linked_project.url | relative_url }}">{{ linked_project.title | escape }}</a>
+      {%- endif %}
+    </p>
     <p class="post-description">{{ page.description | escape }}</p>
   </header>
+  {% if page.sections %}
+    <nav class="article-contents" aria-label="In this article">
+      <p class="eyebrow">In this article</p>
+      <ul>
+        {% for section in page.sections %}
+          <li>
+            <a href="#{{ section.id | escape }}">{{ section.title | escape }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  {% endif %}
   <article>{{ content }}</article>
   <nav class="portfolio-secondary-links" aria-label="Notebook navigation">
     <a href="{{ '/notebook/' | relative_url }}">All notebook entries</a>
-    {% if linked_project %}<a href="{{ linked_project.url | relative_url }}">Back to the project</a>{% endif %}
+    {% if linked_project -%}
+      <a href="{{ linked_project.url | relative_url }}">Back to the project</a>
+    {%- endif %}
   </nav>
 </div>

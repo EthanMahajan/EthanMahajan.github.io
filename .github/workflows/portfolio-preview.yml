@@ -31,7 +31,9 @@ jobs:
           JEKYLL_ENV: production
         run: bundle exec jekyll build
       - name: Check links, metadata, images, and portfolio PDF
-        run: python scripts/check_portfolio.py
+        run: |
+          python scripts/check_portfolio.py
+          node scripts/check_damping.cjs _site/assets/js/damping-demo.js
       - uses: actions/upload-artifact@v4
         with:
           name: portfolio-preview-site

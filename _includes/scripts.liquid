@@ -192,7 +192,7 @@
   <script async src="https://badge.dimensions.ai/badge.js"></script>
 {% endif %}
 
-{% if site.enable_math %}
+{% if site.enable_math or page.math %}
   <!-- MathJax -->
   <script
     defer
@@ -204,11 +204,6 @@
   ></script>
   {% unless page.pseudocode %}
     <script src="{{ '/assets/js/mathjax-setup.js' | relative_url | bust_file_cache }}"></script>
-    <script
-      defer
-      src="{{ site.third_party_libraries.polyfill.url.js }}"
-      crossorigin="anonymous"
-    ></script>
   {% else %}
     <script src="{{ '/assets/js/pseudocode-setup.js' | relative_url | bust_file_cache }}"></script>
     <script
@@ -355,10 +350,7 @@
 
 {% if site.back_to_top and page.back_to_top %}
   <!-- Back to Top -->
-  <script src="{{ '/assets/js/vanilla-back-to-top.min.js' | relative_url | bust_file_cache }}"></script>
-  <script>
-    addBackToTop();
-  </script>
+  <script defer src="{{ '/assets/js/back-to-top.js' | relative_url | bust_file_cache }}"></script>
 {% endif %}
 
 {% if site.search_enabled %}
@@ -376,4 +368,8 @@
 
 {% if page.cad_model %}
   <script type="module" src="{{ '/assets/js/cad-viewer.js' | relative_url }}"></script>
+{% endif %}
+
+{% if page.damping_demo %}
+  <script defer src="{{ '/assets/js/damping-demo.js' | relative_url | bust_file_cache }}"></script>
 {% endif %}

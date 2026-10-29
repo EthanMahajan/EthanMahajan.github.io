@@ -118,6 +118,9 @@ html {
   font-size: 0.85rem;
   line-height: 1.55;
 }
+.post figure img {
+  max-width: 100%;
+}
 a:focus-visible,
 button:focus-visible,
 summary:focus-visible,
@@ -171,6 +174,38 @@ canvas:focus-visible {
 .portfolio-secondary-links a {
   padding: 0.5rem 0;
 }
+.project-index-links {
+  margin: 1rem 0 1.5rem;
+}
+.project-index-links a {
+  min-height: 44px;
+}
+#back-to-top {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 50%;
+  color: var(--global-text-color);
+  background: var(--portfolio-surface);
+  cursor: pointer;
+}
+#back-to-top[hidden] {
+  display: none;
+}
+#back-to-top svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
 .notebook-list {
   list-style: none;
   padding: 0;
@@ -192,6 +227,64 @@ canvas:focus-visible {
 }
 .project-notes {
   margin-top: 2.75rem;
+}
+
+.article-contents {
+  margin: 1.75rem 0 2rem;
+  padding-block: 1rem;
+  border-block: 1px solid var(--global-divider-color);
+}
+.article-contents ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.article-contents a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.resonance-table {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.resonance-comparison {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+}
+.resonance-comparison img {
+  height: auto;
+  max-height: none;
+}
+.resonance-printer {
+  display: block;
+  width: min(100%, 420px);
+  margin-inline: auto;
+}
+@media (max-width: 767px) {
+  .resonance-comparison {
+    grid-template-columns: 1fr;
+  }
+}
+.resonance-table table {
+  width: 100%;
+  min-width: 640px;
+  font-size: 0.9rem;
+}
+.resonance-table th,
+.resonance-table td {
+  padding: 0.65rem;
+  border-bottom: 1px solid var(--global-divider-color);
+  vertical-align: top;
+}
+.resonance-table:focus-visible {
+  outline: 2px solid var(--global-theme-color);
+  outline-offset: 3px;
 }
 .featured-build-image {
   display: block;

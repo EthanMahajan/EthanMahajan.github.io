@@ -1,0 +1,127 @@
+.damping-demo {
+  --damping-curve: #007f80;
+  --damping-label: var(--global-text-color, #202c34);
+  color: var(--damping-label);
+  margin: 2rem 0;
+  padding: 1.25rem 0;
+  border-block: 1px solid var(--global-divider-color);
+}
+html[data-theme="dark"] .damping-demo {
+  --damping-curve: #55d4cd;
+  --damping-label: #fff;
+}
+.damping-demo h3 {
+  margin: 0 0 0.5rem;
+}
+.damping-demo__conditions {
+  color: var(--damping-label);
+  font-size: 0.9rem;
+}
+.damping-demo__control {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+}
+.damping-demo__classification {
+  width: 220px;
+  max-width: 100%;
+}
+.damping-demo__classification summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  cursor: pointer;
+  list-style: none;
+  text-decoration: none;
+}
+.damping-demo__classification summary::-webkit-details-marker {
+  display: none;
+}
+.damping-demo__classification summary::after {
+  content: "▾";
+}
+.damping-demo__options {
+  margin-top: 0.25rem;
+  padding: 0.25rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.25rem;
+  background: var(--portfolio-surface);
+}
+.damping-demo__options button {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  padding: 0.5rem 0.75rem;
+  border: 0;
+  text-align: left;
+  color: var(--damping-label);
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+.damping-demo__options button:hover,
+.damping-demo__options button[aria-pressed="true"] {
+  background: var(--global-bg-color);
+}
+.damping-demo__options button[aria-pressed="true"] {
+  font-weight: 600;
+}
+.damping-demo output {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+.damping-demo input[type="range"] {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  accent-color: var(--damping-curve);
+  cursor: pointer;
+}
+.damping-demo input:focus-visible,
+.damping-demo summary:focus-visible {
+  outline: 2px solid var(--damping-curve);
+  outline-offset: 3px;
+}
+.damping-demo__plot {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+.damping-demo__plot text {
+  fill: var(--damping-label);
+  font-family: inherit;
+  font-size: 13px;
+}
+.damping-demo__grid {
+  stroke: var(--global-text-color-light);
+  stroke-opacity: 0.16;
+}
+.damping-demo__zero {
+  stroke: var(--global-text-color-light);
+  stroke-opacity: 0.45;
+}
+.damping-demo__curve {
+  stroke: var(--damping-curve);
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+.damping-demo__results {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
+  margin: 1rem 0 0;
+}
+.damping-demo__results dt {
+  font-size: 0.85rem;
+  color: var(--damping-label);
+  font-weight: 400;
+}
+.damping-demo__results dd {
+  margin: 0.2rem 0 0;
+  font-variant-numeric: tabular-nums;
+}

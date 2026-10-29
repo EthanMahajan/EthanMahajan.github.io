@@ -83,6 +83,7 @@ jobs:
           export JEKYLL_ENV=production
           bundle exec jekyll build
           python3 scripts/check_portfolio.py
+          node scripts/check_damping.cjs _site/assets/js/damping-demo.js
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss

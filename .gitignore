@@ -19,5 +19,6 @@ assets/pdf/Ethan_Mahajan_Portfolio.pdf
 assets/img/social/
 assets/img/PurifierPCB.png
 __pycache__/
+_data/image_dimensions.json
 assets/models/artorius/artorius-preview.3mf
 assets/models/artorius/preview-manifest.json

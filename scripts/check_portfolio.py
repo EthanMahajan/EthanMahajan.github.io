@@ -29,6 +29,10 @@ class Page(HTMLParser):
             self.ids.append(attrs["id"])
         if tag in ("a", "link") and attrs.get("href"):
             self.links.append(attrs["href"])
+        if tag == "script" and attrs.get("src"):
+            self.links.append(attrs["src"])
+        if tag in ("source", "img") and attrs.get("srcset"):
+            self.links.extend(item.strip().split()[0] for item in attrs["srcset"].split(",") if item.strip())
         if attrs.get("data-model-url"):
             self.links.append(attrs["data-model-url"])
         if tag in ("video", "source"):
@@ -61,6 +65,9 @@ def check(site):
         for img in page.images:
             if "alt" not in img:
                 errors.append(f"{name}: image missing alt text")
+            for dimension in ("width", "height"):
+                if dimension in img and (not img[dimension].isdigit() or int(img[dimension]) <= 0):
+                    errors.append(f"{name}: image has invalid {dimension}: {img[dimension]}")
         references = page.links + [i.get("src", "") for i in page.images]
         references += [page.meta.get("og:image", "")]
         for reference in references:

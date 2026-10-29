@@ -1,0 +1,36 @@
+<section class="damping-demo" data-damping-demo aria-labelledby="damping-demo-title">
+  <h3 id="damping-demo-title">Damped spring-mass response</h3>
+  <p class="damping-demo__conditions">m = 1 kg · k = 1 N/m · x(0) = 1 · x′(0) = 0</p>
+  <div class="damping-demo__control">
+    <label for="damping-ratio">Damping ratio (ζ)</label>
+    <output for="damping-ratio" data-damping-value>0.12</output>
+  </div>
+  <input id="damping-ratio" type="range" min="0" max="1.25" step="0.01" value="0.12" aria-describedby="damping-demo-title">
+  <svg class="damping-demo__plot" role="img" aria-labelledby="damping-plot-title damping-plot-desc">
+    <title id="damping-plot-title">Displacement versus time</title>
+    <desc id="damping-plot-desc">Free response of a spring-mass system with initial displacement 1 and initial velocity 0. Adjust the damping ratio to compare oscillatory and non-oscillatory responses.</desc>
+    <g data-damping-grid></g>
+    <path class="damping-demo__curve" data-damping-curve fill="none" stroke="#008b8b" stroke-width="2.5"></path>
+  </svg>
+  <dl class="damping-demo__results" aria-live="polite" aria-atomic="true">
+    <div>
+      <dt>Damping classification</dt>
+      <dd>
+        <details class="damping-demo__classification" data-damping-picker>
+          <summary><span data-damping-class>Underdamped</span></summary>
+          <div class="damping-demo__options" role="group" aria-label="Choose damping classification">
+            <button type="button" data-damping-option="none" aria-pressed="false">No damping</button>
+            <button type="button" data-damping-option="underdamped" aria-pressed="true">Underdamped</button>
+            <button type="button" data-damping-option="critical" aria-pressed="false">Critically damped</button>
+            <button type="button" data-damping-option="overdamped" aria-pressed="false">Overdamped</button>
+          </div>
+        </details>
+      </dd>
+    </div>
+    <div>
+      <dt>Damped frequency / natural frequency</dt>
+      <dd data-damping-frequency>99.3%</dd>
+    </div>
+  </dl>
+  <noscript>Enable JavaScript to adjust the damping ratio and display the response graph.</noscript>
+</section>

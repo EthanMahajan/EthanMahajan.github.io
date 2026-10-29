@@ -75,6 +75,9 @@
   <link rel="shortcut icon" href="{{ site.icon | prepend: '/assets/img/' | relative_url | bust_file_cache}}">
 {% endif %}
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
+{% if page.damping_demo %}
+  <link rel="stylesheet" href="{{ '/assets/css/damping-demo.css' | relative_url | bust_file_cache }}">
+{% endif %}
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
 {% if site.enable_darkmode %}

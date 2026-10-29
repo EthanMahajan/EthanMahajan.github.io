@@ -34,3 +34,5 @@ I am seeking internship, co-op, and project opportunities where I can contribute
 I designed, fabricated, and revised this operational CoreXY printer around components from an older machine. The project brought together mechanical packaging, printed fixtures, motion control, and CAN-bus electronics, with further work focused on alignment, vibration, and print reliability.
 
 [Explore the design decisions and see it printing →]({{ featured_artorius.url | relative_url }})
+
+[Design story: using resonance measurements to tune Artorius →]({{ '/notebook/artorius-resonance/' | relative_url }})
