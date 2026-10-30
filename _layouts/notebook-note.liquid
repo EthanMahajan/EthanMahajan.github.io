@@ -5,7 +5,7 @@ layout: default
 {% assign linked_project = site.projects | where: 'path', project_path | first %}
 <div class="post notebook-note">
   <header class="post-header">
-    <p class="eyebrow">Engineering notebook</p>
+    <p class="eyebrow">Design Notes</p>
     <h1 class="post-title">{{ page.title | escape }}</h1>
     <p class="caption">
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time>
@@ -28,8 +28,8 @@ layout: default
     </nav>
   {% endif %}
   <article>{{ content }}</article>
-  <nav class="portfolio-secondary-links" aria-label="Notebook navigation">
-    <a href="{{ '/notebook/' | relative_url }}">All notebook entries</a>
+  <nav class="portfolio-secondary-links" aria-label="Design Notes navigation">
+    <a href="{{ '/notebook/' | relative_url }}">All Design Notes</a>
     {% if linked_project -%}
       <a href="{{ linked_project.url | relative_url }}">Back to the project</a>
     {%- endif %}

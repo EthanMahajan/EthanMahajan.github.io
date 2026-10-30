@@ -5,6 +5,7 @@ if (loadButton) {
   loadButton.addEventListener("click", async () => {
     loadButton.disabled = true;
     status.textContent = "Loading viewer and model";
+    let webglUnavailable = false;
     let renderer;
     let controls;
     let observer;
@@ -21,6 +22,13 @@ if (loadButton) {
       renderer?.domElement.remove();
     };
     try {
+      const probe = document.createElement("canvas");
+      const context = probe.getContext("webgl2") || probe.getContext("webgl");
+      if (!context) {
+        webglUnavailable = true;
+        throw new Error("WebGL unavailable");
+      }
+      context.getExtension("WEBGL_lose_context")?.loseContext();
       const [THREE, { OrbitControls }, { ThreeMFLoader }] = await Promise.all([
         import("three"),
         import("three/addons/controls/OrbitControls.js"),
@@ -102,13 +110,16 @@ if (loadButton) {
         },
         { once: true }
       );
+      root.querySelector("[data-cad-static]").hidden = true;
       loadButton.hidden = true;
       status.textContent = "Assembly loaded. Drag to orbit, or use zoom and reset.";
     } catch (error) {
       dispose();
       root.querySelector("[data-cad-interface]").hidden = true;
-      status.textContent =
-        "The 3D model could not be opened. Try again or download the assembly. Large or unsupported exports may need a simpler mesh.";
+      root.querySelector("[data-cad-static]").hidden = false;
+      status.textContent = webglUnavailable
+        ? "This browser cannot display the interactive model because WebGL is unavailable. Use the static view or download the assembly meshes."
+        : "The model could not be downloaded or read. Use the static view, download the assembly meshes, or try loading again.";
       loadButton.disabled = false;
       console.error("Artorius viewer:", error);
     }

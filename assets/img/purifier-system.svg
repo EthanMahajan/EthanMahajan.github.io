@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Planned purifier system — controller schematic complete</title>
+  <desc id="desc">A planned particulate sensor provides input to a controller, which would control a reused 120 millimeter fan. Housing and filter integration are planned. Only the controller schematic is complete.</desc>
+  <rect width="800" height="600" fill="#f3f6f5"/>
+  <g font-family="Arial, sans-serif" fill="#202a30">
+    <text x="50" y="65" font-size="28" font-weight="bold">Planned purifier system</text>
+    <text x="50" y="103" font-size="21">Current evidence: KiCad schematic</text>
+    <g fill="#fff" stroke="#56636a" stroke-width="2">
+      <rect x="50" y="170" width="260" height="130" rx="6"/>
+      <rect x="440" y="170" width="310" height="130" rx="6"/>
+      <rect x="440" y="390" width="310" height="130" rx="6"/>
+    </g>
+    <g font-size="23" text-anchor="middle">
+      <text x="180" y="215">Particulate sensor</text><text x="180" y="258" font-size="20">Planned integration</text>
+      <text x="595" y="215" font-weight="bold">Controller</text><text x="595" y="258" font-size="20">Schematic complete</text>
+      <text x="595" y="435">Reused 120 mm fan</text><text x="595" y="478" font-size="20">Planned control</text>
+    </g>
+    <g stroke="#245b43" stroke-width="4" fill="none"><path d="M310 235H425m-12-9 12 9-12 9"/><path d="M595 300v75m-9-12 9 12 9-12"/></g>
+    <text x="50" y="450" font-size="22">Housing + filter:</text><text x="50" y="485" font-size="20">planned fabrication</text>
+    <text x="50" y="565" font-size="19">Concept overview; not a tested assembly or wiring diagram.</text>
+  </g>
+</svg>

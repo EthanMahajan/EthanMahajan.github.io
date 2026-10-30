@@ -17,7 +17,7 @@
   <div class="project-contact">
     <nav class="project-contact__links" aria-label="Contact about this project">
       {% capture contact_subject %}{{ page.title }}: portfolio inquiry{% endcapture %}
-      <a href="mailto:{{ site.data.socials.email }}?subject={{ contact_subject | uri_escape }}">Email</a>
+      <a href="mailto:{{ site.data.socials.email }}?subject={{ contact_subject | uri_escape }}">Email about this project</a>
       <a href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}/">LinkedIn</a>
     </nav>
     {% include copyright.liquid %}

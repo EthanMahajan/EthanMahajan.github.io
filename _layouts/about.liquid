@@ -1,47 +1,46 @@
 ---
 layout: default
 ---
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
+<div class="post home">
+  <section class="home-intro" aria-labelledby="home-title">
+    <div>
+      <h1 id="home-title" class="post-title">
+        {{ site.first_name }}
         {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
-      {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
-
-  <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
-          {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image_alt
-            cache_bust=true
-          %}
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
+      </h1>
+      <div id="about-copy">{{ content }}</div>
+    </div>
+    {% assign portrait = page.profile.image | prepend: 'assets/img/' %}
+    {% include figure.liquid path=portrait alt=page.profile.image_alt class="home-portrait" loading="eager" sizes="220px" %}
+  </section>
+  {% assign artorius = site.projects | where: 'importance', 1 | first %}
+  {% include featured-project.liquid project=artorius video=true %}
+  <section aria-labelledby="more-work">
+    <h2 id="more-work">More engineering work</h2>
+    <div class="evidence-grid">
+      {% assign project = site.projects | where: 'importance', 2 | first -%}
+      {%- include projects.liquid %}
+      <div class="project-card">
+        <a class="project-card__image" href="{{ '/publications/' | relative_url }}">
+          {%- include figure.liquid path="assets/img/publication_preview/IMG_2407.jpg" alt="Microscope field from the printed-cup study" class="card-img-top" sizes="(min-width: 768px) 520px, 90vw" -%}
+        </a>
+        <div class="card-body">
+          <p class="project-card__status">Exploratory study · 2025</p>
+          <h3><a href="{{ '/publications/' | relative_url }}">Particles in printed cups</a></h3>
+          <p>Independent microscopy study of water held in FDM-printed cups, with explicit limits on particle identification.</p>
+          <a href="{{ '/publications/' | relative_url }}">Read research summary →</a>
+        </div>
       </div>
-    {% endif %}
-
-    <div id="about-copy" class="clearfix">{{ content }}</div>
-
-    {% if page.social %}
-      {% include profile-links.liquid %}
-    {% endif %}
-  </article>
+    </div>
+  </section>
+  <section class="contact-block" id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title">Contact</h2>
+    <p>
+      <a href="mailto:{{ site.data.socials.email }}">{{ site.data.socials.email }}</a>
+    </p>
+    <nav class="portfolio-secondary-links" aria-label="Contact resources">
+      <a href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}/">LinkedIn</a
+      ><a href="{{ site.data.socials.cv_pdf | relative_url }}">Resume (PDF)</a>
+    </nav>
+  </section>
 </div>

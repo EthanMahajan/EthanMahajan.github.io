@@ -14,12 +14,24 @@ layout: default
     <p class="post-description">{{ page.description }}</p>
     {% if page.collection == 'projects' and page.documentation_updated %}
       <p class="project-metadata">
-        {%- if page.project_started %}Started {{ page.project_started }}. {% endif %}Documentation updated {{ page.documentation_updated | date: '%B %-d, %Y' }}
+        {%- if page.project_started %}Started {{ page.project_started }}. {% endif %}Documentation updated
+        {{ page.documentation_updated | date: '%B %-d, %Y' }}
       </p>
     {% endif %}
   </header>
 
   <article>
+    {% if page.sections %}
+      <nav class="article-contents" aria-label="On this page">
+        <ul>
+          {% for section in page.sections %}
+            <li>
+              <a href="#{{ section.id }}">{{ section.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    {% endif %}
     {% if page.collection == 'projects' %}
       {% include project-overview.liquid %}
       {% include project-hero.liquid %}

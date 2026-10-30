@@ -12,7 +12,7 @@ cv:
 
   sections:
     Professional Summary:
-      - bullet: Mechanical engineering student with experience in CAD design, additive manufacturing, electromechanical prototyping, and freelance engineering consulting. Completed 20+ client projects while independently designing and building a high-speed CoreXY 3D printer.
+      - bullet: Mechanical engineering student with experience in CAD design, additive manufacturing, electromechanical prototyping, and freelance engineering consulting. Completed 20+ client projects while independently designing and building a custom CoreXY 3D printer.
 
     Education:
       - institution: Georgia Institute of Technology
@@ -49,11 +49,11 @@ cv:
 
       - label: Electronics & Hardware
         icon: fa-solid fa-microchip
-        details: "PCB Design, Soldering, Wiring, Crimping, Multimeter Diagnostics, CAN Bus, Connector Assembly"
+        details: "KiCad Schematic Design (PCB Layout Pending), Soldering, Wiring, Crimping, Multimeter Diagnostics, CAN Bus, Connector Assembly"
 
       - label: Machinery & Tools
         icon: fa-solid fa-gears
-        details: "FDM 3D Printers, Laser Engravers, Manual & CNC Milling, & Wood Saws"
+        details: "FDM 3D Printers, Laser Engravers, Milling Exposure, & Wood Saws"
 
       - label: Software & Systems
         icon: fa-solid fa-laptop-code
@@ -65,26 +65,29 @@ cv:
 
     Projects:
       - name: FDM 3D Printer Design, Prototyping, & Revising
-        summary: Created a high-speed CoreXY 3D printer by overhauling an older machine.
+        url: https://ethanmahajan.github.io/projects/artorius.html
+        summary: Created a custom CoreXY 3D printer by overhauling an older machine.
         highlights:
           - "Designed a frame and motion system in CAD to meet mechanical and thermal specifications."
           - "Verified component tolerances and clearances before fabrication."
           - "Fabricated a prototype using metalworking machines and additive manufacturing."
-          - "Configured Kalico Klipper firmware for high-speed, quality 3D prints."
+          - "Configured Kalico Klipper firmware and performed exploratory motion tests; the printer is operational."
           - "Installed CAN-bus toolhead electronics to compartmentalize for easier maintenance."
-          - "Used vibration analysis and input shaping to improve rigidity, reliability, and print speed."
+          - "Revised frame support and used vibration analysis and input shaping to investigate ringing; repeatable print quality remains under refinement."
         start_date: "2024-06"
         end_date: "2026-07"
 
       - name: Air Purifier
-        summary: Smart DIY air purifier that reuses a 120 mm computer case fan and responds to room particulate-matter levels.
+        url: https://ethanmahajan.github.io/projects/air_purifier.html
+        summary: Controller design for a proposed smart air purifier using a 120 mm fan and particulate-matter sensor.
         highlights:
           - "Designed a control concept for automatic fan-speed adjustment and filter replacement detection."
-          - "Completed electrical schematics in KiCad; PCB placement and testing are coming soon."
+          - "Completed electrical schematics in KiCad; PCB layout and physical validation remain pending."
         start_date: "2026-07"
         end_date: present
 
       - name: Laser-Engraved Chess Board
+        url: https://ethanmahajan.github.io/projects/laser_engraved_chess_board.html
         summary: In-progress Invention Studio project combining CAD, laser engraving, and planned CNC-machined metal pieces.
         highlights:
           - "Developed a quickly manufacturable board design and planned low-center-of-mass pieces for stability."
@@ -113,7 +116,7 @@ cv:
         summary: Work with an early-stage startup developing shape-computation tools and supporting public-facing digital communication.
         highlights:
           - "Launched Shape Machine's digital presence through social-media outreach."
-          - "Collaborated with an interdisciplinary team to publish the Shape Computation Lab website."
+          - "Collaborate with an interdisciplinary team on the existing Shape Computation Lab website through content edits, corrections, and template fixes."
           - "Contribute GitHub documentation and website fixes through the team's enterprise repository."
 
       - company: Wyzant

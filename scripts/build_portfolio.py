@@ -100,8 +100,8 @@ def build_pdf(config, socials, projects):
         project_heading = Paragraph(escape(project["title"]), heading)
         project_heading.project_key = path.stem
         details = project["project_summary"]
-        story.append(KeepTogether([project_heading, Paragraph(
-            escape(details["status"]) + " | " + escape(details["role"]), meta)]))
+        project_header = [project_heading, Paragraph(
+            escape(details["status"]) + " | " + escape(details["role"]), meta)]
         source = ROOT / hero.get("image", project["img"]).lstrip("/")
         with PILImage.open(source) as original:
             width, height = original.size
@@ -121,7 +121,7 @@ def build_pdf(config, socials, projects):
             ("TOPPADDING", (0, 0), (-1, -1), 2),
             ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
         ]))
-        story.append(section)
+        story.append(KeepTogether(project_header + [section]))
     doc.multiBuild(story)
     print(f"Generated {destination.relative_to(ROOT)} with all {len(projects)} projects and linked contents")
 
@@ -171,7 +171,7 @@ def main():
     config = yaml.safe_load((ROOT / "_config.yml").read_text(encoding="utf-8"))
     socials = yaml.safe_load((ROOT / "_data/socials.yml").read_text(encoding="utf-8"))
     projects = [(path, frontmatter(path)) for path in sorted((ROOT / "_projects").glob("*.md"))]
-    ordered = sorted(projects, key=lambda item: (item[1]["category"] != "Engineering", item[1]["importance"], item[1]["title"]))
+    ordered = sorted(projects, key=lambda item: item[1]["importance"])
     if not ordered:
         raise ValueError("No portfolio projects found")
     build_pdf(config, socials, ordered)

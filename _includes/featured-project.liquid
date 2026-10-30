@@ -1,0 +1,21 @@
+<section id="featured-build-artorius" class="featured-project" aria-label="Featured project">
+  <div>
+    {% if include.video -%}
+      {%- include project-video.liquid project=include.project -%}
+    {%- else -%}
+      <a href="{{ include.project.url | relative_url }}">
+        {%- include figure.liquid path=include.project.img alt="Built Artorius printer with custom toolhead and CoreXY gantry" class="featured-build-image" loading="eager" sizes="(min-width: 768px) 540px, 90vw" -%}
+      </a>
+    {%- endif %}
+  </div>
+  <div class="featured-project__copy">
+    <p class="eyebrow">Featured build · {{ include.project.card_label }}</p>
+    <h2><a href="{{ include.project.url | relative_url }}">Artorius: a custom CoreXY printer</a></h2>
+    <p>I designed, fabricated, and integrated a working printer around reused components, with a custom frame, toolhead, and CAN-bus electronics.</p>
+    <a class="btn btn-outline-primary" href="{{ include.project.url | relative_url }}">View case study</a>
+    <p class="featured-note">
+      <a href="{{ '/notebook/artorius-resonance/' | relative_url }}">Read design note</a> — what resonance measurements reveal about the next
+      revision.
+    </p>
+  </div>
+</section>

@@ -1,29 +1,22 @@
-<div class="col">
-  <div class="card h-100 project-card">
-    {% assign project_url = project.redirect | default: project.url | relative_url %}
-    {% if project.img %}
-      <div class="project-card__image{% if project.thumbnail_light %} project-card__image--light{% endif %}">
-        {%
-          include figure.liquid
-          loading="lazy"
-          path=project.img
-          sizes = "250px"
-          alt=project.title
-          class="card-img-top"
-        %}
-      </div>
-    {% endif %}
-    <div class="card-body">
-      <p class="project-card__status">{{ project.card_label | default: project.category }}</p>
-      <h3 class="card-title">
-        <a href="{{ project_url }}">{{ project.title }}</a>
-      </h3>
-      <p class="card-text">{{ project.card_description | default: project.description }}</p>
-      {% if project.github %}
-        <a class="project-github" href="{{ project.github }}" target="_blank" rel="noopener noreferrer">
-          GitHub repository
-        </a>
-      {% endif %}
-    </div>
+<div class="project-card">
+  {% assign project_url = project.url | relative_url %}
+  {% assign thumbnail = project.thumbnail_image | default: project.img %}
+  <a
+    class="project-card__image{% if project.thumbnail_light %} project-card__image--light{% endif %}"
+    href="{{ project_url }}"
+    aria-label="View case study: {{ project.title | escape }}"
+  >
+    {%- include figure.liquid path=thumbnail width=project.thumbnail_width height=project.thumbnail_height alt=project.thumbnail_alt class="card-img-top" sizes="(min-width: 768px) 520px, 90vw" -%}
+  </a>
+  <div class="card-body">
+    <p class="project-card__status">{{ project.card_label }}</p>
+    <h3 class="card-title">
+      <a href="{{ project_url }}">{{ project.title }}</a>
+    </h3>
+    <p class="card-text">{{ project.card_description }}</p>
+    <a href="{{ project_url }}">View case study →</a>
+    {%- if project.github -%}
+      <a class="project-github" href="{{ project.github }}">View source files</a>
+    {%- endif %}
   </div>
 </div>

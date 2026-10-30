@@ -23,19 +23,32 @@
             {% assign startYear = startParts[0] | strip %}
             {% assign startMonth = startParts[1] | strip | default: '' %}
             {% case startMonth %}
-              {% when '01' %}{% assign startMonthName = 'Jan' %}
-              {% when '02' %}{% assign startMonthName = 'Feb' %}
-              {% when '03' %}{% assign startMonthName = 'Mar' %}
-              {% when '04' %}{% assign startMonthName = 'Apr' %}
-              {% when '05' %}{% assign startMonthName = 'May' %}
-              {% when '06' %}{% assign startMonthName = 'Jun' %}
-              {% when '07' %}{% assign startMonthName = 'Jul' %}
-              {% when '08' %}{% assign startMonthName = 'Aug' %}
-              {% when '09' %}{% assign startMonthName = 'Sep' %}
-              {% when '10' %}{% assign startMonthName = 'Oct' %}
-              {% when '11' %}{% assign startMonthName = 'Nov' %}
-              {% when '12' %}{% assign startMonthName = 'Dec' %}
-              {% else %}{% assign startMonthName = '' %}
+              {% when '01' -%}
+                {%- assign startMonthName = 'Jan' %}
+              {% when '02' -%}
+                {%- assign startMonthName = 'Feb' %}
+              {% when '03' -%}
+                {%- assign startMonthName = 'Mar' %}
+              {% when '04' -%}
+                {%- assign startMonthName = 'Apr' %}
+              {% when '05' -%}
+                {%- assign startMonthName = 'May' %}
+              {% when '06' -%}
+                {%- assign startMonthName = 'Jun' %}
+              {% when '07' -%}
+                {%- assign startMonthName = 'Jul' %}
+              {% when '08' -%}
+                {%- assign startMonthName = 'Aug' %}
+              {% when '09' -%}
+                {%- assign startMonthName = 'Sep' %}
+              {% when '10' -%}
+                {%- assign startMonthName = 'Oct' %}
+              {% when '11' -%}
+                {%- assign startMonthName = 'Nov' %}
+              {% when '12' -%}
+                {%- assign startMonthName = 'Dec' %}
+              {% else -%}
+                {%- assign startMonthName = '' %}
             {% endcase %}
             {% if startMonthName != '' %}
               {% assign startDate = startMonthName | append: ' ' | append: startYear %}
@@ -50,19 +63,32 @@
               {% assign endYear = endParts[0] | strip %}
               {% assign endMonth = endParts[1] | strip | default: '' %}
               {% case endMonth %}
-                {% when '01' %}{% assign endMonthName = 'Jan' %}
-                {% when '02' %}{% assign endMonthName = 'Feb' %}
-                {% when '03' %}{% assign endMonthName = 'Mar' %}
-                {% when '04' %}{% assign endMonthName = 'Apr' %}
-                {% when '05' %}{% assign endMonthName = 'May' %}
-                {% when '06' %}{% assign endMonthName = 'Jun' %}
-                {% when '07' %}{% assign endMonthName = 'Jul' %}
-                {% when '08' %}{% assign endMonthName = 'Aug' %}
-                {% when '09' %}{% assign endMonthName = 'Sep' %}
-                {% when '10' %}{% assign endMonthName = 'Oct' %}
-                {% when '11' %}{% assign endMonthName = 'Nov' %}
-                {% when '12' %}{% assign endMonthName = 'Dec' %}
-                {% else %}{% assign endMonthName = '' %}
+                {% when '01' -%}
+                  {%- assign endMonthName = 'Jan' %}
+                {% when '02' -%}
+                  {%- assign endMonthName = 'Feb' %}
+                {% when '03' -%}
+                  {%- assign endMonthName = 'Mar' %}
+                {% when '04' -%}
+                  {%- assign endMonthName = 'Apr' %}
+                {% when '05' -%}
+                  {%- assign endMonthName = 'May' %}
+                {% when '06' -%}
+                  {%- assign endMonthName = 'Jun' %}
+                {% when '07' -%}
+                  {%- assign endMonthName = 'Jul' %}
+                {% when '08' -%}
+                  {%- assign endMonthName = 'Aug' %}
+                {% when '09' -%}
+                  {%- assign endMonthName = 'Sep' %}
+                {% when '10' -%}
+                  {%- assign endMonthName = 'Oct' %}
+                {% when '11' -%}
+                  {%- assign endMonthName = 'Nov' %}
+                {% when '12' -%}
+                  {%- assign endMonthName = 'Dec' %}
+                {% else -%}
+                  {%- assign endMonthName = '' %}
               {% endcase %}
               {% if endMonthName != '' %}
                 {% assign endDate = endMonthName | append: ' ' | append: endYear %}
@@ -91,7 +117,6 @@
                 <tr>
                   <td>
                     <p class="location">
-
                       {{ location }}
                     </p>
                   </td>
@@ -106,19 +131,19 @@
           {% endcapture %}
 
           {% if entry.url %}
-            <h6 class="title font-weight-bold ">
+            <h3 class="title font-weight-bold ">
               <a href="{{ entry.url }}">{{ study_type }}</a>
-            </h6>
+            </h3>
           {% elsif study_type != '' %}
-            <h6 class="title font-weight-bold ">{{ study_type }}</h6>
+            <h3 class="title font-weight-bold ">{{ study_type }}</h3>
           {% endif %}
 
           {% if entry.institution %}
-            <h6 class="" style="font-size: 0.95rem">{{ entry.institution }}</h6>
+            <p class="" style="font-size: 0.95rem">{{ entry.institution }}</p>
           {% endif %}
 
           {% if entry.area %}
-            <h6 class="" style="font-size: 0.95rem; font-style: italic">{{ entry.area }}</h6>
+            <p class="" style="font-size: 0.95rem; font-style: italic">{{ entry.area }}</p>
           {% endif %}
 
           {% if entry.courses or entry.highlights %}

@@ -62,8 +62,11 @@
   {% if preview_image %}
     <meta property="og:image" content="{{ preview_image | absolute_url }}">
     <meta property="og:image:alt" content="{{ page.title | default: author_name | escape }}: engineering portfolio">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    {% assign image_key = preview_image | remove_first: '/' %}
+    {% assign image_size = site.data.image_dimensions[image_key] %}
+    {% if image_size -%}
+      <meta property="og:image:width" content="{{ image_size.width }}"><meta property="og:image:height" content="{{ image_size.height }}">
+    {%- endif %}
   {% endif %}
   <meta property="og:locale" content="{{ site.lang }}">
 

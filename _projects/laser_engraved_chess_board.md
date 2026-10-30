@@ -3,9 +3,10 @@ layout: page
 title: Laser-Engraved Chess Board
 project_intro: "I am making a chess set through Georgia Tech’s Invention Studio. The physical laser-engraved board is documented here, while the CNC-machined metal pieces remain planned."
 description: In-progress digital fabrication and materials processing project
-card_label: Board prototype
-card_description: "Laser-engraved chess board: physical board documented, with CNC-machined metal pieces planned."
-importance: 3
+thumbnail_alt: Physical laser-engraved wooden chess board
+card_label: Functional board prototype
+card_description: "Wooden chess board with a laser-engraved playing surface and personalized reverse. I designed and fabricated the board through the Invention Studio; CAD for the coordinated set is shown separately, with CNC-machined metal pieces still planned."
+importance: 4
 project_started: August 2026
 documentation_updated: 2026-10-20
 category: Design
@@ -35,7 +36,7 @@ The project also provides a way to learn different processes within one assembly
 <section class="project-section project-section--balanced">
 <div class="project-section__copy" markdown="1">
 
-## Design
+<h2 id="design">Planned metal pieces and set design</h2>
 
 I developed the board in CAD around a surface that could be manufactured with laser engraving. The piece concept uses a low center of mass to improve stability during play. Their CNC manufacturing is planned, so the finished machining approach and results are still pending.
 
@@ -49,7 +50,7 @@ The important design questions are how the engraving defines the playing surface
 
 ## Board fabrication
 
-The photographs show the physical wooden board, with its laser-engraved playing surface and personalized reverse. These document the board work; the CNC-machined metal pieces have not been made.
+The photographs show the physical wooden board, with its laser-engraved playing surface and personalized reverse.
 
 The clip records the laser engraving process.
 

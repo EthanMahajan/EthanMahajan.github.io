@@ -8,7 +8,7 @@ math: true
 damping_demo: true
 back_to_top: true
 description: "Frame decisions, belt tension, and software input shaping in the design of Artorius."
-og_image: /assets/img/social/artorius.png
+og_image: /assets/img/notebook/artorius-resonance/y-20261018.png
 sections:
   - title: Frame decisions
     id: frame-decisions
@@ -20,88 +20,84 @@ sections:
     id: software-input-shaping--how-it-works
 ---
 
-When I was designing Artorius, the coreXY FDM 3D printer, one of the most important issues was the speed at which I could actually print quality parts. The best determining factor to look at for this is the resonance at which the printer naturally tries to vibrate in each direction. Vibrations while printing can lead to noticeable surface quality problems. However, this can be mitigated by frame decisions, belt tension, and software input shaping (resonance compensation).
+<div class="takeaway" markdown="1">
+
+**Issue:** vibration and alignment limited confidence in repeatable print quality on Artorius.
+
+**Changes tried:** frame support revisions, belt tuning, and software input shaping.
+
+**Evidence:** earlier and later accelerometer plots show different responses. They help choose what to investigate next, but differing analysis methods prevent a controlled performance comparison; printed quality and reliability still need separate validation.
+
+</div>
 
 ## Frame decisions
 
-The frame was one of the easier parts of the printer to optimize for resonances. The general philosophy is to make the frame as rigid as possible while reducing the mass. This follows the formula for approximate frequency of spring-mass systems:
+I used aluminum extrusion to build a frame around components reused from my BIQU B1. The choice balanced available material, assembly access, and the need to support a CoreXY gantry. Most of my available extrusion was 2020, so that became a practical constraint rather than a claim that one section is ideal for every printer.
+
+For an ideal single-degree-of-freedom spring–mass model, the undamped natural frequency is
 
 $$
 f_n = \frac{1}{2\pi}\sqrt{\frac{k}{m}}
 $$
 
-where k is stiffness and m is mass.
+Here $$k$$ is effective stiffness and $$m$$ is effective participating mass. This simple model helps explain the relationship; the real printer has multiple modes, joints, belts, and moving components. Toolhead mass and stationary frame mass are not interchangeable quantities in this model.
 
-This meant that the frame should be made out of a material that is relatively lightweight while maintaining structural integrity. This made 6061 aluminum extrusion a fantastic choice for the material to use, and the larger 3D printing community as a whole also agreed with most other diy 3d printers using it as well. It also helped that I already had some aluminum extrusion left over from the old BIQU B1 I had. Pictured here:
+{% include figure.liquid path="assets/img/notebook/artorius-resonance/biqu-b1.png" alt="Original BIQU B1 printer before the CoreXY redesign" class="img-fluid rounded resonance-printer" zoomable=true original_link=true caption="Original BIQU B1. Reusing suitable hardware and available 2020 extrusion helped set the redesign's constraints." %}
 
-{% include figure.liquid path="assets/img/notebook/artorius-resonance/biqu-b1.png" alt="BIQU B1 printer" class="img-fluid rounded resonance-printer" zoomable=true original_link=true caption="BIQU B1 printer" %}
-
-Ideally, a printer would use 2040 or 4040 extrusion, because it can be filled with dirt/sand that can dissipate some of the resonance through friction as thermal energy. However, most of the extrusion I had was 2020 as it was both cheaper and more prevalent in the BIQU B1 design.
+I added extrusion after the first build, but resonance remained. Larger sections or different damping treatments would be additional design options to evaluate, not demonstrated fixes. I did not fill the frame with sand or add fluid or viscoelastic damping treatments.
 
 ## Belt tension
 
-The other main source of meaningful characteristic resonance improvement comes from how well tensioned the belts are. Surprisingly, this does not mean every belt should be as tight as they can possibly be, but that they should be very tight and very similar between the A and B belts. If you are unfamiliar with the terms A & B belts, just know that it refers to the different belts that are synced up to one of the 2 motors in the back; they aren’t labeled X or Y since CoreXY motion systems use a diagonal direction.
+The two CoreXY belts coordinate toolhead motion. My tuning question was whether their measured responses were similar, alongside whether the mechanism moved freely. Belt tension should suit the mechanism; simply maximizing it or seeking the tallest peak is not a validation method.
 
-To break it down, when belts have higher tension, the resonant frequency increases, which is good because it increases the speed at which I can print without print defects. However, if one belt is comparatively higher tension than the other, it can lead to multiple modes of resonance. This is not ideal because then the printer firmware has to account for multiple resonances as opposed to a single resonance. This is why it is very important that both belts have similar stretching/spring characteristics.
-
-Before continuing, I want to explain how to interpret these graphs, since they'll appear frequently throughout this article. They are generated by moving the toolhead back and forth at progressively increasing frequencies while an accelerometer measures the resulting vibrations. The X-axis represents frequency (Hz), while the Y-axis typically represents the strength of the vibration response as measured by the accelerometer, expressed as power spectral density (PSD). Peaks occur at frequencies where the printer experiences resonance, meaning its mechanical structure amplifies the applied motion. Taller peaks indicate stronger vibrations, while peaks farther to the right generally indicate a stiffer mechanical system, assuming the moving mass remains constant. Ideally, we want a single, narrow resonance peak at a relatively high frequency on most types of graphs.
+**Reading the plots:** an accelerometer records the response while the machine is excited through a range of frequencies. The frequency axis is in Hz; power spectral density (PSD) describes how the measured signal's power is distributed across frequency. Peaks identify responses to investigate. Their height alone does not measure belt tension or establish print quality.
 
 <div class="project-gallery resonance-comparison">
-{% include figure.liquid path="assets/img/notebook/artorius-resonance/belts-20260503.png" alt="Earlier belt response" class="img-fluid rounded" zoomable=true original_link=true caption="Left: earlier belt response — May 3, 2026." %}
-{% include figure.liquid path="assets/img/notebook/artorius-resonance/belts-20261018.png" alt="Later belt response" class="img-fluid rounded" zoomable=true original_link=true caption="Right: later belt response — October 18, 2026." %}
+{% include figure.liquid path="assets/img/notebook/artorius-resonance/belts-20260503.png" alt="Earlier A/B belt response plot with separated peaks" class="img-fluid rounded" zoomable=true original_link=true caption="Earlier belt response — May 3, 2026. Frequency versus PSD; the belt responses show separated peaks. Peak height alone does not establish undertension." %}
+{% include figure.liquid path="assets/img/notebook/artorius-resonance/belts-20261018.png" alt="Later A/B belt response plot with more closely aligned peaks" class="img-fluid rounded" zoomable=true original_link=true caption="Later belt response — October 18, 2026. The prominent peaks are more closely aligned. This documents a changed response, not an independent measurement of correct tension." %}
 </div>
 
-The belt graph on the left indicates what belts can look like when they are both undertensioned and dissimilar. This is because the PSD amplitude is relatively low (undertensioned), and the peaks for the different belts are at different frequencies (dissimilar). However, the graph on the right shows that they are both properly tensioned and similar in their responses to motion commands. This is because the PSD amplitude is reasonably high (well tensioned), and the peaks are at approximately the same frequency (similar). It can also be noted that the graph on the left shows multiple peaks which is indicative of a larger structural issue such as binding or large amounts of friction in the motion system.
+The later traces appear more similar than the earlier traces. Multiple peaks do not, by themselves, confirm binding, a locked bearing, or rubbing. Those remain possible inspection questions; no isolating inspection or controlled test identifying a single cause is documented here.
 
 ## Finding Accelerations & Speeds from Graphs
 
-That graph was meant to show the similarity between the different belts for tuning, but there are graphs that can show how the entire system will perform at different frequencies; for example:
+The Y-axis plots show the overall axis response and analysis output. They provide a starting point for firmware tuning, not a complete operating envelope.
 
 <div class="project-gallery resonance-comparison">
-{% include figure.liquid path="assets/img/notebook/artorius-resonance/y-20260212.png" alt="Earlier Y-axis input-shaper result" class="img-fluid rounded" zoomable=true original_link=true caption="Left: earlier Y-axis result — February 12, 2026." %}
-{% include figure.liquid path="assets/img/notebook/artorius-resonance/y-20261018.png" alt="Later Y-axis input-shaper result" class="img-fluid rounded" zoomable=true original_link=true caption="Right: later Y-axis result — October 18, 2026." %}
+{% include figure.liquid path="assets/img/notebook/artorius-resonance/y-20260212.png" alt="Earlier Y-axis response and input-shaper analysis" class="img-fluid rounded" zoomable=true original_link=true caption="Earlier Y-axis analysis — February 12, 2026. The response has several features rather than one dominant isolated peak; a cause cannot be identified from this plot alone." %}
+{% include figure.liquid path="assets/img/notebook/artorius-resonance/y-20261018.png" alt="Later Y-axis response and input-shaper analysis" class="img-fluid rounded" zoomable=true original_link=true caption="Later Y-axis analysis — October 18, 2026. A more distinct peak and subpeak are visible. The subpeak's cause remains unconfirmed, and the analysis method differs from the earlier result." %}
 </div>
 
-The above graphs highlight exactly that, except only for the y-axis since the resonances are only analyzed on a per-axis basis. The graph on the left can be seen as wild and erratic since it doesn’t have much of any clear peak, this is most likely caused by a number of serious structural problems that were cleared up by further improvements and tuning to get to the graph on the right. There, we can see that while the PSD amplitude did not increase by that much yet the entire graph appears to have cleared up into a clearly defined peak and subpeak. The cause of the subpeak is still under question, but is most likely due to a portion of the belt meeting unnecessary friction either through a locked bearing or rubbing with a part at certain points.
+The reported acceleration estimates were approximately **1,500 mm/s²** and **10,460 mm/s²**, **under different software/shaper analysis conditions**: one analysis used an add-on supporting smooth as well as regular resonance compensation. These values do not demonstrate a measured improvement factor in usable print acceleration.
 
-These graphs also include the recommended acceleration values for what the printer could be run at before having significant quality defects. For this metric, the two graphs are a little bit different since one was made using a special add-on to typical resonance compensation algorithms enabling smooth as well as regular resonance compensation which does not make this an apples-to-apples comparison. Excluding that, it can be seen that by making the aforementioned improvements to the frame and system as a whole, the suggested acceleration improved from 1500mm/s^2 to 10460mm/s^2. This is a momentous improvement in terms of speed at quality.
+Klipper describes its shaper acceleration estimate as a theoretical limit associated with smoothing. It is not proof of motor capability, sustainable acceleration, reliability, or print quality. See [Klipper: selecting max_accel](https://www.klipper3d.org/Measuring_Resonances.html#selecting-max_accel). Printed validation remains a separate step; the [resonance-compensation guide](https://www.klipper3d.org/Resonance_Compensation.html#selecting-max_accel) explains checking both ringing and smoothing in a test print.
 
-The graphs can also even depict which speeds to print at as shown here:
+{% include figure.liquid path="assets/img/notebook/artorius-resonance/speed-20261018.png" alt="Speed-dependent vibration profile with several peaks and lower-response bands" class="img-fluid rounded" zoomable=true original_link=true caption="Speed-dependent vibration analysis — October 18, 2026. Lower-response bands suggest candidate speeds to test; the plot is not a print-quality test." %}
 
-{% include figure.liquid path="assets/img/notebook/artorius-resonance/speed-20261018.png" alt="Speed-dependent vibration profile" class="img-fluid rounded" zoomable=true original_link=true caption="Speed-dependent vibration profile" %}
-
-These graphs show how the different speeds can affect the vibrations throughout the printer which allow me to make profiles that fit the printer’s speed well. For example, looking at the top middle graph, I know that the range of speeds from 56.3-71.5 mm/s are good for slower features as they avoid the major peaks around 50mm/s and 80mm/s respectively. Also, if I wanted to push more speed, I could choose between the range after the 110mm/s peak (125-165mm/s) or the range after the 170mm/s peak (180-320mm/s). After those peaks, the amount of resonance at any given speed doesn’t change that much, so I don’t have to worry about the peaks after peak 4 (as labeled on the graph).
-
-Essentially, the graphs generated from the accelerometer values allow me to get a basis profile for speeds and accelerations that will work for quality at speed printing.
+I identified candidate bands around 56.3–71.5, 125–165, and 180–320 mm/s from this profile. These are operating choices to investigate under the recorded test conditions, not guaranteed quality ranges. Neither a lower vibration response nor the absence of another large peak establishes extrusion capacity, dimensional accuracy, or reliable printing at that speed.
 
 ## Software Input Shaping & How It Works
 
-Earlier, I mentioned that the printer could compensate for resonances; this is called input shaping. It relies on the assumption that the toolhead acts as a damped spring system which can be modeled as
+Input shaping changes the timing of motion commands to reduce the vibration they excite. It does not physically stiffen the frame. Mechanical changes and firmware tuning therefore belong to separate parts of the design process. [Klipper's resonance-compensation documentation](https://www.klipper3d.org/Resonance_Compensation.html) describes input shaping and the mechanical checks that precede tuning.
+
+An illustrative linear model uses displacement $$x$$, damping coefficient $$c$$, mass $$m$$, stiffness $$k$$, and external force $$F(t)$$:
 
 $$
-m\ddot{y} + \gamma\dot{y} + ky = F(t)
+m\ddot{x} + c\dot{x} + kx = F(t)
 $$
 
-The implications of this allow the software to avoid certain resonances by adjusting the timings of certain motor movements like accelerations and decelerations.
-
-Let’s talk more about the second-order differential equation I brought up. If you wanted to solve it in terms of the damped angular frequency, you would get an expression like this:
+Define $$\omega_n=\sqrt{k/m}$$ and damping ratio $$\zeta=c/(2\sqrt{km})$$. For the **underdamped free response**, with $$F(t)=0$$ and $$0\leq\zeta<1$$,
 
 $$
-\omega_d = \sqrt{\frac{k}{m} - \frac{\gamma^2}{4m^2}}
+\omega_d = \sqrt{\frac{k}{m} - \frac{c^2}{4m^2}}=\omega_n\sqrt{1-\zeta^2}
 $$
 
-Which combined with an expression that gives us the position as a function of time:
-
 $$
-x(t) = e^{-\frac{c}{2m}t}\left(C_1\cos(\omega_dt) + C_2\sin(\omega_dt)\right)
+x(t)=e^{-\frac{c}{2m}t}\left(C_1\cos(\omega_dt)+C_2\sin(\omega_dt)\right)
 $$
 
-Which helps us understand that if we want to increase the frequency of the printer, we have to increase the stiffness of the spring, in this case the belt, and reduce the mass of the toolhead that is actually moving. However, according to this equation, we should reduce the damping coefficient to increase the frequency, right? Well not really, because it has a minimal impact on frequency, and a much more impact on something else.
-
-That something else is amplitude. In damped spring systems, it would be great to have no oscillatory motion at all. This can be done assuming the damping is high enough to result in a critically damped system.
+The constants depend on initial conditions. This decaying sinusoid is not the general solution for arbitrary forcing or for critically/overdamped cases. In the light-damping regime, damping changes frequency only slightly while changing how quickly oscillations decay; that approximation does not hold near critical damping. At critical damping and above, the free response is nonoscillatory.
 
 {% include damping-demo.liquid %}
 
-This means that increasing damping is beneficial to the printer for reducing oscillation after a print move. Increasing damping of the system can be done in a number of ways such as: using viscoelastic materials, filling the frame with sand, or using fluids to dampen the motion. Notice that these mostly consist of ways to take vibrational energy out of the motion and into the atoms of the printer as thermal energy. While I did not take these measures, I did focus on the frame and belt tension as previously mentioned above.
-
-Ok, but how do input shapers actually cancel those vibrations? They time their accelerations so that if a sudden change in velocity is going to occur, it will happen in multiple steps that are out-of-phase with each other in order to create destructive interference in each of their vibrations.
+The demo isolates that teaching model. Artorius is a multi-mode mechanical system, and these parameters have not been fitted to its measurements. Input shaping coordinates commanded motions to reduce residual vibration; adding physical damping would be a different intervention, requiring its own design and tests.

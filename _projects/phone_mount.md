@@ -1,16 +1,17 @@
 ---
 layout: page
 back_to_top: true
-title: Phone Mount
+title: Adjustable Phone Filming Mount
 project_intro: "I designed and built this adjustable iPhone mount to film my engineering projects. Aluminum extrusion provides the structure, while custom ABS fixtures allow height, arm rotation, and phone orientation to be adjusted."
 description: Adjustable, low-cost iPhone filming mount built from aluminum extrusion and 3D-printed fixtures
 og_image: /assets/img/social/phone_mount.png
-img: assets/img/phone-mount/thumbnail.jpg
+img: assets/img/phone-mount/assembled-prototype.jpg
 importance: 2
 documentation_updated: 2026-10-20
 category: Engineering
-card_label: Completed prototype
-card_description: "Adjustable filming mount: approximately $18, with custom ABS fixtures and reusable aluminum extrusion."
+thumbnail_alt: Physical adjustable phone mount with extrusion upright and ABS fixtures
+card_label: Functional prototype
+card_description: "Adjustable iPhone filming mount built from extrusion and custom ABS fixtures. I designed the joints, printed and assembled the parts, and use the functional prototype to film projects; the video estimates about $18 including extrusion."
 hero:
   summary_beside: true
   image: assets/img/phone-mount/assembled-prototype.jpg
@@ -32,11 +33,11 @@ project_summary:
 <section class="project-section project-section--balanced">
 <div class="project-section__copy" markdown="1">
 
-## Ideation
+<h2 id="ideation">An adjustable mount for project filming</h2>
 
 I wanted a low-cost way to capture footage of my builds without buying a dedicated camera or an expensive filming rig. Reusable aluminum extrusion and a small set of printed parts offered a practical way to make a mount that I could adjust for different camera angles.
 
-The build cost approximately $18 including aluminum extrusion, or about $4 excluding the extrusion, as estimated in the project video.
+The project video estimates approximately $18 including aluminum extrusion, or about $4 excluding extrusion. This is a build estimate, not a complete costed bill of materials.
 
 </div>
 <div class="project-section__media">
@@ -44,7 +45,7 @@ The build cost approximately $18 including aluminum extrusion, or about $4 exclu
 </div>
 </section>
 
-## Design
+<h2 id="design">Joints, retention, and access</h2>
 
 I modeled the fixtures in Fusion 360 around three adjustments: vertical positioning, arm rotation, and phone orientation. Screw-tightened joints let me reposition the mount and lock it for recording.
 
@@ -52,10 +53,13 @@ The design balances adjustability with stiffness. A printed base supports the ex
 
 I also designed the printed geometry around FDM manufacturing. Chamfers, clearance holes, and inclined internal surfaces help the parts print and assemble without relying on difficult unsupported geometry.
 
-<div class="project-gallery">
-    {% include figure.liquid path="assets/img/phone-mount/assembly-cad.jpg" alt="Overall extrusion and fixture assembly." title="Overall extrusion and fixture assembly." class="img-fluid rounded" zoomable=true caption="Overall extrusion and fixture assembly." %}
-    {% include figure.liquid path="assets/img/phone-mount/phone-holder-cad.jpg" alt="Phone retention and angular adjustment." title="Phone retention and angular adjustment." class="img-fluid rounded" zoomable=true caption="Phone retention and angular adjustment." %}
-    {% include figure.liquid path="assets/img/phone-mount/base-cad.jpg" alt="Braced base supporting the upright." title="Braced base supporting the upright." class="img-fluid rounded" zoomable=true caption="Braced base supporting the upright." %}
+<div class="project-gallery phone-details">
+    <div class="annotated-assembly">
+    <span class="figure-marker" style="left:48%;top:55%" aria-hidden="true">1</span><span class="figure-marker" style="left:91%;top:18%" aria-hidden="true">2</span>
+    {% include figure.liquid path="assets/img/phone-mount/assembly-cad.jpg" alt="Overall extrusion and fixture assembly." title="Overall extrusion and fixture assembly." class="img-fluid rounded" zoomable=true caption="CAD assembly: (1) the sliding joint sets height and arm rotation; (2) the holder sets phone orientation. Loads pass through the printed joints into the braced base. See the base detail for tool-access findings." %}
+    </div>
+    {% include figure.liquid path="assets/img/phone-mount/phone-holder-cad.jpg" alt="Phone retention and angular adjustment." title="Phone retention and angular adjustment." class="img-fluid rounded" zoomable=true caption="CAD detail: screw-tightened retention pieces set phone orientation; M4 screws and heat-set inserts secure the holder." %}
+    {% include figure.liquid path="assets/img/phone-mount/base-cad.jpg" alt="Braced base supporting the upright." title="Braced base supporting the upright." class="img-fluid rounded" zoomable=true caption="CAD base detail: bracing supports the upright. Assembly later exposed a missing screw-access hole; the workaround was used in the first prototype." %}
 </div>
 
 <section class="project-section project-section--balanced project-section--media-left">
@@ -73,10 +77,16 @@ All of the parts printed successfully on the first attempt. I assembled the fixt
 </div>
 </section>
 
-## Testing & Revisions
+<h2 id="testing--revisions">Findings from use</h2>
 
-The first prototype became the mount I use to film project footage. Assembly exposed a missing access hole for an extrusion-mounting screw, which I worked around and identified for a future revision.
+The first prototype became the mount I use to film project footage. A second build was unnecessary for my recording needs.
 
-The phone holder has some play, and touching the base introduces visible shake. Improving holder stiffness and base stability are possible refinements; a second build was unnecessary for my recording needs.
+| Observed finding                                                                    | Proposed change (not built)    |
+| ----------------------------------------------------------------------------------- | ------------------------------ |
+| Missing access hole for an extrusion-mounting screw; assembly required a workaround | Add tool access to the fixture |
+| Play in the phone holder                                                            | Improve retention stiffness    |
+| Visible shake when touching the base                                                | Improve base stability         |
+
+{: .requirements}
 
 The expandable demonstration at the top documents the design, CAD, slicing, assembled mount, and sample footage.

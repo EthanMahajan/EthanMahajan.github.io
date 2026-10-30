@@ -2,11 +2,11 @@
 layout: page
 title: Shape Machine
 project_intro: "I contribute to the Shape Computation Lab website through content edits, corrections, template fixes, and GitHub documentation. I work in the team’s enterprise repository; the underlying Shape Machine technology is the team’s work."
-overview_detail: "This work is ongoing. Specific before-and-after examples remain to be documented; the demonstrations show the team’s underlying technology."
 description: Content improvements, error correction, and template fixes for an existing team website
-card_label: Team contribution
-card_description: "Shape Computation Lab website: clearer content, corrected mistakes, and maintained templates."
-importance: 2
+thumbnail_alt: Shape Computation Lab identity
+card_label: Ongoing team contribution
+card_description: "Website content and documentation for the Shape Computation Lab. My ongoing contribution includes wording, corrections, shared-template fixes, and GitHub documentation within an interdisciplinary team; the underlying shape-computation technology is the team’s work."
+importance: 5
 documentation_updated: 2026-10-20
 category: Design
 og_image: /assets/img/social/shape_machine.png
@@ -16,6 +16,10 @@ pdf_summary:
   caption: "Shape Computation Lab identity. The linked page distinguishes my role from the team's technology."
   design: "Within an interdisciplinary team, I improve the existing Shape Computation Lab website through content review, error correction, template maintenance, and GitHub documentation in the team’s enterprise repository. The goal is to make explanations of Shape Machine's specialized shape-computation technology clearer and more consistent for visitors with varied technical backgrounds."
   evidence: "My contribution is ongoing and focuses on the website's existing content and presentation. The case study describes those responsibilities and links to demonstrations of the team's technology for context. Specific before-and-after contribution examples remain to be documented; I do not claim authorship of the underlying technology."
+overview_media:
+  image: assets/img/SCLLogo_110.png
+  alt: Shape Computation Lab identity
+  caption: "Lab identity; my contribution concerns the website and documentation."
 project_summary:
   role: "Website content and documentation"
   tools: "Content editing, templates, GitHub"
@@ -36,8 +40,6 @@ project_summary:
 ## Shape Machine in Context
 
 Shape Machine identifies matching geometric elements in drawings and can apply transformations across those matches, conceptually similar to find-and-replace operations. This demonstration shows the team's technology and provides context for the website content I help improve.
-
-
 
 - [Shape Computation Lab website](https://shape.gatech.edu)
 - [What Is Shape Machine?](https://youtu.be/wlHdKuWjhsE)

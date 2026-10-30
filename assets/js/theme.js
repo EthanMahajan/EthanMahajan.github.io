@@ -58,6 +58,14 @@ let applyTheme = () => {
   }
 
   document.documentElement.setAttribute("data-theme", theme);
+  const themeButton = document.getElementById("light-toggle");
+  const setting = determineThemeSetting();
+  const next = { system: "light", light: "dark", dark: "system" }[setting];
+  if (themeButton) {
+    const label = `Theme: ${setting}${setting === "system" ? ` (${theme})` : ""}. Switch to ${next}`;
+    themeButton.setAttribute("aria-label", label);
+    themeButton.title = label;
+  }
 
   // Add class to tables.
   let tables = document.getElementsByTagName("table");
@@ -298,6 +306,7 @@ let initTheme = () => {
 
   // Add event listener to the theme toggle button.
   document.addEventListener("DOMContentLoaded", function () {
+    applyTheme();
     const mode_toggle = document.getElementById("light-toggle");
 
     mode_toggle.addEventListener("click", function () {

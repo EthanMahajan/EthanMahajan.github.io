@@ -64,7 +64,7 @@
         element("text", { x: left - 10, y: y(v) + 4, "text-anchor": "end" }, String(v));
       }
       element("text", { x: (left + right) / 2, y: height - 5, "text-anchor": "middle" }, "Time (s)");
-      element("text", { transform: `translate(14 ${(top + bottom) / 2}) rotate(-90)`, "text-anchor": "middle" }, "Displacement");
+      element("text", { transform: `translate(14 ${(top + bottom) / 2}) rotate(-90)`, "text-anchor": "middle" }, "Normalized displacement");
 
       const points = [];
       for (let i = 0; i <= 1000; i++) {
@@ -76,7 +76,7 @@
       const mode = zeta === 0 ? "none" : zeta < 1 ? "underdamped" : zeta === 1 ? "critical" : "overdamped";
       classification.textContent = options.find((option) => option.dataset.dampingOption === mode).textContent;
       options.forEach((option) => option.setAttribute("aria-pressed", String(option.dataset.dampingOption === mode)));
-      frequency.textContent = zeta < 1 ? `${(Math.sqrt(1 - zeta * zeta) * 100).toFixed(1)}%` : "No oscillation";
+      frequency.textContent = zeta < 1 ? `${(Math.sqrt(1 - zeta * zeta) * 100).toFixed(1)}%` : "Not applicable (nonoscillatory)";
       slider.setAttribute("aria-valuetext", `${zeta.toFixed(2)}, ${classification.textContent}`);
     }
 
