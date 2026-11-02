@@ -1084,3 +1084,10 @@ p {
   color: var(--global-theme-color);
   font-weight: 600;
 }
+
+.collision-tap-video {
+  max-width: 820px;
+}
+.collision-tap-video video {
+  height: auto;
+}

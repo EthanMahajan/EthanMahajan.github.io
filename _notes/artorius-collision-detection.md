@@ -140,6 +140,20 @@ I ran stationary impact tests in both directions and deliberately allowed some r
 
 The successful X and Y records show the same sequence. The EBB42 identified a physical acceleration event. Both the EBB42 and Manta reported the synchronized trigger before the cleanup process sent stop queries. The existing X and Y motors were registered, their MCU step counts were unchanged, the accelerometer settings were restored, and the plugin cleared the XY homing state.
 
+<figure class="project-video--local collision-tap-video">
+  <video controls playsinline preload="none" width="1920" height="1080"
+    poster="{{ '/assets/video/artorius-collision-detection/directional-tap-test.jpg' | relative_url }}"
+    aria-label="Stationary X and Y finger-tap demonstration on Artorius"
+    aria-describedby="directional-tap-caption">
+    <source src="{{ '/assets/video/artorius-collision-detection/directional-tap-test.mp4' | relative_url }}" type="video/mp4">
+    <a href="{{ '/assets/video/artorius-collision-detection/directional-tap-test.mp4' | relative_url }}">Watch the stationary finger-tap demonstration</a>.
+  </video>
+  <figcaption class="caption" id="directional-tap-caption">
+    I tap the toolhead in X and Y and compare the detector’s response with the selected axis. In this demonstration, it mostly responds to disturbances along the selected axis and ignores taps in the other direction. This is a stationary demonstration, not a measurement of directional false-trigger rates or stopping behavior during motion.
+    <a href="{{ '/assets/video/artorius-collision-detection/directional-tap-test.mp4' | relative_url }}">Open the video</a>.
+  </figcaption>
+</figure>
+
 <div class="table-scroll resonance-table" tabindex="0" role="region" aria-label="Commissioning tests and their limits" markdown="1">
 
 | Test                               | Result                                                         | What remains unknown                                     |
