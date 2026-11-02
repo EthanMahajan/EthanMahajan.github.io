@@ -15,6 +15,9 @@ layout: default
     </p>
     <p class="post-description">{{ page.description | escape }}</p>
   </header>
+  {% if page.notebook_intro %}
+    <div class="takeaway">{{ page.notebook_intro | markdownify }}</div>
+  {% endif %}
   {% if page.sections %}
     <nav class="article-contents" aria-label="In this article">
       <p class="eyebrow">In this article</p>
