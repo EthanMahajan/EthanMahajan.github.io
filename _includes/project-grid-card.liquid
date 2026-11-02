@@ -1,0 +1,20 @@
+<div class="col mb-4">
+  <div class="card h-100 hoverable">
+    <a class="project-index__link" href="{{ project.url | relative_url }}">
+      {% assign thumbnail = project.thumbnail_image | default: project.img %}
+      {% assign thumbnail_alt = project.thumbnail_alt | default: project.hero.alt | default: project.title %}
+      {% include figure.liquid path=thumbnail alt=thumbnail_alt class="card-img-top" sizes="(min-width: 768px) 350px, 90vw" %}
+      <div class="card-body">
+        <h3 class="card-title">{{ project.title | escape }}</h3>
+        <p class="card-text">{{ project.description | escape }}</p>
+      </div>
+    </a>
+    {% if project.github %}
+      <div class="project-index__source">
+        <a href="{{ project.github }}" aria-label="Source files for {{ project.title | escape }}"
+          ><i class="fa-brands fa-github" aria-hidden="true"></i> Source files</a
+        >
+      </div>
+    {% endif %}
+  </div>
+</div>

@@ -1091,3 +1091,66 @@ p {
 .collision-tap-video video {
   height: auto;
 }
+
+// Center prose as a reading column while leaving media and structured layouts wider.
+.post:not(.home) > .post-header,
+.post:not(.home) article > p,
+.post:not(.home) article > h2,
+.post:not(.home) article > h3,
+.post:not(.home) article > h4,
+.post:not(.home) article > ul,
+.post:not(.home) article > ol,
+.post:not(.home) article > blockquote,
+.post:not(.home) article > pre,
+.post:not(.home) article > .takeaway,
+.notebook-note > .takeaway,
+.collision-signal-flow {
+  max-width: 48rem;
+  margin-inline: auto;
+}
+.post:not(.home) article > .notebook-list {
+  max-width: 48rem;
+}
+.project-index .card {
+  overflow: hidden;
+  background: var(--global-card-bg-color, var(--global-bg-color));
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.25rem;
+}
+.project-index .project-index__link {
+  display: block;
+  color: var(--global-text-color);
+  text-decoration: none !important;
+  flex: 1;
+}
+.project-index .project-index__link:focus-visible {
+  outline: 3px solid var(--global-theme-color);
+  outline-offset: -3px;
+}
+.project-index figure {
+  margin: 0;
+}
+.project-index .card-img-top {
+  width: 100%;
+  height: 210px;
+  object-fit: contain;
+  background: var(--portfolio-image-bg);
+}
+.project-index .card-title {
+  font-size: 1.35rem;
+  line-height: 1.3;
+}
+.project-index .card-text {
+  font-size: 1rem;
+}
+.project-index__source {
+  padding: 0 1.25rem 1.25rem;
+  font-size: 0.9rem;
+}
+
+.post:has(.project-index) > .post-header {
+  max-width: none;
+}
+.projects.project-index .card .card-body .card-text {
+  color: var(--global-text-color-light);
+}
