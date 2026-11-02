@@ -1,6 +1,6 @@
 # Artorius collision notebook review
 
-Reviewed November 1, 2026. Permalink: `/notebook/artorius-collision-detection/`.
+Initial integration reviewed November 1, 2026. The November 2 follow-up below supersedes the original verbatim-preservation assessment and records the subsequent technical clarifications. Permalink: `/notebook/artorius-collision-detection/`.
 
 ## Scope and editorial integrity
 
@@ -102,3 +102,74 @@ The author subsequently supplied `IMG_2219.MOV` (30.912 seconds, 1920 × 1080) a
 The web copy retains the full duration, 1080p frame dimensions and original AAC audio, transcoded to H.264/AAC MP4 with fast-start layout. Extra Apple spatial-audio and data streams and source metadata were omitted. A still/contact-sheet inspection confirms the stationary printer, finger taps and laptop interface. The author’s axis-selectivity description is qualified as a demonstration, not a measured false-trigger rate or moving-collision result. No speech transcript or independent quantitative directional analysis is claimed. The source article remains intact; the new video figure/caption is excluded from the preservation comparison as a separately authorized addition.
 
 Video follow-up validation: production Jekyll rebuild PASS (3.705 s), the 13-page structural checker PASS, source-preservation comparison PASS, changed-source Prettier PASS and patch whitespace PASS. `ffprobe` confirms H.264/AAC, 1920 × 1080 and a 30.931 s web duration (the slight container/audio padding differs from the 30.912 s source). Keyboard Space started playback in the browser; ready state reached 4, playback advanced past 14 seconds, and Space paused it without a media error. Inspected the native player at 390 px (335 × 188 px) and 1440 px (820 × 460 px), with no page-wide overflow. `mobile-video.png` and `desktop-video.png` show those views. Re-reviewed the added caption against the supplied editorial criteria: PASS; the word “mostly” and experimental limits are retained. Remote CI for the video commit is reported in the PR.
+
+## Independent follow-up: November 2, 2026
+
+Reviewed PR #13 at `2c25309` against both supplied Markdown files and the two original PNGs before editing. The canonical comparison passed at that commit, including image byte identity. The original integration did not omit technical substance. The existing video is retained as a previously documented addition, not treated as evidence supplied in this review.
+
+### Findings and corrections
+
+No critical or major defect found. Targeted changes in `_notes/artorius-collision-detection.md`:
+
+- **Moderate, detector scale:** “raw count” did not identify the representation. A reader using the datasheet's 14-bit digits could apply the wrong scale by a factor of four. Explained unshifted 16-bit register units (0.488 mg/count) versus right-shifted 14-bit digits (1.952 mg/digit at ±16 g). Retained the original conversion and gravity interpretation. This is a representation clarification, not a recalibration of the supplied traces.
+- **Moderate, recording duration:** 128 sample periods at the nominal rate are 80 ms, while the first-to-last interval covers 127 periods (79.375 ms). Both supplied plots extend to roughly 82 ms. Clarified nominal duration, distinguished the firmware history from the sensor's 32-sample FIFO, and explicitly left the plot timing discrepancy unresolved pending CSV timestamps. No explanation for the discrepancy was invented.
+- **Minor, tap timing:** defined “shock time” as the maximum over-threshold duration accepted by the tap logic. It is not measured motor-stop latency.
+- **Minor, first-use vocabulary:** expanded CAN and identified Kalico as the Klipper fork used here.
+- **Minor, references:** added direct ST datasheet and AN5038 links so readers can check representation and tap settings. No layout, dependency, or unrelated-page changes were needed.
+
+The source diff contains only these clarifications and the added reference. All original sections, comparisons, equation, test outcomes, identifiers, commissioning limits, contribution statement, uncertainty and future work remain. The supplied plots are unchanged.
+
+### Technical evidence and limits
+
+Checked the [ST datasheet](https://www.st.com/resource/en/datasheet/lis2dw12.pdf), table 3, and [AN5038](https://www.st.com/resource/en/application_note/dm00401877-lis2dw12-alwayson-3d-accelerometer-stmicroelectronics.pdf), register map and tap configuration. AN5038 gives FS/32 for the tap threshold: register 3 at ±16 g corresponds to 1.5 g. The datasheet's timing definition supports the shock-time clarification. The 16-bit representation explanation is consistent with the stated scale and visible gravity offset; custom logger code was not supplied for independent inspection.
+
+[Analog Devices AN-002](https://www.analog.com/en/resources/app-notes/AN-002.html) supports the electrical load-estimation explanation. [Klipper TMC documentation](https://www.klipper3d.org/TMC_Drivers.html) supports the signed sensitivity direction and operating-condition limits. [Multi-MCU homing documentation](https://www.klipper3d.org/Multi_MCU_Homing.html) supports the distinction between triggering and motor overshoot. These sources do not independently verify Artorius's custom `CombinedDispatch` code, cause codes, register restoration or recorded outcomes. Those remain author-reported. No firmware source, raw JSON/CSV records or printer connection was available in this review. The historical 271 tests were not rerun.
+
+### Audience and writing evaluation
+
+Recruiter **PASS**: purpose/status are visible at the opening; alternatives, personal contribution and Codex assistance remain concrete. Hobbyist **PASS**: register units and timing are now explicit, and hardware/firmware compatibility and supervised-use limits remain. General engineering reader **PASS**: CAN and Kalico now have first-use explanations; the narrative still proceeds from motivation and alternatives to implementation and evidence.
+
+Re-read every supplied evaluation check after editing. These are editorial judgments; the complete named writing skills are not available in the catalog or located files, so they are not claimed as executed. The table below uses the supplied evaluation's check numbers, not an invented replacement rubric.
+
+| Group and check       | Result                        | Evidence                                                                                                            |
+| --------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Editing principles 1  | PASS                          | Measurements and uncertainty preserved; timing discrepancy explicitly qualified.                                    |
+| Editing principles 2  | PASS                          | First-person account retained.                                                                                      |
+| Editing principles 3  | PASS                          | Commissioning threshold-test descriptions unchanged.                                                                |
+| Editing principles 4  | PASS                          | Five localized prose clarifications; no section removed or condensed.                                               |
+| Editing principles 5  | PASS                          | Original homing motivation retained.                                                                                |
+| Editing principles 6  | PASS                          | Alternatives still precede transport details.                                                                       |
+| Editing principles 7  | PASS                          | Added primary documentation; author-reported evidence distinguished above.                                          |
+| Editing principles 8  | PASS                          | Definitions explain the actual installed system.                                                                    |
+| Editing principles 9  | PASS                          | Author's contribution and Codex assistance unchanged.                                                               |
+| Editing principles 10 | PASS                          | Tables, signal sequence, analysis and future work retained.                                                         |
+| Editing principles 11 | PASS                          | Gravity explanation separated from register representation.                                                         |
+| Words to cut 1        | PASS                          | No prestige language or rhetorical filler added.                                                                    |
+| Patterns to cut 1     | PASS                          | Contrasts distinguish technical representations and measured versus unmeasured quantities.                          |
+| Patterns to cut 2     | PASS                          | No staged reveal or punchline fragments.                                                                            |
+| Patterns to cut 3     | PASS                          | Specific hardware documentation and recorded test identifiers.                                                      |
+| Patterns to cut 4     | PASS                          | Mechanisms explained without importance inflation.                                                                  |
+| Patterns to cut 5     | PASS                          | Ending still identifies measurements needed.                                                                        |
+| Patterns to cut 6     | PASS                          | No extra recap conclusion added to article.                                                                         |
+| Patterns to cut 7     | PASS                          | Existing substantive headings and technical visuals retained.                                                       |
+| Patterns to cut 8     | PASS                          | Sentence-case headings retained.                                                                                    |
+| Patterns to cut 9     | PASS                          | Article contains no em dash.                                                                                        |
+| Final read 1          | PASS                          | Paragraph forms vary; no repetitive punchlines.                                                                     |
+| Final read 2          | PASS                          | First-person voice retained; author has final voice judgment.                                                       |
+| Final read 3          | PASS                          | First-use definitions reduce unexplained jargon.                                                                    |
+| Final read 4          | FAIL literally; outside scope | Website Markdown delivered; no Word file requested or produced. This is not a writing defect to fix in the website. |
+| Final read 5          | PASS                          | Actual targeted edits supplied.                                                                                     |
+
+### Follow-up verification
+
+- `bundle check`: PASS with existing local Ruby 3.3.5 runtime prepended to PATH.
+- `$env:JEKYLL_ENV='production'; bundle exec jekyll build --destination tmp/collision-site`: PASS, final run 3.383 seconds; existing Ruby fiddle warning only.
+- `python scripts/check_portfolio.py tmp/collision-site`: PASS, all 13 pages, links, anchors, assets, metadata and project association.
+- `node scripts/check_damping.cjs tmp/collision-site/assets/js/damping-demo.js`: PASS.
+- `npx prettier _notes/artorius-collision-detection.md docs/artorius-collision-review.md --check` and `git diff --check`: PASS after formatting.
+- Initial `python tmp/check_collision_source.py`: PASS before edits. Exact identity is intentionally no longer claimed after the documented clarifications; reviewed the complete final diff for preserved content. Both image files remain untouched.
+- Browser: new opening captures at 1440, 768, 390 and 375 px, each 900 px high, in light and dark modes. No page-wide horizontal overflow. Inspected revised detector at 390 px and references at desktop; MathJax had zero error nodes and browser warning/error logs were empty. Menu and theme controls operated successfully. Compared the resonance notebook at 375 px. Earlier wider resonance and table/player interaction checks above are historical, not claimed as repeated here.
+- Screenshots: `revised-responsive.jpg` and `revised-detector-mobile.jpg` in the adjacent screenshot directory. No redesign warranted by these checks.
+- Previous head `2c25309` CI is now complete: production build PASS, formatter FAIL, upstream-only broken-links job skipped. This supersedes the earlier “still running” status. Repository-wide formatting problems remain outside this targeted change; fresh changed-file formatting passes. GitHub CLI check retrieval returned HTTP 401, so remote status was obtained through the connected GitHub tool.
+
+Remaining uncertainty is the source-record timing discrepancy and independent verification of the custom firmware and historical experiments. No moving collision performance claim was added. PR remains open and unmerged.

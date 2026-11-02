@@ -55,7 +55,7 @@ I considered several ways to recognize contact before changing any firmware.
 
 I went with StallGuard plus the accelerometer. StallGuard measures changes in motor load. The accelerometer measures a jolt at the toolhead. Comparing those signals could tell me more about a homing attempt than either reading on its own.
 
-I had to choose how that impact would reach the motors, too. I considered detecting it in a host Python script, adding a stop wire between the boards, and writing a dedicated controller-to-controller message. I used Klipper and Kalico's existing trigger synchronization instead. The toolhead controller could recognize the impact locally, and the main controller could use its existing motor stop callbacks. No additional wiring was needed.
+I had to choose how that impact would reach the motors, too. I considered detecting it in a host Python script, adding a stop wire between the boards, and writing a dedicated controller-to-controller message. I used the existing trigger synchronization in Klipper and Kalico, the Klipper fork running on Artorius, instead. The toolhead controller could recognize the impact locally, and the main controller could use its existing motor stop callbacks. No additional wiring was needed.
 
 I put the configuration, experiments, and reports in a separate Kalico plugin. The EBB42 firmware reads the sensor and decides when to trigger. The Python plugin manages the tests and records the results, without having to inspect each accelerometer sample before issuing a stop.
 
@@ -85,7 +85,7 @@ During supervised homing tests, I want to compare which signal fired and under w
 
 ## Getting a signal from the toolhead to both motors
 
-The accelerometer is connected to the EBB42, while the X and Y stepper drivers are on the Manta M8P. Those boards communicate over CAN, so an impact detected at the toolhead needs a way to stop motors controlled by another board.
+The accelerometer is connected to the EBB42, while the X and Y stepper drivers are on the Manta M8P. Those boards communicate over Controller Area Network (CAN), the wired communication bus between them, so an impact detected at the toolhead needs a way to stop motors controlled by another board.
 
 Both CoreXY motors contribute to X and Y movement. Stopping one while the other continues could send the carriage in an unintended direction. I needed the stop request to reach both motor channels as one coordinated event.
 
@@ -177,7 +177,9 @@ A future calibration routine would have to distinguish a real impact from a dead
 
 ## How the detector processes acceleration
 
-The LIS2DW is configured to sample at **1,600 Hz**, producing a reading every **0.625 ms**. At its selected **±16 g** range, one raw count corresponds to about **0.488 mg**. The accelerometer also measures gravity while sitting still, so a channel aligned opposite gravity reads around **−2,000 counts**, close to −1 g.
+The LIS2DW is configured to sample at **1,600 Hz**, producing a reading every **0.625 ms**. At its selected **±16 g** range, the plotted counts use a scale of about **0.488 mg/count**. This scale corresponds to the unshifted 16-bit register value. The sensor has 14-bit resolution in high-performance mode; shifting that value right by two bits gives the datasheet scale of **1.952 mg per digit** at ±16 g. The conversion must match the representation used by the logger.
+
+The accelerometer also measures gravity while sitting still, so a channel aligned opposite gravity reads around **−2,000 counts**, close to −1 g.
 
 The raw collision detector looks for a sudden change rather than total acceleration. It establishes a baseline for each sensor axis and updates that baseline as new readings arrive. The basic calculation is the largest difference between a sample and its baseline on the selected axes:
 
@@ -187,11 +189,11 @@ $$
 
 Here, `a` is the latest raw reading and `b` is the running baseline. In the plots, raw sensor Y stays near −2,000 counts at rest, while the red `magnitude` trace stays near zero. The red line shows the acceleration remaining after subtracting the baseline, rather than the length of the XYZ acceleration vector.
 
-For the current X/Y stationary tests, the raw method requires **two consecutive samples** above the configured **2,000 mg** threshold. The second method uses the accelerometer's hardware tap logic. Its current tap threshold register setting is `3`, equivalent to approximately **1.5 g** at ±16 g, with a shock time of about **5 ms**. Sharp impacts and slow pressure on the toolhead do not necessarily produce the same result. Both methods need more validation during movement.
+For the current X/Y stationary tests, the raw method requires **two consecutive samples** above the configured **2,000 mg** threshold. The second method uses the accelerometer's hardware tap logic. Its current tap threshold register setting is `3`, equivalent to approximately **1.5 g** at ±16 g, with a maximum over-threshold duration (the tap logic's shock time) of about **5 ms**. That duration is a tap recognition setting, not a measured time to stop the motors. Sharp impacts and slow pressure on the toolhead do not necessarily produce the same result. Both methods need more validation during movement.
 
 The physical orientation of the sensor also matters. Artorius uses `axes_map: z,-x,-y`. Printer X is detected mainly through sensor Z, while printer Y corresponds to negative sensor X. The dominant channels in my X and Y recordings are consistent with those mappings.
 
-Each recording stores the latest **128 samples**. At 1,600 Hz, that amounts to **80 ms**, regardless of whether the sensor was armed for two seconds. The peak falls near the right edge because recording ends around the trigger. The buffer shows what happened before the impact, but does not show moving motor stopping distance.
+Each recording stores the latest **128 samples** in the firmware recording buffer, separate from the sensor's 32-sample hardware FIFO. At the nominal 1,600 Hz rate, 128 sample periods amount to **80 ms**, regardless of whether the sensor was armed for two seconds. The first-to-last interval spans 127 periods, or about 79.4 ms at that rate. The supplied plots extend to roughly 82 ms; the CSV timestamps would be needed to reconcile that difference with the configured rate. The peak falls near the right edge because recording ends around the trigger. The buffer shows what happened before the impact, but does not show moving motor stopping distance.
 
 ## The software behind the stop
 
@@ -264,4 +266,5 @@ My next measurements are the time from contact to a stop during a commanded move
 - [Klipper multi MCU homing documentation](https://www.klipper3d.org/Multi_MCU_Homing.html). The existing controller synchronization mechanism.
 - [Analog Devices StallGuard2 application note](https://www.analog.com/en/resources/app-notes/AN-002.html). Stepper motor load detection and tuning.
 - [ST LIS2DW12 product information](https://www.st.com/en/mems-and-sensors/lis2dw12.html). Accelerometer and tap detection.
+- [ST LIS2DW12 datasheet](https://www.st.com/resource/en/datasheet/lis2dw12.pdf) and [application note AN5038](https://www.st.com/resource/en/application_note/dm00401877-lis2dw12-alwayson-3d-accelerometer-stmicroelectronics.pdf). Output representation, FIFO depth, and hardware tap thresholds and timing.
 - Project source and local test data: `accelerometer-stallguard/` and `printer_data/logs/accel_sg/`. The records reflect tests on Artorius, not independent benchmarks.
