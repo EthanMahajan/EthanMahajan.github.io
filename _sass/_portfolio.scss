@@ -78,6 +78,7 @@ html {
 }
 #light-toggle,
 .navbar.navbar-light .navbar-toggler {
+  color: var(--global-text-color);
   min-width: 44px;
   min-height: 44px;
 }
@@ -1064,4 +1065,22 @@ p {
   width: 100%;
   max-width: 720px;
   height: auto;
+}
+
+// Collision notebook: contain long identifiers and retain a readable vertical signal path.
+.notebook-note:has(.collision-signal-flow) article {
+  overflow-wrap: anywhere;
+}
+.collision-signal-flow {
+  max-width: var(--reading-width);
+  padding-left: 2rem;
+  margin-block: 1.5rem;
+}
+.collision-signal-flow li {
+  padding: 0.5rem 0 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+.collision-signal-flow li::marker {
+  color: var(--global-theme-color);
+  font-weight: 600;
 }
