@@ -39,7 +39,7 @@ project_summary:
 
 ## Shape Machine in Context
 
-Shape Machine identifies matching geometric elements in drawings and can apply transformations across those matches, conceptually similar to find-and-replace operations. This demonstration shows the team's technology and provides context for the website content I help improve.
+Shape Machine identifies matching geometric elements in drawings and can apply transformations across those matches, much like find-and-replace. The demonstration below shows the team's technology, which I help explain on the website.
 
 - [Shape Computation Lab website](https://shape.gatech.edu)
 - [What Is Shape Machine?](https://youtu.be/wlHdKuWjhsE)

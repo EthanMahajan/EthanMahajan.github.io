@@ -18,7 +18,7 @@
       context: CAN-bus toolboard, motor drivers, wiring, and serviceable electronics.
     - label: Air purifier
       url: /projects/air_purifier.html#design
-      context: KiCad schematics complete; board layout and physical validation pending.
+      context: KiCad schematics complete; PCB layout and mechanical design still undecided.
 - skill: Machinery & Tools
   examples:
     - label: Laser-engraved chess board

@@ -2,7 +2,8 @@ const root = document.querySelector("[data-cad-viewer]");
 const loadButton = root?.querySelector("[data-cad-load]");
 if (loadButton) {
   const status = root.querySelector("[data-cad-status]");
-  loadButton.addEventListener("click", async () => {
+  const loadModel = async () => {
+    if (loadButton.disabled || loadButton.hidden) return;
     loadButton.disabled = true;
     status.textContent = "Loading viewer and model";
     let webglUnavailable = false;
@@ -123,5 +124,30 @@ if (loadButton) {
       loadButton.disabled = false;
       console.error("Artorius viewer:", error);
     }
+  };
+  loadButton.addEventListener("click", loadModel);
+  // Give below-the-fold images priority over the model download.
+  const imagesReady = Promise.all(
+    Array.from(document.images, (image) => {
+      image.loading = "eager";
+      return new Promise((resolve) => {
+        if (image.complete) return resolve();
+        const settled = () => {
+          image.removeEventListener("load", settled);
+          image.removeEventListener("error", settled);
+          resolve();
+        };
+        image.addEventListener("load", settled, { once: true });
+        image.addEventListener("error", settled, { once: true });
+      });
+    })
+  );
+  const pageReady = new Promise((resolve) => {
+    if (document.readyState === "complete") resolve();
+    else window.addEventListener("load", resolve, { once: true });
+  });
+  Promise.all([pageReady, imagesReady, document.fonts?.ready]).then(() => {
+    if ("requestIdleCallback" in window) window.requestIdleCallback(loadModel, { timeout: 2000 });
+    else window.setTimeout(loadModel, 0);
   });
 }

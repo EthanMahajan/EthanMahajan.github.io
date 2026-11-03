@@ -9,7 +9,7 @@ profile:
   image_alt: Ethan Mahajan
 ---
 
-Mechanical engineering student at Georgia Tech building and testing electromechanical systems, with a focus on additive manufacturing. I connect CAD, fabrication, and electronics through hands-on projects, from an operational CoreXY printer to adjustable filming hardware. My work also includes freelance design and manufacturing and exploratory research into particles observed in water held in FDM-printed cups.
+I'm a mechanical engineering student at Georgia Tech. I build and test electromechanical systems, with a focus on additive manufacturing. My projects combine CAD, fabrication, and electronics, from a working CoreXY printer to an adjustable phone filming mount. My work also includes freelance design and manufacturing and exploratory research into particles observed in water held in FDM-printed cups.
 
 <p class="recruiting-context">B.S. Mechanical Engineering · Expected May 2029</p>
 <div class="portfolio-actions">

@@ -35,6 +35,10 @@ html[data-theme="dark"] .damping-demo {
   cursor: pointer;
   list-style: none;
   text-decoration: none;
+  border: 1px solid var(--global-theme-color);
+  border-radius: 0.25rem;
+  padding: 0.45rem 0.75rem;
+  color: var(--global-theme-color);
 }
 .damping-demo__classification summary::-webkit-details-marker {
   display: none;

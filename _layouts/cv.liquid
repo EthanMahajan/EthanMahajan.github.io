@@ -16,32 +16,36 @@ layout: default
     <span id="contact-information"></span><span id="professional-summary"></span>
     <p>{{ cv.sections['Professional Summary'][0].bullet }}</p>
   </div>
-  <details class="resume-contents">
-    <summary>On this page</summary>
-    <nav aria-label="Resume sections">
-      <a href="#education">Education</a><a href="#experience">Engineering experience</a><a href="#projects">Selected projects</a
-      ><a href="#skills">Technical skills</a><a href="#additional-experience">Additional experience</a><a href="#involvement">Involvement</a>
-    </nav>
-  </details>
+  <nav class="article-contents" aria-label="Resume sections">
+    <p class="eyebrow">On this page</p>
+    <ul>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Engineering experience</a></li>
+      <li><a href="#projects">Selected projects</a></li>
+      <li><a href="#skills">Technical skills</a></li>
+      <li><a href="#additional-experience">Additional experience</a></li>
+      <li><a href="#involvement">Involvement</a></li>
+    </ul>
+  </nav>
   <article class="cv">
     <section class="cv-section" id="education">
       <h2>Education</h2>
-      {% assign entries = cv.sections.Education | slice: 0, 1 -%}
+      {% assign entries = cv.sections.Education | slice: 0, 2 -%}
       {%- include cv/education.liquid %}
       <details>
         <summary>Earlier education</summary>
-        {% assign entries = cv.sections.Education | slice: 1, 10 -%}
+        {% assign entries = cv.sections.Education | slice: 2, 10 -%}
         {%- include cv/education.liquid %}
       </details>
     </section>
     <section class="cv-section" id="experience">
       <h2>Engineering experience</h2>
-      {% assign entries = cv.sections.Experience | slice: 0, 2 -%}
+      {% assign entries = cv.sections.Experience | slice: 0, 2 | sort: 'end_date' | reverse -%}
       {%- include cv/experience.liquid %}
     </section>
     <section class="cv-section" id="projects">
       <h2>Selected projects</h2>
-      {% assign entries = cv.sections.Projects -%}
+      {% assign entries = cv.sections.Projects | sort: 'start_date' | reverse -%}
       {%- include cv/projects.liquid %}
     </section>
     <section class="cv-section" id="skills">
@@ -51,22 +55,21 @@ layout: default
     </section>
     <section class="cv-section" id="additional-experience">
       <h2>Additional experience</h2>
-      {% assign entries = cv.sections.Experience | slice: 2, 20 -%}
+      {% assign entries = cv.sections.Experience | slice: 2, 20 | sort: 'end_date' | reverse -%}
       {%- include cv/experience.liquid %}
     </section>
     <section class="cv-section" id="involvement">
       <h2>Selected involvement</h2>
-      {% assign entries = cv.sections.Involvement -%}
+      {% assign entries = cv.sections.Involvement | sort: 'start_date' | reverse -%}
       {%- include cv/experience.liquid %}
     </section>
-    <details class="cv-section">
-      <summary>Languages and interests</summary>
-      <h2 id="languages">Languages</h2>
-      {% assign entries = cv.sections.Languages -%}
-      {%- include cv/languages.liquid %}
+    <section class="cv-section cv-personal" aria-label="Interests and languages">
       <h2 id="interests">Interests</h2>
       {% assign entries = cv.sections.Interests -%}
       {%- include cv/interests.liquid %}
-    </details>
+      <h2 id="languages">Languages</h2>
+      {% assign entries = cv.sections.Languages -%}
+      {%- include cv/languages.liquid %}
+    </section>
   </article>
 </div>

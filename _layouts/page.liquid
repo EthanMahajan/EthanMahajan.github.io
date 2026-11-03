@@ -9,8 +9,11 @@ layout: default
 {% endif %}
 
 <div class="post">
-  <header class="post-header">
+  <header class="post-header{% if page.portfolio_download %} post-header--download{% endif %}">
     <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.portfolio_download %}
+      <a class="header-download" href="{{ site.portfolio_pdf | relative_url }}">Portfolio (PDF)</a>
+    {% endif %}
     <p class="post-description">{{ page.description }}</p>
     {% if page.collection == 'projects' and page.documentation_updated %}
       <p class="project-metadata">
@@ -38,7 +41,6 @@ layout: default
     {% endif %}
     {{ content }}
     {% if page.collection == 'projects' %}
-      {% include project-notes.liquid %}
       {% include project-contact.liquid %}
     {% endif %}
   </article>

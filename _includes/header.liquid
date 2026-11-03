@@ -23,7 +23,7 @@
             {%- if p.nav %}
               <li class="nav-item">
                 <a
-                  class="nav-link{% if p.permalink == '/resume/' %} nav-resume{% endif %}"
+                  class="nav-link"
                   href="{{ p.url | relative_url }}"
                   {% if page.url contains p.permalink %}
                     aria-current="page"
