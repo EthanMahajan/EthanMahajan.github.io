@@ -512,8 +512,7 @@ canvas:focus-visible {
   border-radius: 0;
 }
 .project-card:hover .card-title a {
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
+  text-decoration: none;
 }
 .project-card__status {
   margin: 0 0 0.5rem;
@@ -552,7 +551,7 @@ canvas:focus-visible {
   margin-bottom: 0.75rem;
 }
 .project-card .card-title a {
-  color: var(--global-text-color);
+  color: var(--global-theme-color);
 }
 .project-card .card-body .card-text {
   color: var(--global-text-color);
@@ -697,11 +696,6 @@ p {
   text-underline-offset: 0.4em;
   text-decoration-thickness: 2px;
   font-weight: 600;
-}
-.nav-resume {
-  border: 1px solid var(--global-divider-color);
-  border-radius: 4px;
-  padding-inline: 12px !important;
 }
 .navbar-toggler {
   display: none;
@@ -1153,4 +1147,198 @@ p {
 }
 .projects.project-index .card .card-body .card-text {
   color: var(--global-text-color-light);
+}
+
+// Feedback from the November 3 review.
+.post :is(h2, h3, h4) a:not(.btn):not(.project-card__image),
+.post .project-notes a:not(.btn):not(.project-card__image),
+.post .contact-block a:not(.btn):not(.project-card__image),
+.post .project-contact__links a:not(.btn):not(.project-card__image) {
+  text-decoration: none;
+}
+.post :is(h2, h3, h4) a:not(.btn),
+.project-index .card-title {
+  color: var(--global-theme-color);
+}
+.post :is(h2, h3, h4) a:hover,
+.post .contact-block a:hover {
+  color: var(--global-hover-color);
+}
+.contact-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 2rem;
+}
+.contact-block h2 {
+  margin: 0;
+}
+.contact-block .portfolio-secondary-links {
+  margin: 0;
+  align-items: center;
+  font-size: 0.95rem;
+}
+.post-header--download {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 0.25rem 1.5rem;
+}
+.post-header--download .post-description {
+  grid-column: 1 / -1;
+}
+.header-download {
+  white-space: nowrap;
+  font-size: 0.95rem;
+}
+.project-overview__facts {
+  align-self: center;
+}
+.post figure > .caption,
+.post figure figcaption {
+  text-align: center;
+}
+.research-figure {
+  margin-inline: auto;
+}
+.research-figure img {
+  display: block;
+  margin-inline: auto;
+}
+.article-contents {
+  text-align: center;
+}
+.article-contents ul {
+  justify-content: center;
+}
+.notebook-note article > .model-details {
+  max-width: 48rem;
+  margin: 1.5rem auto;
+}
+.model-details > summary {
+  cursor: pointer;
+  color: var(--global-theme-color);
+  padding-block: 0.75rem;
+}
+.notebook-note mjx-container[jax="CHTML"][display="true"] {
+  padding-block: 0.4rem;
+  max-width: 100%;
+}
+@media (max-width: 575px) {
+  .post-header--download {
+    gap: 0.5rem;
+  }
+  .header-download {
+    font-size: 0.85rem;
+  }
+  .notebook-note mjx-container[jax="CHTML"][display="true"] {
+    font-size: 100% !important;
+  }
+}
+
+// Follow-up review: bring supporting notes and media beside their context.
+.project-overview__facts .project-notes {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  h2 {
+    font-size: 1.25rem;
+  }
+  ul {
+    padding-left: 1.2rem;
+    margin-bottom: 0;
+  }
+  li {
+    margin-bottom: 0.85rem;
+  }
+  .caption {
+    display: block;
+    margin-top: 0.2rem;
+  }
+}
+.phone-assembly {
+  max-width: 640px;
+  margin: 1.5rem auto;
+}
+.phone-detail-pairs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-block: 2rem;
+}
+.phone-detail-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.25rem;
+  h3 {
+    font-size: 1.15rem;
+  }
+  p {
+    font-size: 0.95rem;
+    margin: 0;
+  }
+  figure {
+    margin: 0;
+  }
+}
+.requirements.phone-findings {
+  width: auto;
+  max-width: 100%;
+  margin-inline: auto;
+}
+.collision-tap-video {
+  margin-inline: auto;
+}
+.impact-recordings {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  max-width: 1040px;
+  margin: 1.5rem auto;
+}
+.impact-recordings figure {
+  margin: 0;
+}
+.chess-engraving-video {
+  max-width: 320px;
+  margin-inline: auto;
+}
+.chess-engraving-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+}
+.cv #education {
+  border-top: 0;
+  margin-top: 0;
+}
+.cv .skill-evidence {
+  padding-left: 1.5rem;
+}
+.cv-personal > .card-text {
+  padding-inline-start: 1.5rem;
+}
+.cv-personal > h2:not(:first-child) {
+  margin-top: 1.5rem;
+}
+.chess-status {
+  align-items: center;
+}
+.notebook-note article > figure {
+  margin-inline: auto;
+  text-align: center;
+}
+.notebook-note article > figure img {
+  display: block;
+  margin-inline: auto;
+}
+@media (max-width: 767px) {
+  .phone-detail-pairs,
+  .impact-recordings {
+    grid-template-columns: 1fr;
+  }
 }

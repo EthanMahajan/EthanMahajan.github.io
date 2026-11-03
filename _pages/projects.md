@@ -2,13 +2,13 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: Built hardware, design decisions, and the evidence behind each stage of development.
+description: Hardware projects, from early designs to working prototypes, with build details and test results.
 nav: true
 nav_order: 2
 og_image: /assets/img/artorius-working.jpg
+portfolio_download: true
 ---
 
-<nav class="portfolio-secondary-links project-index-links" aria-label="Project resources"><a href="{{ site.portfolio_pdf | relative_url }}">Portfolio (PDF)</a></nav>
 <div class="projects project-index">
 {% assign categories = 'Engineering,Design' | split: ',' %}
 {% for category in categories %}

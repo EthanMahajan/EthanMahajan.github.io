@@ -26,6 +26,13 @@ cv:
           - "GPA: 4.00"
           - "Relevant Coursework: Principles & Applications of Engineering Materials; Engineering Graphics"
 
+      - institution: Georgia Institute of Technology
+        location: Atlanta, GA
+        url: https://www.gatech.edu/
+        area: Linear Algebra and Multivariable Calculus
+        studyType: Dual Enrollment
+        date: "Fall 2025 – Spring 2026"
+
       - institution: Mill Creek High School
         location: Hoschton, GA
         area: STEM
@@ -41,7 +48,7 @@ cv:
     Skills:
       - label: CAD & Design
         icon: fa-solid fa-drafting-compass
-        details: "Fusion 360, Solidworks, Onshape, FreeCAD, Technical Drawings, Design for Manufacturing"
+        details: "Fusion 360, SolidWorks, Onshape, FreeCAD, Technical Drawings, Design for Manufacturing"
 
       - label: Manufacturing & Fabrication
         icon: fa-solid fa-screwdriver-wrench
@@ -57,7 +64,7 @@ cv:
 
       - label: Software & Systems
         icon: fa-solid fa-laptop-code
-        details: "Microsoft Office, Google Workspace, Github, Windows, Linux, MacOS, Klipper, Java, Python, & Markdown"
+        details: "Microsoft Office, Google Workspace, GitHub, Windows, Linux, macOS, Klipper, Java, Python, & Markdown"
 
       - label: Communication & Project Work
         icon: fa-solid fa-people-group
@@ -72,7 +79,7 @@ cv:
           - "Verified component tolerances and clearances before fabrication."
           - "Fabricated a prototype using metalworking machines and additive manufacturing."
           - "Configured Kalico Klipper firmware and performed exploratory motion tests; the printer is operational."
-          - "Installed CAN-bus toolhead electronics to compartmentalize for easier maintenance."
+          - "Installed CAN-bus toolhead electronics to separate toolhead connections for easier maintenance."
           - "Revised frame support and used vibration analysis and input shaping to investigate ringing; repeatable print quality remains under refinement."
         start_date: "2024-06"
         end_date: "2026-07"
@@ -82,7 +89,7 @@ cv:
         summary: Controller design for a proposed smart air purifier using a 120 mm fan and particulate-matter sensor.
         highlights:
           - "Designed a control concept for automatic fan-speed adjustment and filter replacement detection."
-          - "Completed electrical schematics in KiCad; PCB layout and physical validation remain pending."
+          - "Completed electrical schematics in KiCad; PCB layout and mechanical design are still undecided."
         start_date: "2026-07"
         end_date: present
 
@@ -103,10 +110,10 @@ cv:
         end_date: "2025-10"
         summary: Completed 20+ custom engineering contracts involving CAD design, reverse engineering, and small-scale manufacturing.
         highlights:
-          - "Maintained a 4.6-star client rating across completed engagements."
+          - "Maintained a 4.6-star client rating across completed projects."
           - "Designed and iterated an accessibility device, including a tie-tying assistance tool."
           - "Reverse-engineered a broken replacement component from reference materials and technical drawings."
-          - "Manufactured a low-volume production run of 30 tailored tablet holders."
+          - "Manufactured a small production run of 30 custom tablet holders."
 
       - company: Shape Machine
         position: Social Media & Web Design Contributor
@@ -146,7 +153,7 @@ cv:
         location: Remote
         start_date: "2026-05"
         end_date: present
-        summary: Analyze AI-generated artifacts and author prompts to provide structured feedback on model quality.
+        summary: Analyze AI-generated artifacts and write prompts to provide structured feedback on model quality.
 
     Involvement:
       - company: Technology Student Association
@@ -156,8 +163,8 @@ cv:
         end_date: "2026-05"
         summary: Managed club finances, supported engineering competition activities, and helped coordinate member communication.
         highlights:
-          - "Managed club finances and structural budgeting alongside faculty advisors."
-          - "Organized community fundraising initiatives, including a local movie-night event."
+          - "Managed club finances and budgets alongside faculty advisors."
+          - "Organized community fundraisers, including a local movie night."
           - "Organized and delivered presentations about upcoming events and member opportunities."
           - "Competed at the state level as part of a biotechnology team."
 

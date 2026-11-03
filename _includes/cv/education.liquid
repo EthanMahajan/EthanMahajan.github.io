@@ -105,8 +105,8 @@
             <tbody>
               <tr>
                 <td>
-                  {% if date %}
-                    <span class="cv-date">{{ date }}</span>
+                  {% if date or entry.date %}
+                    <span class="cv-date">{{ entry.date | default: date }}</span>
                   {% endif %}
                 </td>
               </tr>
