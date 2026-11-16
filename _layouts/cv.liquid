@@ -40,7 +40,7 @@ layout: default
     </section>
     <section class="cv-section" id="experience">
       <h2>Engineering experience</h2>
-      {% assign entries = cv.sections.Experience | slice: 0, 2 | sort: 'end_date' | reverse -%}
+      {% assign entries = cv.sections.Experience | slice: 0, 3 | sort: 'start_date' | reverse -%}
       {%- include cv/experience.liquid %}
     </section>
     <section class="cv-section" id="projects">
@@ -55,7 +55,7 @@ layout: default
     </section>
     <section class="cv-section" id="additional-experience">
       <h2>Additional experience</h2>
-      {% assign entries = cv.sections.Experience | slice: 2, 20 | sort: 'end_date' | reverse -%}
+      {% assign entries = cv.sections.Experience | slice: 3, 20 | sort: 'end_date' | reverse -%}
       {%- include cv/experience.liquid %}
     </section>
     <section class="cv-section" id="involvement">

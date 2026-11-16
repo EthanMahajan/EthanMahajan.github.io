@@ -103,6 +103,16 @@ cv:
         end_date: present
 
     Experience:
+      - company: Georgia Tech Invention Studio
+        position: Prototyping Instructor
+        location: Atlanta, GA
+        start_date: "2026-11"
+        end_date: present
+        summary: Help students turn their designs into physical prototypes at Georgia Tech's student-run makerspace.
+        highlights:
+          - "Recommend materials, tools, and fabrication methods. Troubleshoot build problems and suggest design changes that make parts easier to manufacture."
+          - "Teach safe equipment operation and shop procedures, adapting hands-on instruction to each student's fabrication experience."
+
       - company: Fiverr
         position: Freelance CAD Designer & Manufacturing Consultant
         location: Remote
